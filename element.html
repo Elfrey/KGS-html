@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html xmlns:1="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<title>Просмотр карточки</title>
+		<meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="css/jquery.selectBox.css" type="text/css" media="screen, projection" />
+        <!--[if lte IE 6]><link rel="stylesheet" href="css/style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+
+        <link rel="stylesheet" href="css/libs/uniform.default.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="css/libs/jquery-ui-timepicker-addon.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.16.custom.css" type="text/css" media="screen, projection" />
+
+		<link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen, projection" />
+
+        <script type="text/javascript" src="js/libs/php.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.ui.datepicker-ru.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-ui-timepicker-addon.js"></script>
+		<script type="text/javascript" src="fancybox/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.selectBox.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/libs/additional-methods.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.fixedtable.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.uniform.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="js/libs/capslock.jquery.js"></script>
+
+        <script type="text/javascript" src="js/temp.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/jquery.kPopup.js"></script>
+        <script type="text/javascript" src="js/customSelect.js"></script>
+        <script type="text/javascript" src="js/tableActions.js"></script>
+        <script type="text/javascript" src="js/custom.checkbox.js"></script>
+        <script type="text/javascript" src="js/input.date.js"></script>
+        <script type="text/javascript" src="js/input.time.js"></script>
+		<script type="text/javascript" src="js/lookup.js"></script>
+		<script type="text/javascript" src="js/element.js"></script>
+		<script type="text/javascript" src="js/addTableItems.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<div class="breadcrumb">
+					<ul class="breadcrumb-navigation">
+						<li>
+							<div class="breadcrumb-wrapper">
+								<a href="/dp03/" class="breadcrumb-a" title="Сектор гос. службы">Сектор гос. службы</a>
+								<span title="Открыть меню" class="home-menu-opener"></span>
+								<div class="header-menu">
+									<a class="header-menu-a" title="Сектор гос. службы" href="/dp03/">Сектор гос. службы</a>
+									<a class="header-menu-a" title="Гос. реестра ЯНАО" href="/dp04/">Гос. реестра ЯНАО</a>
+									<a class="header-menu-a" title="Гос. регистрации прав ЯНАО" href="/dp05/">Гос. регистрации прав ЯНАО</a>
+									<a class="header-menu-a" title="Земельных отношений" href="/dp07/">Земельных отношений</a>
+									<a class="header-menu-a" title="Землепользования и фонда скважин" href="/dp08/">Землепользования и фонда скважин</a>
+									<a class="header-menu-a" title="Сектор фонда скважин ТЭК" href="/dp09/">Сектор фонда скважин ТЭК</a>
+									<a class="header-menu-a" title="Управления и распоряжения объектами жилищного фонда ЯНАО" href="/dp10/">Управления и распоряжения объектами жилищного фонда ЯНАО</a>
+									<a class="header-menu-a" title="Ведения реестра и учёта объектов жилищного фонда ЯНАО" href="/dp11/">Ведения реестра и учёта объектов жилищного фонда ЯНАО</a>
+									<a class="header-menu-a" title="Приватизации" href="/dp12/">Приватизации</a>
+									<a class="header-menu-a" title="Обязательственных отношений и вещных прав" href="/dp13/">Обязательственных отношений и вещных прав</a>
+									<a class="header-menu-a" title="Мониторинга и разграничения гос. и муниципальной собственности" href="/dp14/">Мониторинга и разграничения гос. и муниципальной собственности</a>
+									<a class="header-menu-a" title="По работе с ГУП и учреждениями ЯНАО" href="/dp15/">По работе с ГУП и учреждениями ЯНАО</a>
+									<a class="header-menu-a" title="По работе с АО с участием ЯНАО" href="/dp16/">По работе с АО с участием ЯНАО</a>
+									<a class="header-menu-a" title="Контрольно-ревизионный" href="/dp17/">Контрольно-ревизионный</a>
+									<a class="header-menu-a" title="Сектор фонда скважин ТЭК" href="/dp18/">Сектор фонда скважин ТЭК</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="breadcrumb-wrapper">
+								<a href="/dp03/" class="breadcrumb-a" title="Сектор гос. службы">Учет имущества</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="quickaccess">
+					<a title="Календарь" class="quickaccess-a quickaccess-calendar" href="#"><span class="quickaccess-calendar-date">6</span> <span class="quickaccess-number">3</span> </a>
+					<a title="Напоминания" class="quickaccess-a quickaccess-notification" href="#"> <span class="quickaccess-number">1</span> </a>
+					<a title="Помощь" class="quickaccess-a quickaccess-help" href="#">Помощь</a>
+					<div class="quickaccess-help-block">
+						<div class="quickaccess-help-block-header">
+							&nbsp;
+						</div>
+						<div class="quickaccess-help-block-data">
+							<p>
+								Перед вами обычный справочник объектов.
+								<br>
+								Тут идет какой-нибудь поясняющий текст.
+								<br>
+								Главное убрать его из релиза.
+								<br>
+							</p>
+							<p>
+								Узнайте как выполнить типичные действия:
+							</p>
+							<ul>
+								<li>
+									&mdash; <a href="#">Добавление нового элемента</a>
+								</li>
+								<li>
+									&mdash; <a href="#">Сортировка справочника</a>
+								</li>
+								<li>
+									&mdash; <a href="#">Поиск данных</a>
+								</li>
+							</ul>
+							<a class="more" href="#">Узнать больше ...</a>
+						</div>
+					</div>
+				</div>
+				<h1 class="header-title">Просмотр карточки</h1>
+			</header><!-- #header-->
+			<section id="middle">
+				<div id="container">
+					<div id="content">
+                        <div id="sideLeft">
+                            <div class="element-actions">
+                                <ul class="element-actions-list">
+                                    <li>
+                                        <a href="#">
+                                            Характеристики
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Права
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Стоимость
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Другие документы
+                                        </a>
+                                    </li>
+                                </ul>
+                                <input type="button" class="elemet-left-apply-button" value="Сохранить" />
+                                <input type="button" class="elemet-left-cancel-button" value="Отменить" />
+
+                            </div>
+                        </div>
+                        <div class="element-fields">
+                            <h1>Характеристики</h1>
+
+                            <div class="element-field full-w">
+                                <label class="element-label" for="field_1">Объект недвижимости</label>
+                                <div class="elenemt-data">
+                                    <input type="text" name="field_1" id="field_1" />
+                                </div>
+                            </div>
+
+                            <div class="element-field float-left">
+                                <label class="element-label" for="field_2">ИНОН</label>
+                                <div class="elenemt-data">
+                                    <input type="text" name="field_2" id="field_2" />
+                                </div>
+                            </div>
+
+                            <div class="element-field">
+                                <label class="element-label" for="field_3">Инвентарный номер</label>
+                                <div class="elenemt-data">
+                                    <input type="text" name="field_3" id="field_3" />
+                                </div>
+                            </div>
+
+                            <div class="element-field">
+                                <label class="element-label" for="field_4">Год ввода</label>
+                                <div class="elenemt-data">
+                                    <input type="text" name="field_4" id="field_4" />
+                                </div>
+                            </div>
+
+                            <div class="element-field element-checkbox">
+                                <label class="element-label" for="field_5">Памятник истории и культуры</label>
+
+                                <div class="element-data">
+                                    <input id="field_5" name="field_5" type="checkbox" />
+                                </div>
+                            </div>
+                            <div class="element-field">
+                                <label class="element-label" for="field_6">Дата</label>
+
+                                <div class="element-data">
+                                    <input id="field_6" name="field_6" type="date">
+                                </div>
+                            </div>
+                            <div class="element-field">
+                                <label class="element-label" for="field_11">Время</label>
+
+                                <div class="element-data">
+                                    <input id="field_11" name="field_11" type="time">
+                                </div>
+                            </div>
+
+                            <div class="element-field float-left">
+                                <label class="element-label" for="field_7_0">Протяженность <span class="element-dash">-</span> км</label>
+
+                                <div class="element-data">
+                                    <select class="element-select select-editable" name="field_7_0" id="field_7_0">
+                                        <optgroup label="1">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </optgroup>
+                                        <optgroup label="2">
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+
+	                        <div class="element-field">
+		                        <label class="element-label" for="field_7">Протяженность <span class="element-dash">-</span> км</label>
+
+		                        <div class="element-data">
+			                        <select class="element-select" name="field_7" id="field_7">
+				                        <optgroup label="1">
+					                        <option value="1">1</option>
+					                        <option value="2">2</option>
+					                        <option value="3">3</option>
+				                        </optgroup>
+				                        <optgroup label="2">
+					                        <option value="4">4</option>
+					                        <option value="5">5</option>
+				                        </optgroup>
+			                        </select>
+		                        </div>
+	                        </div>
+                        </div>
+
+                        <br class="clear" />
+
+                        <div class="element-fields">
+                            <h1>Права на имущество</h1>
+
+                            <div class="element-field element-link">
+                                <icon class="element-link-icon element-link-icon-person element-link-icon-inactive"></icon>
+                                <label class="element-label" for="field_8">Юридическое лицо</label>
+
+                                <div class="element-data">
+                                    <a href="#" class="element-link-add-button">Выбрать</a>
+                                    <input id="field_8" name="field_8" type="hidden">
+								</div>
+                            </div>
+                            <br class="clear" />
+
+                            <div class="element-field element-link">
+                                <icon class="element-link-icon element-link-icon-house element-link-icon-active"></icon>
+                                <label class="element-label" for="field_9">Объект имущества для передачи</label>
+
+                                <div class="element-data">
+                                    <a href="#" class="element-link-edit-button">Здание обл. больницы</a>
+                                    <input id="field_9" name="field_9" type="hidden" value="5438">
+                                </div>
+                            </div>
+                            <br class="clear" />
+
+                            <div class="element-field element-document">
+                                <icon class="element-document-icon"></icon>
+                                <label class="element-label" for="field_10">Условие закрепление имущества за пользователем</label>
+
+                                <div class="element-data">
+                                    <a href="#" class="element-document-add-button">Прикрепить документ</a>
+                                    <input id="field_10" name="field_10" type="hidden" />
+                                </div>
+                            </div>
+                            <br class="clear" />
+
+                            <div class="element-field element-document">
+                                <icon class="element-document-icon"></icon>
+                                <label class="element-label" for="field_12">Условие закрепление имущества за пользователем</label>
+
+                                <div class="element-data">
+                                    <a href="#" class="element-document-edit-button">№ 24/44-В от 25.12.2011</a>
+                                    <input id="field_12" name="field_12" type="hidden" />
+                                </div>
+                            </div>
+                            <br class="clear" />
+                       </div>
+                        <br class="clear" />
+
+                        <div class="element-fields">
+	                        <h1>Другие документы</h1>
+
+	                        <div class="element-field element-table">
+		                        <a class="element-table-add-button gray-button" href="#">Прикрепить документы</a>
+		                        <div class=table-wrapper>
+			                        <table class="element-table-data" cellspacing="0" cellpadding="0" >
+				                        <thead>
+				                        <tr>
+					                        <th>Объект</th>
+					                        <th>Кадастровый номер</th>
+					                        <th>Адрес</th>
+					                        <th>Площадь</th>
+					                        <th>Балансовая стоимость</th>
+				                        </tr>
+				                        </thead>
+				                        <tbody>
+				                        <tr>
+					                        <td>
+						                        <a href="#delete-row" class="element-table-delete-row-button">Удалить</a>
+						                        Здание
+					                        </td>
+					                        <td>A2:42:B4А:8:23:19: К3:АВ:32:21</td>
+					                        <td>Тюмень,<br />
+						                        ул. Ленина, 12</td>
+					                        <td>132,2 <span class="small-gray-measure-unit">м2</span></td>
+					                        <td>7 890 921,33 <icon class="small-gray-rouble"></icon></td>
+				                        </tr>
+				                        <tr>
+					                        <td>
+						                        <a href="#delete-row" class="element-table-delete-row-button">Удалить</a>
+						                        Здание
+					                        </td>
+					                        <td>А8:23:19:К3:АВ:32: 21:A2:42:B4</td>
+					                        <td>Тюмень,<br />
+						                        ул. Pеспублики, 48</td>
+					                        <td>512 <span class="small-gray-measure-unit">м2</span></td>
+					                        <td>12 020 421 <icon class="small-gray-rouble"></icon></td>
+				                        </tr>
+				                        <tr>
+					                        <td>
+						                        <a href="#delete-row" class="element-table-delete-row-button">Удалить</a>
+						                        Здание
+					                        </td>
+					                        <td>A2:42:B4А:8:23:19: К3:АВ:32:21</td>
+					                        <td>Тюмень,<br />
+						                        ул. Ленина, 12</td>
+					                        <td>132,2 <span class="small-gray-measure-unit">м2</span></td>
+					                        <td>7 890 921,33 <icon class="small-gray-rouble"></icon></td>
+				                        </tr>
+				                        </tbody>
+				                        <tfoot>
+				                        <tr>
+					                        <td colspan="3">Всего: 3 записи</td>
+					                        <td class="calculated">776,4 <span class="small-gray-measure-unit">м2</span></td>
+					                        <td class="calculated">27 802 263,66 <icon class="small-bold-gray-rouble"></icon></td>
+				                        </tr>
+				                        </tfoot>
+			                        </table>
+			                        <div class="pagination">
+				                        <a class="prev-page" href="#prev-page">←</a>
+				                        <a class="current" href="?page=0">1</a>
+				                        <a href="?page=1">2</a>
+				                        <a href="?page=2">3</a>
+				                        <a href="?page=3">4</a>
+				                        <a href="?page=4">5</a>
+				                        <a class="next-page" href="#next-page">→</a>
+			                        </div>
+		                        </div>
+	                        </div>
+                        </div>
+
+                        <div class="element-fields">
+	                        <h1>Другие документы</h1>
+
+	                        <div class="element-field element-table">
+		                        <a class="element-table-add-button gray-button" href="#">Прикрепить документы</a>
+		                        <div class=table-wrapper>
+			                        <table class="element-table-data" cellspacing="0" cellpadding="0" >
+				                        <thead>
+				                        <tr>
+					                        <th>Объект</th>
+					                        <th>Кадастровый номер</th>
+					                        <th>Адрес</th>
+					                        <th>Площадь</th>
+					                        <th>Балансовая стоимость</th>
+				                        </tr>
+				                        </thead>
+				                        <tbody>
+				                        <tr>
+					                        <td>
+						                        <a href="#delete-row" class="element-table-delete-row-button">Удалить</a>
+						                        Здание
+					                        </td>
+					                        <td>A2:42:B4А:8:23:19: К3:АВ:32:21</td>
+					                        <td>Тюмень,<br />
+						                        ул. Ленина, 12</td>
+					                        <td>132,2 <span class="small-gray-measure-unit">м2</span></td>
+					                        <td>7 890 921,33 <icon class="small-gray-rouble"></icon></td>
+				                        </tr>
+				                        <tr>
+					                        <td>
+						                        <a href="#delete-row" class="element-table-delete-row-button">Удалить</a>
+						                        Здание
+					                        </td>
+					                        <td>А8:23:19:К3:АВ:32: 21:A2:42:B4</td>
+					                        <td>Тюмень,<br />
+						                        ул. Pеспублики, 48</td>
+					                        <td>512 <span class="small-gray-measure-unit">м2</span></td>
+					                        <td>12 020 421 <icon class="small-gray-rouble"></icon></td>
+				                        </tr>
+				                        <tr>
+					                        <td>
+						                        <a href="#delete-row" class="element-table-delete-row-button">Удалить</a>
+						                        Здание
+					                        </td>
+					                        <td>A2:42:B4А:8:23:19: К3:АВ:32:21</td>
+					                        <td>Тюмень,<br />
+						                        ул. Ленина, 12</td>
+					                        <td>132,2 <span class="small-gray-measure-unit">м2</span></td>
+					                        <td>7 890 921,33 <icon class="small-gray-rouble"></icon></td>
+				                        </tr>
+				                        </tbody>
+				                        <tfoot>
+				                        <tr>
+					                        <td colspan="3">Всего: 3 записи</td>
+					                        <td class="calculated">776,4 <span class="small-gray-measure-unit">м2</span></td>
+					                        <td class="calculated">27 802 263,66 <icon class="small-bold-gray-rouble"></icon></td>
+				                        </tr>
+				                        </tfoot>
+			                        </table>
+			                        <div class="pagination">
+				                        <a class="prev-page" href="#prev-page">←</a>
+				                        <a class="current" href="?page=0">1</a>
+				                        <a href="?page=1">2</a>
+				                        <a href="?page=2">3</a>
+				                        <a href="?page=3">4</a>
+				                        <a href="?page=4">5</a>
+				                        <a class="next-page" href="#next-page">→</a>
+			                        </div>
+		                        </div>
+	                        </div>
+                        </div>
+					</div><!-- #content-->
+				</div><!-- #container-->
+			</section><!-- #middle-->
+		</div><!-- #wrapper -->
+		<footer id="footer">
+			<div class="footer_note">
+				У вас <a href="#">1 новое уведомление</a>
+			</div>
+			<div class="footer_opt">
+				<a href="#">Настройки</a>
+			</div>
+			<div class="footer_dashboard">
+				<a href="/personal/">Личный кабинет</a>
+			</div>
+		</footer><!-- #footer -->
+		<someloadeddata>
+			<ul id="lookup_for_field_8">
+				<li>
+					<h3>ОАО «Кабельсбыт»</h3>
+					<p>Еще атрибут: значение атрибута; Другой атрибут: 29.04.2010; Текстовое поле</p>
+				</li>
+				<li>
+					<h3>ОАО «Московская компания»</h3>
+					<p>Еще атрибут: значение атрибута; Текстовое поле</p>
+				</li>
+				<li>
+					<h3>ОАО «Вершина»</h3>
+					<p>Еще атрибут: значение атрибута; Другой атрибут: 2.12.2009; Пример как может обрезать</p>
+				</li>
+				<li>
+					<h3>ОАО «Концерн Пищепром»</h3>
+					<p>Еще атрибут: значение атрибута; Другой атрибут: 16.02.2011; Очень длинное текстово поле</p>
+				</li>
+				<li>
+					<h3>ОАО «Вершина»</h3>
+					<p>Еще атрибут: значение атрибута; Другой атрибут: 2.12.2009; Пример как может обрезать</p>
+				</li>
+				<li>
+					<h3>ОАО «Концерн Пищепром»</h3>
+					<p>Еще атрибут: значение атрибута; Другой атрибут: 16.02.2011; Очень длинное текстово поле</p>
+				</li>
+				<li>
+					<h3>ОАО «Кабельсбыт»</h3>
+					<p>Еще атрибут: значение атрибута; Другой атрибут: 29.04.2010; Текстовое поле</p>
+				</li>
+				<li>
+					<h3>ОАО «Московская компания»</h3>
+					<p>Еще атрибут: значение атрибута; Текстовое поле</p>
+				</li>
+			</ul>
+		</someloadeddata>
+	</body>
+</html>
+</html>

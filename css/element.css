@@ -1,0 +1,521 @@
+.element-actions {
+    background-color: #eeeff1;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 3px 3px 4px #CECECE;
+    padding: 23px 5px 19px 25px;
+    width: 184px;
+}
+
+.element-actions-list {
+    list-style: none;
+    margin-left: 6px;
+}
+.element-actions-list li {
+    margin-bottom: 10px;
+}
+.element-actions-list li a {
+    color: #3C608D;
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.elemet-left-apply-button {
+    background: -moz-linear-gradient(top, #8bba0d 0%, #447a04 100%);
+    border: 1px solid #627b20;
+    border-radius: 2px;
+    box-shadow: 0px 3px 3px #558205;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 23px;
+    padding: 7px 7px;
+    text-align: center;
+    width: 168px;
+}
+.elemet-left-cancel-button {
+    background: -moz-linear-gradient(top, #ebedef 0%, #dddee0 100%);
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    color: #7e7e7e;
+    font-size:  14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 13px 0 0 6px;
+    padding: 5px;
+    text-align: center;
+    width: 153px;
+}
+
+/* END left block
+----------------------------------------------------------------------------------------------*/
+
+.element-fields {
+    margin-top: 19px;
+    min-width: 740px;
+    padding-left: 220px;
+}
+.element-fields > h1 {
+    color: #000;
+    font-size: 36px;
+    line-height: 1.25;
+}
+
+.element-field {
+    margin-top: 20px;
+}
+.element-field .element-label {
+    color: #484848;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.element-field.element-checkbox .element-label {
+    display: inline-block;
+    margin-top: 1px;
+}
+.element-field .elenemt-data {
+}
+.element-field input[type=text] {
+    color: #000000;
+    font-size: 14px;
+    border: 1px solid #b2b2b2;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07) inset;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    width: 267px;
+}
+
+.element-field.full-w input[type=text] {
+    width: -moz-calc(100% - 22px);
+}
+
+.element-field.float-left {
+    float: left;
+    margin-right: 30px;
+}
+.element-field.float-left+.element-field.float-left:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.element-field.element-checkbox .element-data{
+    float: left;
+    margin-right: 1px;
+    margin-top: 3px;
+}
+
+.input-icon {
+    background: -moz-linear-gradient(center top , #ececee 0%, #dadadd 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #B2B2B2;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 0.4px 1px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    height: 28px;
+    margin-left: -30px;
+    position: absolute;
+    width: 31px;
+}
+input[disabled]+.input-icon {
+    background: transparent;
+    border: none;
+}
+.input-icon.input-date:before {
+    background: url('../img/sprites.png') no-repeat -413px 0;
+    content: "";
+    display: block;
+    height: 16px;
+    margin: 6px 0 0 9px;
+    width: 14px;;
+}
+
+/*Element-link
+***********************************************************************************************************************/
+
+.element-field.element-link, .element-field.element-document {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: -1px;
+    margin-left: -19px;
+    min-width: 655px;
+    height: 37px;
+    padding: 18px 18px 18px 18px;
+}
+/*.element-field.element-link:hover, .element-field.element-document:hover, */.element-field.element-link.hover, .element-field.element-document.hover {
+    border-color: rgba(184,216,255,0.81);
+    background-color: #f0f7ff;
+}
+.element-field.element-link:hover .element-data > a, .element-field.element-document:hover .element-data > a {
+    border-bottom: none;
+}
+/*
+ * Основной фон иконки
+ */
+.element-link-icon {
+    background: url('../img/sprites.png') no-repeat -440px 0;
+    display: block;
+    float: left;
+    height: 31px;
+    margin-right: 11px;
+    width: 32px;
+}
+
+/*
+ * Иконка внутри
+ */
+
+/*
+ * Иконка внутри - человек
+ */
+.element-link-icon.element-link-icon-person:before {
+    background: url("../img/sprites.png") no-repeat scroll -487px 0 transparent;
+    content: "";
+    display: block;
+    height: 10px;
+    margin-left: 12px;
+    margin-top: 10px;
+    position: absolute;
+    width: 9px;
+}
+
+/*
+ * Иконка внутри - дом
+ */
+.element-link-icon.element-link-icon-house:before {
+    background: url("../img/sprites.png") no-repeat scroll -511px 0 transparent;
+    content: "";
+    display: block;
+    height: 16px;
+    margin-left: 9px;
+    margin-top: 7px;
+    position: absolute;
+    width: 16px;
+}
+
+/*
+ * Иконка внутри - карта
+ */
+.element-link-icon.element-link-icon-map:before {
+    background: url("../img/sprites.png") no-repeat scroll -542px 0 transparent;
+    content: "";
+    display: block;
+    height: 15px;
+    margin-left: 9px;
+    margin-top: 7px;
+    position: absolute;
+    width: 15px;
+}
+
+/*
+ * Иконка внутри - люди
+ */
+.element-link-icon.element-link-icon-persons:before {
+    background: url("../img/sprites.png") no-repeat scroll -574px 0 transparent;
+    content: "";
+    display: block;
+    height: 15px;
+    margin-left: 8px;
+    margin-top: 7px;
+    position: absolute;
+    width: 16px;
+}
+
+/*
+ * Иконка снизу справа для неактивной ссылки
+ */
+.element-link-icon.element-link-icon-inactive:after {
+    background: url("../img/sprites.png") no-repeat scroll -607px 0 transparent;
+    content: "";
+    display: block;
+    height: 11px;
+    margin-left: 20px;
+    margin-top: 24px;
+    width: 15px;
+}
+/*
+ * Иконка снизу справа для активной ссылки
+ */
+.element-link-icon.element-link-icon-active:after {
+    background: url("../img/sprites.png") no-repeat scroll -632px 0 transparent;
+    content: "";
+    display: block;
+    height: 11px;
+    margin-left: 20px;
+    margin-top: 24px;
+    width: 15px;
+}
+
+.element-field.element-link .element-label {
+    color: #3E3E3E;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 15px;
+}
+
+.element-link-add-button {
+    border-bottom: 1px dotted #4c4c4c;
+    color: #4c4c4c;
+    font-size: 14px;
+    text-decoration: none;
+}
+.element-link-add-button:after {
+    background: url("../img/sprites.png") no-repeat scroll -656px 0 transparent;
+    content: "";
+    display: block;
+    height: 8px;
+    margin-left: 105px;
+    margin-top: -13px;
+    position: absolute;
+    width: 8px;
+}
+.element-link-add-button:hover {
+    color: #4c4c4c;
+    border-bottom: none;
+}
+
+.element-link-edit-button {
+    border-bottom: 1px dotted #3c608d;
+    color: #3c608d;
+    font-size: 14px;
+    text-decoration: none;
+}
+.element-link-edit-button:hover {
+    color: #3c608d;
+    border-bottom: none;
+}
+
+/*element-document
+----------------------------------------------------------------------------------------------------------------------*/
+.element-document-icon {
+    background: url('../img/sprites.png') no-repeat -673px 0;
+    display: block;
+    float: left;
+    height: 30px;
+    margin-right: 11px;
+    width: 27px;
+}
+
+.element-field.element-document .element-label {
+    color: #3E3E3E;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 15px;
+}
+
+.element-document-add-button, .element-document-edit-button {
+    border-bottom: 1px dotted #3C608D;
+    color: #3C608D;
+    font-size: 14px;
+    text-decoration: none;
+}
+.element-document-add-button:after {
+    /* Иконка лупы*/
+    background: url("../img/sprites.png") no-repeat scroll -656px 0 transparent;
+    content: "";
+    margin-top: -13px;
+
+/*Многоточие
+    content: "...";
+    margin-top: -17px;
+*/    
+    display: block;
+    height: 8px;
+    margin-left: 105px;
+    position: absolute;
+    width: 8px;
+}
+.element-document-add-button:hover, .element-document-edit-button:hover {
+    color: #3c608d;
+    border-bottom: none;
+}
+
+.gray-button {
+    border: 1px solid #aeaeae;
+    border-radius: 3px;
+    background: -moz-linear-gradient(top, rgba(233, 233, 236, 0.55) 0%, rgba(205, 206, 209, 0.55) 100%);
+
+    box-shadow: 0 2px 7px -1px rgba(0, 0, 0, 0.24);
+    display: inline-block;
+    color: #7e7e7e;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 12px;
+    padding: 4px 13px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.gray-button:hover {
+    color: #7e7e7e;
+}
+
+/*Element table
+----------------------------------------------------------------------------------------------------------------------*/
+.element-table {
+    margin-top: 4px;
+}
+
+.element-table-data {
+    border-collapse: separate;
+    width: 100%;
+}
+
+
+.element-table-data thead {
+    box-shadow: 5px 3px 4px 0px rgba(227, 227, 227, 0.9);
+}
+
+.element-table-data thead tr th {
+    /*Borders*/
+    background: -moz-linear-gradient(top, rgba(233,233,236,0.7) 0%, rgba(205,206,209,0.7) 100%);
+    border-width: 1px 1px 1px 0px;
+    -moz-border-top-colors: rgb(198,198,198) rgb(249,249,250);
+    -moz-border-right-colors: rgb(198,198,198);
+    -moz-border-bottom-colors: rgb(198,198,198);
+    -moz-border-left-colors: rgba(255,255,255,0);
+    border-style: solid;
+
+    color: #2a2a2a;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15px;
+    min-height: 27px;
+    padding: 12px 13px;
+    text-align: left;
+}
+.element-table-data thead tr th:first-child {
+        border-left-width: 1px;
+        -moz-border-left-colors: rgb(198,198,198) rgb(249,249,250);
+    }
+
+.element-table-data tbody tr td {
+    border-bottom: 1px dotted #acacac;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.25;
+    padding: 13px;
+}
+.element-table-data tbody tr:hover {
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+
+.element-table-data tfoot tr td {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15px;
+    padding: 13px;
+}
+.small-gray-measure-unit {
+    color: #979797;
+    font-size: 12px;
+    line-height: 15px;
+}
+.small-gray-rouble {
+    background: url('../img/sprites.png') no-repeat -710px 0;
+    display: inline-block;
+    height: 9px;
+    width: 6px;
+}
+.small-bold-gray-rouble {
+    background: url('../img/sprites.png') no-repeat -722px 0;
+    display: inline-block;
+    height: 11px;
+    width: 8px;
+}
+.element-table .pagination {
+    margin-left: 13px;
+    margin-top: 5px;
+}
+.element-table-delete-row-button {
+    display: block;
+    height: 30px;
+    margin-left: -44px;
+    margin-top: -21px;
+    padding: 13px 0;
+    position: absolute;
+    text-indent: -9999px;
+    width: 31px;
+}
+.element-table-data tbody tr:hover .element-table-delete-row-button:before {
+    background: url("../img/sprites.png") no-repeat scroll -736px 0 transparent;
+    content: "";
+    display: block;
+    height: 11px;
+    margin-left: 10px;
+    margin-top: 9px;
+    /*padding: 33px;*/
+    padding: 4px;
+    position: absolute;
+    width: 11px;
+}
+
+.attr-link-list {
+    background-color: #fff;
+    border: 1px solid #c4c7cb;
+    border-radius: 5px;
+    /*margin-left: 38px;*/
+    margin-top: 5px;
+    margin-left: -15px;
+    position: absolute;
+    z-index: 2;
+}
+.attr-link-list:before {
+    background: url('../img/sprites.png') no-repeat -755px 0;
+    content: "";
+    display: block;
+    height: 8px;
+    width: 14px;
+    position: absolute;
+    margin-left: -moz-calc(50% - 7px);
+    margin-top: -8px;
+}
+.attr-link-list ul {
+    background: none repeat scroll 0 0 #FFFFFF;
+    list-style: none outside none;
+    position: relative;
+    z-index: 2;
+}
+.attr-link-list ul li {
+    padding: 8px 16px;
+}
+
+.attr-link-list ul li:first-child {
+    /*padding-top: 16px;*/
+    margin-top: 8px;
+}
+.attr-link-list ul li:last-child {
+    /*padding-bottom: 16px;*/
+    margin-bottom: 8px;
+}
+.attr-link-list ul li a {
+    color: #3c608d;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+}
+.attr-link-list ul li:hover {
+    /*background-color: #f0f7ff;*/
+    background-color: #0088cc;
+}
+.attr-link-list ul li:first-child:hover {
+    /*border-radius: 5px 5px 0 0;*/
+}
+.attr-link-list ul li:last-child:hover {
+    /*border-radius: 0 0 5px 5px;*/
+}
+.attr-link-list ul li:hover a, .attr-link-list ul li:hover a:hover, .attr-link-list ul li a:hover {
+    /*color: #000;*/
+    color: #fff;
+}

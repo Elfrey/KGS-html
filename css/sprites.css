@@ -1,0 +1,122 @@
+.green-apply {
+    background: url("../img/sprites.png") no-repeat -266px 0;
+    color: #007d15;
+    font-size: 20px;
+    height: 11px;
+    text-indent: -9999px;
+    width: 15px;
+}
+/*
+.green-apply:before {
+    content: "";
+    display: inline-block;
+    height: 11px;
+    width: 15px;
+}
+*/
+.red-x {
+    background: url("../img/sprites.png") no-repeat scroll -288px 0 transparent;
+    color: #7D0000;
+    font-size: 16px;
+    font-weight: 700;
+    height: 12px;
+    text-indent: -9999px;
+    width: 12px;
+}
+
+.report-ico {
+    background: url("../img/sprites.png") no-repeat scroll -311px 0 transparent;
+    display: inline-block;
+    height: 9px;
+    margin-right: 4px;
+    margin-top: 3px;
+    vertical-align: top;
+    width: 8px;
+}
+
+
+.can-expand:hover td:last-child:after, .expand-add-data-ico {
+    background: url("../img/sprites.png") no-repeat -333px 0;
+    display: block;
+    content: "";
+    height: 7px;
+    float: right;
+    margin-top: 2px;
+    width: 13px;
+}
+
+
+/* journal-table actions
+---------------------------------------------------------------------------------*/
+.item-action-ico {
+    background: url("../img/sprites.png") no-repeat scroll left top transparent;
+    display: block;
+    height: 17px;
+    margin-left: 11px;
+    margin-top: 11px;
+    text-indent: -9999px;
+    width: 14px;
+}
+.item-action-ico.add {
+    background-position: 0 0;
+}
+.item-action-ico.edit {
+    background-position: -21px 0;
+    height: 16px;
+    width: 16px;
+}
+.item-action-ico.delete {
+    background-position: -44px 0;
+    width: 14px;
+    height: 13px;
+}
+.item-action-ico.blank {
+    background-position: -66px 0;
+    width: 16px;
+    height: 16px;
+}
+.item-action-ico.xls {
+    background-position: -88px 0;
+    width: 16px;
+    height: 16px;
+}
+.item-action-ico.blue-arrow-next {
+    background-position: -133px 0;
+    width: 14px;
+    height: 14px;
+}
+.item-action-ico.blue-arrow-prev {
+    background-position: -110px 0;
+    width: 14px;
+    height: 14px;
+}
+.item-action-ico.gray-arrow-prev {
+    background-position: -155px 0;
+    width: 14px;
+    height: 14px;
+}
+.item-action-ico.gray-arrow-next {
+    background-position: -177px 0;
+    width: 14px;
+    height: 14px;
+}
+.item-action-ico.person {
+    background-position: -199px 0;
+    width: 16px;
+    height: 16px;
+}
+.item-action-ico.point {
+    background-clip: content-box;
+    background-position: -222px 0;
+    width: 10px;
+    height: 10px;
+    margin-top: 4px;
+    position: absolute;
+}
+.item-action-ico.point:active {
+    background-position: -244px 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    margin-left: 5px;
+}

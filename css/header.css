@@ -1,0 +1,250 @@
+/* 
+    Document   : header
+    Created on : Jan 6, 2012, 2:41:59 PM
+    Author     : Elfrey
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+    background: url(../img/header-bg.png) repeat-x left top #333333 scroll;
+    height: 126px;
+    width: 100%;
+    z-index: 12;
+}
+
+#header.fixed {
+    margin-top: -126px;
+    position: fixed;
+}
+
+#header.dashboard-header.fixed {
+    height: 147px;
+    margin-top: -147px;
+}
+#header .header-title {
+    color: #FFFFFF;
+    font-size: 46px;
+    padding: 64px 0 0 83px;
+}
+#header .breadcrumb ~ .header-title{
+    font-size: 37px;
+    letter-spacing: -1.2px;
+    padding: 80px 0 0 32px;
+}
+
+
+/*.quickaccess
+------------------------------------------------------------------------------*/
+.quickaccess {
+    float: right;
+    margin: 51px 49px 0 0;
+}
+#header .breadcrumb ~ .quickaccess{
+    margin: 30px 30px 0 0;
+}
+.quickaccess .quickaccess-a {
+    display: block;
+    border: 1px solid #262626;
+    width: 61px;
+    height: 36px;
+    float: left;
+    text-indent: -999999px;
+    text-decoration: none;
+}
+.quickaccess .quickaccess-feedback {
+    background-image: url(../img/header-calendar-bg.png), url(../img/header-note-bg.png), url(../img/heager-help-bg.png);
+    background-position: left top, left top, right top;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: auto auto, -moz-calc(100% - 33px) 36px, auto auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-indent: 0px;
+    padding: 0 5px 0 15px;
+    width: 160px;
+}
+.quickaccess .quickaccess-calendar {
+    background-image: url(../img/header-calendar-ico.png), url(../img/header-calendar-bg.png);
+    background-position: 16px center, left top;
+    background-repeat: no-repeat, no-repeat;
+    background-color: transparent, transparent;			
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-indent: 0px;
+}
+.quickaccess .quickaccess-notification {
+    background-image: url(../img/header-note-ico.png), url(../img/header-note-bg-active.png);
+    background-position: 17px center, left top;
+    background-repeat: no-repeat, no-repeat;
+    background-color: transparent, transparent;
+    border-left: none;
+    text-indent: 0px;
+}
+.quickaccess .quickaccess-help {
+    background-image: url(../img/header-help-ico.png), url(../img/heager-help-bg.png);
+    background-position: 22px center, left top;
+    background-repeat: no-repeat, no-repeat;
+    background-color: transparent, transparent;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.quickaccess .quickaccess-calendar .quickaccess-calendar-date {
+    color: #F1F1E3;
+    display: block;
+    float: left;
+    font-size: 6px;
+    font-weight: bold;
+    margin: 11px 0 0 23px;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.quickaccess .quickaccess-number {
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    font-size: 14px;
+    margin: 9px 15px 0 0;
+}
+
+.quickaccess .quickaccess-help-block {
+    display: none;
+    margin-left: -139px;
+    margin-top: 33px;
+    position: absolute;
+}
+.quickaccess .quickaccess-help-block .quickaccess-help-block-header {
+    border-bottom: 23px solid #EEEEEE;
+    border-left: 23px solid transparent;
+    border-right: 23px solid transparent;
+    float: right;
+    height: 0;
+    margin: 0 27px 0 0;
+    width: 0;
+}
+.quickaccess .quickaccess-help-block .quickaccess-help-block-data {
+    background-color: #eeeeee;
+    border: 1px solid #fbfbfc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #bbb;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 22px 0 0;
+    padding: 17px 25px 22px 18px;
+    width: 300px;
+}
+.quickaccess .quickaccess-help-block .quickaccess-help-block-data a {
+    color: #4870a5;
+}
+.quickaccess .quickaccess-help-block .quickaccess-help-block-data .more {
+    color: #0e3a75;
+    display: block;
+    margin-top: 23px;
+    margin-left: 17px;
+}
+
+/*END .quickaccess
+------------------------------------------------------------------------------*/
+.breadcrumb {
+    margin-left: 46px;
+    margin-top: 24px;
+    position: absolute;
+}
+
+.breadcrumb ul li:first-child {
+    background-image: url("../img/breadcrumg-first-left-bg.png"), url("../img/breadcrumg-right-bg.png");
+    background-position: left top, right top, center top;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-size: 5px 36px, 11px 36px, 1px 36px;
+    padding: 0 11px 0 5px;
+}
+
+.breadcrumb ul li {
+    background-image: url("../img/breadcrumg-left-bg.png"), url("../img/breadcrumg-right-bg.png");
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 12px 36px, 11px 36px;
+    display: block;
+    float: left;
+    height: 36px;
+    margin-left: -11px;
+    padding: 0 11px 0 12px;
+}
+
+.breadcrumb ul li div.breadcrumb-wrapper {
+    background-color: transparent;
+    background-image: url("../img/breadcrumg-center-bg.png");
+    background-position: left top;
+    background-repeat: repeat-x;
+    height: 36px;
+    padding: 0 25px;
+}
+.breadcrumb ul li:first-child div.breadcrumb-wrapper {
+    padding: 0;
+}
+
+.breadcrumb ul li:first-child a.breadcrumb-a {
+    background-color: transparent;
+    background-image: url("../img/home.png");
+    background-position: 9px 10px;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 100%;
+    padding: 0 15px;
+    text-indent: -9999px;
+}
+
+.breadcrumb ul li a.breadcrumb-a {
+    color: #FFFFFF;
+    display: block;
+    font-size: 11px;
+    line-height: 36px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.breadcrumb-a {
+    font-size: 13px !important;
+}
+
+.breadcrumb ul li:first-child .home-menu-opener {
+    border-color: #EEEEEE transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    cursor: pointer;
+    float: left;
+    margin-left: 5px;
+    margin-right: 9px;
+    margin-top: 17px;
+}
+
+.header-menu {
+    background-color: #6A6A6A;
+    border-radius: 5px 5px 5px 5px;
+    display: none;
+    margin-left: -5px;
+    margin-top: 36px;
+    padding: 5px;
+    position: absolute;
+    text-align: left;
+    z-index: 10;
+}
+
+.header-menu a.header-menu-a {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 2px 8px 8px;
+    text-align: left;
+    text-decoration: underline;
+    white-space: nowrap;
+}

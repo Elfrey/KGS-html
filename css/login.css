@@ -1,0 +1,106 @@
+.login-body {
+    background: url("../img/login-body-bg.png") repeat scroll left top transparent;
+}
+.login-body h1 {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.75;
+    padding-left: 26px;
+    text-align: left;
+}
+.login-body h3 {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.55;
+    text-align: center;
+}
+.login-body .login-content {
+    display: inline-block;
+    margin-left: -moz-calc(50% - 241px);
+    margin-top: 184px;
+}
+.login-body .login-content .login-form {
+    background: url("../img/login-page-form-bg.png") repeat scroll left top transparent;
+    border: 1px solid #676767;
+    border-radius: 15px 15px 15px 15px;
+    height: 177px;
+    margin: 64px 0;
+    padding: 52px 76px 44px;
+    width: 400px;
+}
+.login-body .login-content .login-form .login-label {
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 37px;
+    padding-right: 26px;
+    text-align: right;
+    width: 60px;
+}
+.login-body .login-content .login-form .login-input {
+    border: medium none;
+    border-radius: 5px 5px 5px 5px;
+    color: #000000;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    height: 37px;
+    line-height: 37px;
+    margin-bottom: 25px;
+    padding: 0 15px;
+    width: 278px;
+}
+.login-body .login-content .login-form .password-input {
+    border: medium none;
+    border-radius: 5px 5px 5px 5px;
+    color: #000000;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    height: 37px;
+    line-height: 37px;
+    margin-bottom: 37px;
+    padding: 0 15px;
+    width: 278px;
+}
+.login-input.caps-on + .on-caps-span,.password-input.caps-on + .on-caps-span {
+    background: url('../img/sprites.png') no-repeat -819px 0;
+    display: inline-block;
+    height: 27px;
+    margin-left: -32px;
+    margin-top: 5px;
+    position: absolute;
+    width: 27px;
+}
+.login-body .login-content .login-form .login-submit {
+    background: url("../img/login-sumbit-bg.png") no-repeat scroll left top transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    margin-left: 89px;
+    text-align: center;
+    width: 124px;
+}
+.login-body .login-content .login-footer {
+    color: #B3B3B3;
+    font-size: 14px;
+    margin-top: -7px;
+    text-align: center;
+}
+.login-body .login-content .login-footer a {
+    color: #9AABC4;
+}
+.login-body .login-content .login-footer-separator {
+    color: #737373;
+    font-size: 18px;
+    padding: 0 14px;
+}

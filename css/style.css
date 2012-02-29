@@ -1,0 +1,101 @@
+@import url('header.css');
+@import url('content.css');
+@import url('footer.css');
+@import url('table.css');
+@import url('sprites.css');
+@import url('journal.css');
+@import url('dashboard.css');
+@import url('login.css');
+@import url('element.css');
+@import url('lookup.css');
+@import url('addTableItems.css');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+header, nav, section, article, aside, footer {
+    display: block;
+}
+body {
+    font: 12px/18px Helvetica Neue, Arial, Tahoma, Verdana, sans-serif;
+    height: 100%;
+    letter-spacing: 0.15px;
+}
+a {
+    color: #3c608d;
+    outline: none;
+    text-decoration: underline;
+}
+/*a[class='']:hover {*/
+a[class='']:hover {
+    color: #488ce1;
+    text-decoration: none;
+}
+p {
+    margin: 0 0 18px
+}
+img {
+    border: none;
+}
+input {
+    font-family: Helvetica Neue, Arial, Tahoma, Verdana, sans-serif;
+    vertical-align: middle;
+}
+input[disabled] {
+    background-color: #f5f5f5;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clear {
+    clear: both;
+    font-size: 1px;
+    height: 1px;
+    line-height: 1px;
+}
+
+
+#wrapper {
+    width: 100%;
+    min-width: 1000px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+
+
+
+
+
+/* Sidebar Left
+-----------------------------------------------------------------------------*/
+#sideLeft {
+    float: left;
+    margin-left: -36px;
+    position: relative;;
+    width: 250px;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+    
+    margin: -93px auto 0;
+    min-width: 1000px;
+    height: 93px;
+    background: url("../img/footer-bg.png") repeat-x scroll left top #3B3B3B;
+    position: relative;
+}
+
+
+someloadeddata {
+    display: none;
+}

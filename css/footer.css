@@ -1,0 +1,45 @@
+/* 
+    Document   : footer
+    Created on : Jan 7, 2012, 12:56:18 PM
+    Author     : Elfrey
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+    display: none;
+
+    background: url("../img/footer-bg.png") repeat-x scroll left top #3B3B3B;
+    height: 93px;
+    margin: -93px auto 0;
+    min-width: 1000px;
+    padding: 38px 38px 0;
+    position: relative;
+}
+#footer a {
+    color: #FFFFFF;
+}
+.footer_note {
+    color: #FFFFFF;
+    float: left;
+    font-size: 14px;
+    line-height: 21px;
+}
+.footer_opt {
+    color: #FFFFFF;
+    float: right;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    line-height: 19px;
+    margin-right: 9px;
+}
+.footer_dashboard {
+    color: #FFFFFF;
+    float: right;
+    font-size: 18px;
+    line-height: 16px;
+    margin-right: 45px;
+}

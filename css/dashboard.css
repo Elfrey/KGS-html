@@ -1,0 +1,100 @@
+.dashboard-block {
+    margin-top: 32px;
+}
+
+.dashboard-block .dasboard-buttons {
+    float: left;
+}
+
+.dashboard-block .dasboard-buttons .dashboard-big-button {
+    background: url("../img/dashboard-big-button-bg.png") repeat-x scroll left top #DBDBDE;
+    border: 1px solid #C4C4C4;
+
+    -webkit-border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px;
+    color: #7F7F7F;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 20px;
+    min-height: 84px;
+    padding: 15px 60px;
+    text-align: center;
+    text-shadow: 0 2px 3px white;
+    vertical-align: middle;
+    width: 332px;
+}
+
+.dashboard-block .dasboard-buttons .dashboard-big-button:hover {
+    color: #209add;
+    background: url(../img/dashboard-big-button-bg-hover.png) repeat-x scroll left top #c2e4f6 !important;
+}
+
+.dashboard-block .dashboard-data {
+    float: left;
+    margin-left: 57px;
+}
+
+.dashboard-block .dashboard-data .dashboard-notice {
+    border: 1px dashed #038C23;
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 1.25;
+    padding: 10px 14px;
+    width: 475px;
+}
+
+.dashboard-block .dashboard-data .dashboard-notice b {
+    color: #189C27;
+    display: block;
+    letter-spacing: -0.4px;
+    margin-bottom: -10px;
+}
+
+.dashboard-block .dashboard-data .search-templates {
+    letter-spacing: -0.1px;
+    margin-top: 27px;
+}
+
+.dashboard-block .dashboard-data .search-templates h3 {
+    color: #000;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.dashboard-block .dashboard-data .search-templates ul {
+    list-style: none;
+}
+
+.dashboard-block .dashboard-data .search-templates ul li {
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    line-height: 21px;
+    margin-top: 21px;
+}
+
+.dashboard-block .dashboard-data .search-templates ul li a {
+    color: #1B6090;
+}
+
+.dashboard-block .dashboard-data .search-templates .new-search-template {
+    background: url("../img/btn_add_search.png") repeat scroll 0 0 transparent;
+    display: block;
+    font-size: 18px;
+    height: 34px;
+    margin-top: 30px;
+    text-indent: -99999px;
+    width: 149px;
+}
+
+.dashboard-block .dashboard-data .search-templates .new-search-template:hover {
+    background: url("../img/btn_add_search_hover.png") repeat scroll 0 0 transparent;
+    color: #333333;
+}
+
+/*END .dashboard-block
+------------------------------------------------------------------------------*/

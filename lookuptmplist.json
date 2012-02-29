@@ -1,0 +1,53 @@
+{
+	"items" : {
+		"item1" : {
+			"title" : "Title1",
+			"attr" : {
+				"attr1": "attr1_value",
+				"attr2": "attr2_value",
+				"attr3": "attr3_value"
+			}
+		},
+		"item2" : {
+			"title" : "Title2",
+			"attr" : {
+				"attr1": "attr1_value",
+				"attr2": "attr2_value",
+				"attr3": "attr3_value"
+			}
+		},
+		"item3" : {
+			"title" : "Title3",
+			"attr" : {
+				"attr1": "attr1_value",
+				"attr2": "attr2_value",
+				"attr3": "attr3_value"
+			}
+		},
+		"item4" : {
+			"title" : "Title4",
+			"attr" : {
+				"attr1": "attr1_value",
+				"attr2": "attr2_value",
+				"attr3": "attr3_value"
+			}
+		},
+		"item5" : {
+			"title" : "Title5",
+			"attr" : {
+				"attr1": "attr1_value",
+				"attr2": "attr2_value",
+				"attr3": "attr3_value"
+			}
+		},
+		"item6" : {
+			"title" : "Title6",
+			"attr" : {
+				"attr1": "attr1_value",
+				"attr2": "attr2_value",
+				"attr3": "attr3_value"
+			}
+		}
+	}
+
+}

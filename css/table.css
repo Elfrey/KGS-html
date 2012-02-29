@@ -1,0 +1,410 @@
+/* 
+    Document   : table
+    Created on : Jan 8, 2012, 8:40:57 PM
+    Author     : Elfrey
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.table-data {
+    margin-top: 4px;
+}
+
+.table-data .table-main-actions {
+    margin-top: 22px;
+}
+.green-subscribe-button {
+    background: -moz-linear-gradient(top, rgba(154,186,47,1) 0%, rgba(87,120,30,1) 100%);
+    border: 1px solid #578C12;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 3px 0 #CCCCCC;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 6px;
+    padding: 0 27px;
+    text-decoration: none;
+}
+.green-add-button-with-plus {
+    background: url("../img/data-green-button-bg.png") repeat-x scroll left top #55B322;
+    border: 1px solid #578C12;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 3px 0 #CCCCCC;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    height: 28px;
+    letter-spacing: -0.1px;
+    line-height: 28px;
+    margin-right: 6px;
+    padding: 0 18px 0 38px;
+    text-decoration: none;   
+}
+.gray-add-button-with-plus {
+    background-image: -moz-linear-gradient(bottom, rgb(205,206,209) 0%, rgb(233,233,236) 100%);;
+    border: 1px solid #C3C3C3;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 3px 0 #CCCCCC;
+    color: #7E7E7E;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 6px;
+    padding: 0 18px 0 31px;
+    text-decoration: none;
+}
+
+.green-add-button-with-plus .big-plus {
+    display: block;
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: -26px;
+    position: absolute;
+}
+
+.gray-add-button-with-plus .big-plus {
+    display: block;
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: -21px;
+    position: absolute;
+}
+
+.table-filter-button {
+    background-image: -moz-linear-gradient(bottom, rgb(205,206,209) 0%, rgb(233,233,236) 100%);;
+    border: 1px solid #C3C3C3;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 3px 0 #CCCCCC;
+    color: #7E7E7E;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 6px;
+    padding: 0 15px;
+    text-decoration: none;
+}
+.table-field-settings {
+    background-color: transparent;
+    background-image: url("../img/gear-ico.png"), -moz-linear-gradient(bottom, rgb(205,206,209) 0%, rgb(233,233,236) 100%);;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid #C3C3C3;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 3px 0 #CCCCCC;
+    color: #7E7E7E;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 28px;
+    height: 28px;
+    margin-right: 6px;
+    padding: 0 18px;
+    text-decoration: none;
+}
+
+.table-fields-filter-block {
+    background-color: #FFFFFF;
+    border: 1px solid #AFAFAF;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 3px 0 #CCCCCC;
+    display: none;
+    margin: 5px 0 0;
+    padding: 5px 27px 25px;
+    position: absolute;
+    z-index: 10;
+}
+
+.table-fields-filter-block-top-corner {
+    background: url("../img/hint-top-corner.png") no-repeat scroll left top transparent;
+    height: 12px;
+    margin: -17px 0 0 15px;
+    position: absolute;
+    width: 23px;
+    z-index: 9;
+}
+
+.close-filter-block {
+    background: url("../img/gray-x.gif") no-repeat scroll left top transparent;
+    cursor: pointer;
+    float: right;
+    height: 10px;
+    margin: 8px 0 0;
+    text-indent: -99999px;
+    width: 10px;
+}
+
+.table-fields-filter-block h4 {
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    line-height: 1.25;
+    margin: 14px 0 18px;
+}
+
+.table-fields-filter-block label {
+    color: #484848;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+    margin-left: 25px;
+    margin-top: -18px;
+    position: static;
+}
+
+.table-fields-filter-block-actions {
+    font-size: 14px;
+    line-height: 46px;
+    margin-top: 20px;
+}
+
+.table-fields-filter-block-submit, div.data input.table-fields-filter-block-submit {
+    background-image: -moz-linear-gradient(bottom, rgb(205,206,209) 0%, rgb(233,233,236) 100%);;
+    border: 1px solid #C3C3C3;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 3px 0 #CCCCCC;
+    color: #7E7E7E !important;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 28px;
+    margin-right: 10px;
+    margin-top: 0;
+    padding: 0 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 108px;
+}
+
+.table-fields-filter-block-actions .table-fields-filter-block-cancel {
+    color: #3C608D;
+    margin-left: 5px;
+}
+/* END .table-main-actions
+------------------------------------------------------------------------------*/
+.table-fields-filter-block ul {
+    float: left;
+    list-style: none;
+    margin-right: 18px;
+    width: 210px;
+}
+
+
+.data-table {
+    border-top: 1px solid #CECECE;
+    margin-left: -2px;
+    margin-top: 31px;
+    width: 100%;
+}
+
+.data-table > thead {
+    background: -moz-linear-gradient(top, rgba(233,233,236,1) 0%, rgba(205,206,209,1) 100%);
+    box-shadow: 0 1px 20px #CCCCCC;
+}
+
+.data-table > thead th {
+    /*background: url("../img/data-th-bg.png") repeat-x scroll left top padding-box #CECECE;*/
+    border: 1px solid #ADADAD;
+    color: #2A2A2A;
+    font-size: 14px;
+    height: 53px;
+    letter-spacing: -0.2px;
+    line-height: 14px;
+    padding: 13px 18px 0 12px;
+    text-align: left;
+    vertical-align: top;
+}
+.data-table > thead th.half-th-top {
+    height: 24px;
+    padding: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+.data-table > thead th.half-th-bot {
+    font-size: 12px;
+    height: 27px;
+    line-height: 1;
+    padding: 0px 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+.data-table > tbody > tr {
+    border-bottom: 1px dotted #A8AAAC;
+}
+
+.data-table > tbody td {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    color: #000000;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 15px;
+    vertical-align: top;
+}
+
+.data-table > tbody td a {
+    color: #01366a;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.25;
+    text-decoration: none;
+}
+.data-table > tbody td a:hover {
+    color: #0080ff;
+}
+
+.table-cell-types > tbody tr:hover, .can-expand:hover {
+    background-color: #eff7ff;
+}
+
+.add-info-data-tr {
+    background: url("../img/add-info-data-tr-bg.png") repeat-x scroll 0 0 #FFFFEE;
+    color: #000000;
+    cursor: default;
+    font-size: 12px;
+    line-height: 15px;
+}
+.data-table > tbody tr.add-info-data-tr > td {
+    padding: 17px 49px;
+}
+
+.add-info-table thead tr {
+    border-bottom: 1px solid #ABABA0;
+}
+.add-info-data-tr table th,.add-info-data-tr table td {
+    cursor: default;
+    padding: 0 10px 0 0;
+    text-align: left;
+}
+.add-info-data-tr table td {
+    padding: 5px 5px 5px 0px;
+}
+
+
+/* END table-styles
+-------------------------------------------------------------------------------------------*/
+
+.data-table > tbody > tr.notification-tr {
+    border: medium none;
+}
+
+.data-table > tbody > tr.notification-tr.notification-blue {
+    background-color: #4870A5;
+}
+.data-table > tbody > tr.notification-tr.notification-green {
+    background-color: #1B8C00;
+}
+.data-table > tbody > tr.notification-tr.notification-red {
+    background-color: #6F3838;
+}
+.data-table tbody tr.notification-tr td {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.25;
+    padding: 10px;
+    text-align: center;
+}
+.data-table tbody tr.notification-tr td a {
+    color: #fff;
+    text-decoration: underline;
+}
+.data-table tbody tr.notification-tr td .notification-close {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    float: right;
+    text-decoration: none;
+}
+
+/*END notifications
+--------------------------------------------------------------------------------------------*/
+
+
+.data-table-actions-tr {
+    margin-left: -10px;
+    margin-top: 9px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.data-table > tbody td .data-table-actions-tr a {
+    background: none repeat scroll 0 0 #CCCCCC;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 4px 6px;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+.data-table > tbody .data-table-actions-tr a.data-edit-a {
+    background: none repeat scroll 0 0 #4870A5;
+}
+
+.data-table > tbody .data-table-actions-tr a.data-note-a, .data-table > tbody tr.data-table-actions-tr td a.data-approve-a {
+    background: none repeat scroll 0 0 #4CA548;
+}
+
+.data-table > tbody .data-table-actions-tr a.data-delete-a {
+    background: none repeat scroll 0 0 #A54848;
+}
+
+/* END .data-table-actions-tr
+------------------------------------------------------------------------------*/
+
+.pagination {
+    margin-bottom: 32px;
+    margin-top: 24px;
+}
+
+.pagination a {
+    background: url("../img/pagination-a-bg.png") repeat-x scroll left top #DBDBDD;
+    border: 1px solid #C3C3C3;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 1px 1px 1px #B7CFE6;    
+    color: #7E7E7E;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 5px;
+    padding: 0 12px;
+    text-decoration: none;
+}
+
+.pagination a.current {
+    background: url("../img/pagination-current-bg.png") repeat-x scroll left top #313F4D;
+    border: 1px solid #4E5B68;
+    color: #FFFFFF;
+}
+
+.pagination a.prev-page {
+    background: url("../img/pagination-prev-bg.png") repeat-x scroll left top #DBDBDD;
+    text-indent: -9999px;
+    padding: 0;
+    width: 32px;
+}
+.pagination a.next-page {
+    background: url("../img/pagination-next-bg.png") repeat-x scroll left top #DBDBDD;
+    padding: 0;
+    text-indent: -9999px;
+    width: 32px;
+}
+
+/* END .pagination
+------------------------------------------------------------------------------*/

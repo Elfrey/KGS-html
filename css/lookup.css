@@ -1,0 +1,107 @@
+.lookup-wrapper {
+    background-color: #f4f4f4;
+    border: 1px solid #dadada;
+    border-top: none;
+    display: none;
+    padding: 3px 5px 0 3px;
+    position: absolute;
+    z-index: 1;
+}
+.lookup-wrapper ul, .lookup-wrapper ol {
+    list-style: none;
+}
+.lookup-wrapper ul {
+    background: #fff;
+    border: 1px solid #aaa;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1) inset;
+    height: 187px;
+    overflow: auto;
+    width: 100%;
+}
+.lookup-wrapper ul li:nth-child(even) {
+    background-color: #f1f1f1;
+}
+.lookup-wrapper ul li {
+    color: #484848;
+    overflow: hidden;
+    padding: 6px 11px;
+}
+.lookup-wrapper ul li:hover, .lookup-wrapper ul li.hover {
+    background-color: #0087cf;
+    color: #fff;
+}
+
+.lookup-wrapper ul li h3 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.55;
+}
+.lookup-wrapper ul li p {
+    font-size: 12px;
+    line-height: 1.15;
+    margin: 0px;
+    white-space: nowrap;
+}
+
+.lookup-wrapper ol {
+    padding: 10px 11px;
+}
+.lookup-wrapper ol li {
+    display: inline-block;
+}
+.lookup-action-select {
+    background: -moz-linear-gradient(top, #0087cf 0%, #004f7b 100%);
+    border-width: 1px;
+    -moz-border-top-colors: rgb(42,96,162) rgb(56,159,200);
+    -moz-border-right-colors: rgb(42,96,162);
+    -moz-border-bottom-colors: rgb(42,96,162);
+    -moz-border-left-colors: rgb(42,96,162) rgb(56,159,200);
+    border-radius: 3px;
+    border-style: solid;
+    box-shadow: 2px 1px 3px rgba(32,86,129,0.79);
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 7px 43px;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.lookup-action-add {
+    background: -moz-linear-gradient(top, #89b80f 0%, #467a04 100%);
+    border-width: 1px;
+    -moz-border-top-colors: rgb(135,162,42) rgb(174,200,56);
+    -moz-border-right-colors: rgb(135,162,42);
+    -moz-border-bottom-colors: rgb(135,162,42);
+    -moz-border-left-colors: rgb(135,162,42) rgb(174,200,56);
+    border-radius: 3px;
+    border-style: solid;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left:  13px;
+    padding: 7px 31px 7px 49px;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+}
+.lookup-action-add .big-plus {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: -22px;
+    position: absolute;
+    text-shadow: none;
+}
+.lookup-action-cancel {
+    color: #3c608d;
+    font-size: 14px;
+    border-bottom: 1px solid #3c608d;
+    margin-left: 24px;
+    text-decoration: none;
+}
+.lookup-action-cancel:hover {
+    border-bottom: none;
+}

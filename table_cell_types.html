@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta charset="utf-8" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<title>Реестр имущества</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/jquery.selectBox.css" type="text/css" media="screen, projection" />
+	<!--[if lte IE 6]><link rel="stylesheet" href="css/style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+
+	<script type="text/javascript" src="js/libs/php.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-ui-1.8.16.custom.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.ui.datepicker-ru.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.selectBox.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/libs/additional-methods.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.fixedtable.js"></script>
+
+	<script type="text/javascript" src="js/temp.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<script type="text/javascript" src="js/customSelect.js"></script>
+	<script type="text/javascript" src="js/tableActions.js"></script>
+    </head>
+    <body>
+	<div id="wrapper">
+	    <header id="header">
+		<div class="breadcrumb">
+		    <ul class="breadcrumb-navigation">
+			<li>
+			    <div class="breadcrumb-wrapper">
+				<a href="/dp03/" class="breadcrumb-a" title="Сектор гос. службы">Сектор гос. службы</a>
+				<span title="Открыть меню" class="home-menu-opener"></span>
+				<div class="header-menu">
+				    <a class="header-menu-a" title="Сектор гос. службы" href="/dp03/">Сектор гос. службы</a>
+				    <a class="header-menu-a" title="Гос. реестра ЯНАО" href="/dp04/">Гос. реестра ЯНАО</a>
+				    <a class="header-menu-a" title="Гос. регистрации прав ЯНАО" href="/dp05/">Гос. регистрации прав ЯНАО</a>
+				    <a class="header-menu-a" title="Земельных отношений" href="/dp07/">Земельных отношений</a>
+				    <a class="header-menu-a" title="Землепользования и фонда скважин" href="/dp08/">Землепользования и фонда скважин</a>
+				    <a class="header-menu-a" title="Сектор фонда скважин ТЭК" href="/dp09/">Сектор фонда скважин ТЭК</a>
+				    <a class="header-menu-a" title="Управления и распоряжения объектами жилищного фонда ЯНАО" href="/dp10/">Управления и распоряжения объектами жилищного фонда ЯНАО</a>
+				    <a class="header-menu-a" title="Ведения реестра и учёта объектов жилищного фонда ЯНАО" href="/dp11/">Ведения реестра и учёта объектов жилищного фонда ЯНАО</a>
+				    <a class="header-menu-a" title="Приватизации" href="/dp12/">Приватизации</a>
+				    <a class="header-menu-a" title="Обязательственных отношений и вещных прав" href="/dp13/">Обязательственных отношений и вещных прав</a>
+				    <a class="header-menu-a" title="Мониторинга и разграничения гос. и муниципальной собственности" href="/dp14/">Мониторинга и разграничения гос. и муниципальной собственности</a>
+				    <a class="header-menu-a" title="По работе с ГУП и учреждениями ЯНАО" href="/dp15/">По работе с ГУП и учреждениями ЯНАО</a>
+				    <a class="header-menu-a" title="По работе с АО с участием ЯНАО" href="/dp16/">По работе с АО с участием ЯНАО</a>
+				    <a class="header-menu-a" title="Контрольно-ревизионный" href="/dp17/">Контрольно-ревизионный</a>
+				    <a class="header-menu-a" title="Сектор фонда скважин ТЭК" href="/dp18/">Сектор фонда скважин ТЭК</a>
+				</div>
+			    </div>
+			</li>
+			<li>
+			    <div class="breadcrumb-wrapper">
+				<a href="/dp03/" class="breadcrumb-a" title="Сектор гос. службы">Учет имущества</a>
+			    </div>
+			</li>
+		    </ul>
+		</div>
+		<div class="quickaccess">
+		    <a title="Календарь" class="quickaccess-a quickaccess-calendar" href="#"><span class="quickaccess-calendar-date">6</span> <span class="quickaccess-number">3</span> </a>
+		    <a title="Напоминания" class="quickaccess-a quickaccess-notification" href="#"> <span class="quickaccess-number">1</span> </a>
+		    <a title="Помощь" class="quickaccess-a quickaccess-help" href="#">Помощь</a>
+		    <div class="quickaccess-help-block">
+			<div class="quickaccess-help-block-header">
+			    &nbsp;
+			</div>
+			<div class="quickaccess-help-block-data">
+			    <p>
+				Перед вами обычный справочник объектов.
+				<br>
+				Тут идет какой-нибудь поясняющий текст.
+				<br>
+				Главное убрать его из релиза.
+				<br>
+			    </p>
+			    <p>
+				Узнайте как выполнить типичные действия:
+			    </p>
+			    <ul>
+				<li>
+				    &mdash; <a href="#">Добавление нового элемента</a>
+				</li>
+				<li>
+				    &mdash; <a href="#">Сортировка справочника</a>
+				</li>
+				<li>
+				    &mdash; <a href="#">Поиск данных</a>
+				</li>
+			    </ul>
+			    <a class="more" href="#">Узнать больше ...</a>
+			</div>
+		    </div>
+		</div>
+		<h1 class="header-title">Реестр имущества</h1>
+	    </header><!-- #header-->
+	    <section id="middle">
+		<div id="container">
+		    <div id="content">
+			<div class="table-data">
+			    <table class="data-table table-cell-types">
+				<thead>
+				    <tr>
+                        <th rowspan="2"> Дата проведения </th>
+                        <th rowspan="2"> Наименование АО </th>
+                        <th colspan="2" class="half-th-top"> Размер пакета акций </th>
+                        <th rowspan="2"> Представители государства </th>
+				    </tr>
+				    <tr>
+                        <th class="half-th-bot"> Количество<br /> голосов </th>
+                        <th class="half-th-bot"> % </th>
+				    </tr>
+				</thead>
+				<tbody>
+				    <tr>
+					    <td>
+                            21.02.2011
+					    </td>
+                        <td>
+                            <a href="#">Открытое акционерное общество «Авиационная транспортная компания «Ямал», ОАО «АТК «Ямал»</a>
+                        </td>
+                        <td>
+                            24
+                        </td>
+                        <td>
+                            25%
+                        </td>
+                        <td>
+                            Иванов И.А.
+                        </td>
+				    </tr>
+                    <tr>
+                        <td>
+                            21.02.2011
+                        </td>
+                        <td>
+                            <a href="#">Открытое акционерное общество «Авиационная транспортная компания «Ямал», ОАО «АТК «Ямал»</a>
+                        </td>
+                        <td>
+                            24
+                        </td>
+                        <td>
+                            25%
+                        </td>
+                        <td>
+                            Иванов И.А.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            21.02.2011
+                        </td>
+                        <td>
+                            <a href="#">Открытое акционерное общество «Авиационная транспортная компания «Ямал», ОАО «АТК «Ямал»</a>
+                        </td>
+                        <td>
+                            <div class="green-apply">
+                                ✓
+                            </div>
+                        </td>
+                        <td>
+                            25%
+                        </td>
+                        <td>
+                            Иванов И.А.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            21.02.2011
+                        </td>
+                        <td>
+                            <a href="#">Открытое акционерное общество «Авиационная транспортная компания «Ямал», ОАО «АТК «Ямал»</a>
+                        </td>
+                        <td>
+                            <div class="green-apply">
+                                ✓
+                            </div>
+                        </td>
+                        <td>
+                            25%
+                        </td>
+                        <td>
+                            Иванов И.А.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            21.02.2011
+                        </td>
+                        <td>
+                            <a href="#">Открытое акционерное общество «Авиационная транспортная компания «Ямал», ОАО «АТК «Ямал»</a>
+                        </td>
+                        <td>
+                            <div class="red-x">
+                                ✕
+                            </div>
+                        </td>
+                        <td>
+                            25%
+                        </td>
+                        <td>
+                            <div class="green-apply">
+                                ✓
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            21.02.2011
+                        </td>
+                        <td>
+                            <a href="#">Открытое акционерное общество «Авиационная транспортная компания «Ямал», ОАО «АТК «Ямал»</a>
+                        </td>
+                        <td>
+                            24
+                        </td>
+                        <td>
+                            25%
+                        </td>
+                        <td>
+                            Иванов И.А.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            21.02.2011
+                        </td>
+                        <td>
+                            <a href="#">Открытое акционерное общество «Авиационная транспортная компания «Ямал», ОАО «АТК «Ямал»</a>
+                        </td>
+                        <td>
+                            24
+                        </td>
+                        <td>
+                            25%
+                        </td>
+                        <td>
+                            <div class="report-ico">&nbsp;</div>
+                            <a href=="#">
+                                Отчет номер 1234<br />
+                                от 1.01.1988
+                            </a>
+                        </td>
+                    </tr>
+				</tbody>
+				    
+			    </table>
+			   
+			</div>
+		    </div><!-- #content-->
+		</div><!-- #container-->
+	    </section><!-- #middle-->
+	</div><!-- #wrapper -->
+	<footer id="footer">
+	    <div class="footer_note">
+		У вас <a href="#">1 новое уведомление</a>
+	    </div>
+	    <div class="footer_opt">
+		<a href="#">Настройки</a>
+	    </div>
+	    <div class="footer_dashboard">
+		<a href="/personal/">Личный кабинет</a>
+	    </div>
+	</footer><!-- #footer -->
+    </body>
+</html>

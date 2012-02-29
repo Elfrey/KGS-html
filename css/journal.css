@@ -1,0 +1,11 @@
+.journal-table {
+
+}
+
+.data-table.journal-table > thead th, .data-table.table-notification > thead th {
+    letter-spacing: 0.3px;
+    padding: 19px 8px 0 9px;
+}
+.data-table.table-notification > tbody td {
+    padding: 18px 6px;
+}
