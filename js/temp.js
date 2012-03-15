@@ -12,11 +12,15 @@ $(function(){
     });
 
 
-    /*if (window.location.href.indexOf("element.html")>=0){
+    if (window.location.href.indexOf("element.html")>=0){
+        /*
         $("input, select").each(function(){
             $(this).attr("disabled","disabled");
         });
-    }*/
+        */
+        $("#header").addClass("document-header");
+    }
+    $(".breadcrumb, .quickaccess").remove();
 })
 
 

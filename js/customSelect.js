@@ -1,10 +1,16 @@
+/**
+ *
+ * @description скрипт для оформления селектов
+ */
+
 $(function () {
     var options = {
         selecBoxClass: "selectBox"
     };
 
+
     if ($(".left a#action_2")) {
-        var $div = $("<div />").css({
+        $("<div />").css({
             "display":"block",
             "width":"20px",
             "height":"35px"
@@ -13,7 +19,7 @@ $(function () {
 
     if ($(".form_submit_block")) {
         $(".form_submit_block a").each(function () {
-            var $div = $("<div />").css({
+            $("<div />").css({
                 "display":"table-cell",
                 "padding":"0 10px",
                 "height":"35px"
@@ -26,13 +32,15 @@ $(function () {
 
         var $select = $(this);
 
+       /*
+        @TODO на кой черт это тут..
         if ($("optgroup", $select)) {
             $("optgroup", $select).each(function () {
                 var $optGroup = $(this);
                 //var $newOption = $("<option />").appendTo($optGroup);
             })
         }
-
+        */
         $select.selectBox();
     });
 

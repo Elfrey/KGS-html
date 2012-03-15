@@ -118,7 +118,7 @@ $(function(){
     $(".element-link, .element-document").on("click",function(event){
         if (event.target.tagName.toUpperCase()!="A"){
             var $div = $(this),
-                $a = $div.find("a");
+                $a = $div.find(".element-data > a");
             event.preventDefault();
             $a.click();
             return false;
@@ -136,9 +136,9 @@ $(function(){
     });
 
     $(".element-link-add-button, .element-document-add-button").live("click",function(){
-        var $button = $(this);
-        var $parentDiv = $button.parent();
-        var $input = $button.next();
+        var $button = $(this),
+            $parentDiv = $button.parent(),
+            $input = $button.next();
         $button.hide();
 
         var lookupOptions = {
@@ -168,6 +168,7 @@ $(function(){
             }
         }
         $input.lookup("init",lookupOptions);
+        $parentDiv.removeClass("hover-clean");
         return false;
     });
 

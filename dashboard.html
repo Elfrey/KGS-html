@@ -10,37 +10,11 @@
         <!--[if lte IE 6]><link rel="stylesheet" href="css/style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
     </head>
 
-    <body>
+    <body class="dashboard">
 
         <div id="wrapper">
 
-            <header id="header" class="dashboard-header">
-                <div class="quickaccess">
-
-                    <a title="Календарь" class="quickaccess-a quickaccess-calendar" href="#"><span class="quickaccess-calendar-date">6</span>
-                        <span class="quickaccess-number">3</span>
-                    </a>
-                    <a title="Напоминания" class="quickaccess-a quickaccess-notification" href="#">
-                        <span class="quickaccess-number">1</span>
-                    </a>
-                    <a title="Помощь" class="quickaccess-a quickaccess-help" href="#">Помощь</a>
-                    <div class="quickaccess-help-block">
-                        <div class="quickaccess-help-block-header">&nbsp;</div>
-                        <div class="quickaccess-help-block-data">
-                            <p>Перед вами обычный справочник объектов. <br>
-                                Тут идет какой-нибудь поясняющий текст. <br>
-                                Главное убрать его из релиза.<br>
-                            </p>
-                            <p>Узнайте как выполнить типичные действия:</p>
-                            <ul>
-                                <li>&mdash; <a href="#">Добавление нового элемента</a></li>
-                                <li>&mdash; <a href="#">Сортировка справочника</a></li>
-                                <li>&mdash; <a href="#">Поиск данных</a></li>						
-                            </ul>
-                            <a class="more" href="#">Узнать больше ...</a>
-                        </div>
-                    </div>
-                </div>            
+            <header id="header" class="dashboard-header">   
 
                 <h1 class="header-title">Личная страница</h1>
             </header><!-- #header-->
@@ -53,7 +27,7 @@
                         <!-- @TODO Доделать аннотации у инпута -->
                         <div class="search-block">
                             <input type="text" name="search_input" class="search-big-input" placeholder="Быстрый поиск ..." />
-                            <input type="submit" value="Найти" class="search-submit" />
+                            <input type="submit" value="Найти" class="search-submit-button" />
                             <input type="button" class="ext-search-button" />
                         </div>
 
@@ -62,6 +36,7 @@
                                 <button class="dashboard-big-button" href="#">Учет имущества</button>
                                 <button class="dashboard-big-button" href="#">Предварительный учет имущества</button>
                                 <button class="dashboard-big-button" href="#">Учёт особо ценного движимого имущества</button>
+                                <button class="dashboard-big-button" href="#">Формирование выписок из реестра имущества</button>
                                 <button class="dashboard-big-button" href="#">Учёт балансодержателей</button>
                                 <button class="dashboard-big-button" href="#">Учёт передачи объектов имущества</button>
                                 <button class="dashboard-big-button" href="#">Учёт передачи имущества в казну</button>

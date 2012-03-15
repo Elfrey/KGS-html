@@ -3,7 +3,8 @@
     border: 1px solid #dadada;
     border-top: none;
     display: none;
-    padding: 3px 5px 0 3px;
+    /*padding: 3px 5px 0 3px;*/
+    padding: 0;
     position: absolute;
     z-index: 1;
 }
@@ -12,23 +13,29 @@
 }
 .lookup-wrapper ul {
     background: #fff;
+    /*
     border: 1px solid #aaa;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1) inset;
-    height: 187px;
+    */
+    border-bottom: 1px solid #dddddd;
+    height: 190px;
     overflow: auto;
-    width: 100%;
+    width: -moz-calc(100% - 1px);
 }
+/*
 .lookup-wrapper ul li:nth-child(even) {
     background-color: #f1f1f1;
 }
+*/
 .lookup-wrapper ul li {
     color: #484848;
     overflow: hidden;
     padding: 6px 11px;
 }
 .lookup-wrapper ul li:hover, .lookup-wrapper ul li.hover {
-    background-color: #0087cf;
-    color: #fff;
+    /*background-color: #0087cf;*/
+    /*color: #fff;*/
+    background-color: #f0f7ff;
 }
 
 .lookup-wrapper ul li h3 {
@@ -104,4 +111,9 @@
 }
 .lookup-action-cancel:hover {
     border-bottom: none;
+}
+
+.hover-clean {
+    background-color: transparent !important;
+    border: none !important;
 }

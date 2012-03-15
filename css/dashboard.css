@@ -1,3 +1,22 @@
+body.dashboard #header {
+    letter-spacing: 1.1px;
+    padding: 23px 0 17px 81px;
+    width: -moz-calc(100% - 81px);
+}
+
+body.dashboard #container {
+    float: left;
+    overflow: hidden;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-top: 20px;
+    width: -moz-calc(100% - 80px);
+}
+
+body.dashboard .search-block {
+    margin-top: 26px;
+}
+
 .dashboard-block {
     margin-top: 32px;
 }
@@ -21,7 +40,7 @@
     line-height: 20px;
     margin-bottom: 20px;
     min-height: 84px;
-    padding: 15px 60px;
+    padding: 15px 40px 15px 38px;
     text-align: center;
     text-shadow: 0 2px 3px white;
     vertical-align: middle;

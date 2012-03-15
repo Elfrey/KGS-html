@@ -28,19 +28,22 @@
     border-radius: 15px 15px 15px 15px;
     height: 177px;
     margin: 64px 0;
-    padding: 52px 76px 44px;
+    padding: 52px 75px 44px 80px;
     width: 400px;
 }
-.login-body .login-content .login-form .login-label {
+.login-body .login-content .login-form .form-label {
     color: #FFFFFF;
     display: block;
     float: left;
     font-size: 18px;
     font-weight: normal;
     line-height: 37px;
-    padding-right: 26px;
+    padding-right: 28px;
     text-align: right;
     width: 60px;
+}
+.login-body .login-content .login-form .form-label.password-label {
+    line-height: 44px;
 }
 .login-body .login-content .login-form .login-input {
     border: medium none;
@@ -64,7 +67,7 @@
     font-weight: normal;
     height: 37px;
     line-height: 37px;
-    margin-bottom: 37px;
+    margin-bottom: 33px;
     padding: 0 15px;
     width: 278px;
 }
@@ -78,17 +81,36 @@
     width: 27px;
 }
 .login-body .login-content .login-form .login-submit {
+    /*
     background: url("../img/login-sumbit-bg.png") no-repeat scroll left top transparent;
+    background: url('../img/sprites.png') no-repeat -895px -3px;
     border: medium none;
     color: #FFFFFF;
     cursor: pointer;
     display: block;
     font-size: 14px;
     height: 38px;
+    height: 48px;
     line-height: 38px;
     margin-left: 89px;
     text-align: center;
+    text-indent: -9999px;
     width: 124px;
+    */
+
+    background: url("../img/sprites.png") no-repeat scroll -897px 6px transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    height: 48px;
+    line-height: 38px;
+    margin-left: 88px;
+    text-align: center;
+    text-indent: -11px;
+    width: 134px;
 }
 .login-body .login-content .login-footer {
     color: #B3B3B3;

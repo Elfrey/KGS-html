@@ -173,18 +173,17 @@ $(function(){
             }).appendTo($popupFooter);
 
         $popup.find("input[type=checkbox]").removeAttr("checked");
-        
+
         $("<a />",{
             text: "x",
             href: "#close",
-            class: "popup-close",
-            css: {
-                display: "block",
-                position: "absolute",
-                width: "20px",
-                height: "20px"
-            }
-        }).prependTo($popup);
+            class: "popup-close"
+        })
+            .on("click",function(event){
+                event.preventDefault();
+                $.kPopup.removePopup();
+            })
+            .prependTo($popup);
 
         hideCounter($popup);
 

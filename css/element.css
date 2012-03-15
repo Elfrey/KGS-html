@@ -1,3 +1,14 @@
+#middle.element-middle {
+    margin-top: 26px;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+.element-sub-actions {
+    padding: 0 5px 19px 32px;
+    width: 184px;
+}
 .element-actions {
     background-color: #eeeff1;
     border-radius: 0px 5px 5px 0px;
@@ -54,26 +65,28 @@
 ----------------------------------------------------------------------------------------------*/
 
 .element-fields {
-    margin-top: 19px;
+    margin-bottom: 28px;
     min-width: 740px;
     padding-left: 220px;
 }
 .element-fields > h1 {
-    color: #000;
+    color: #000000;
     font-size: 36px;
-    line-height: 1.25;
+    line-height: 1;
+    margin-bottom: 32px;
 }
 
 .element-field {
-    margin-top: 20px;
+    margin-bottom: 14px;
 }
 .element-field .element-label {
     color: #484848;
     font-size: 14px;
-    line-height: 23px;
+    line-height: 1.65;
 }
 
 .element-field.element-checkbox .element-label {
+    cursor: pointer;
     display: inline-block;
     margin-top: 1px;
 }
@@ -87,7 +100,7 @@
     height: 28px;
     line-height: 28px;
     padding: 0 10px;
-    width: 267px;
+    width: 269px;
 }
 
 .element-field.full-w input[type=text] {
@@ -139,14 +152,14 @@ input[disabled]+.input-icon {
 
 .element-field.element-link, .element-field.element-document {
     border: 1px solid transparent;
-    border-radius: 3px;
+    border-radius: 3px 3px 3px 3px;
     cursor: pointer;
     display: inline-block;
-    margin-top: -1px;
-    margin-left: -19px;
-    min-width: 655px;
     height: 37px;
-    padding: 18px 18px 18px 18px;
+    margin-bottom: 10px;
+    margin-top: -15px;
+    min-width: 655px;
+    padding: 18px;
 }
 /*.element-field.element-link:hover, .element-field.element-document:hover, */.element-field.element-link.hover, .element-field.element-document.hover {
     border-color: rgba(184,216,255,0.81);
@@ -339,15 +352,15 @@ input[disabled]+.input-icon {
 }
 
 .gray-button {
-    border: 1px solid #aeaeae;
-    border-radius: 3px;
-    background: -moz-linear-gradient(top, rgba(233, 233, 236, 0.55) 0%, rgba(205, 206, 209, 0.55) 100%);
-
-    box-shadow: 0 2px 7px -1px rgba(0, 0, 0, 0.24);
+    background: -moz-linear-gradient(center top , rgba(233, 233, 236, 0.55) 0%, rgba(205, 206, 209, 0.55) 100%) repeat scroll 0 0 transparent;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.24);
+    color: #7E7E7E;
     display: inline-block;
-    color: #7e7e7e;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
+    letter-spacing: 0.6px;
     line-height: 20px;
     margin-bottom: 12px;
     padding: 4px 13px;
@@ -462,24 +475,24 @@ input[disabled]+.input-icon {
 }
 
 .attr-link-list {
-    background-color: #fff;
-    border: 1px solid #c4c7cb;
-    border-radius: 5px;
-    /*margin-left: 38px;*/
+    background-color: #FFFFFF;
+    border: 1px solid #C4C7CB;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 34px;
     margin-top: 5px;
-    margin-left: -15px;
+    min-width: 177px;
     position: absolute;
     z-index: 2;
 }
 .attr-link-list:before {
-    background: url('../img/sprites.png') no-repeat -755px 0;
+    background: url("../img/sprites.png") no-repeat scroll -755px 0 transparent;
     content: "";
     display: block;
     height: 8px;
-    width: 14px;
-    position: absolute;
-    margin-left: -moz-calc(50% - 7px);
+    margin-left: 16px;
     margin-top: -8px;
+    position: absolute;
+    width: 14px;
 }
 .attr-link-list ul {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -488,7 +501,7 @@ input[disabled]+.input-icon {
     z-index: 2;
 }
 .attr-link-list ul li {
-    padding: 8px 16px;
+    padding: 3px 16px;
 }
 
 .attr-link-list ul li:first-child {
@@ -496,8 +509,7 @@ input[disabled]+.input-icon {
     margin-top: 8px;
 }
 .attr-link-list ul li:last-child {
-    /*padding-bottom: 16px;*/
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 .attr-link-list ul li a {
     color: #3c608d;
@@ -518,4 +530,25 @@ input[disabled]+.input-icon {
 .attr-link-list ul li:hover a, .attr-link-list ul li:hover a:hover, .attr-link-list ul li a:hover {
     /*color: #000;*/
     color: #fff;
+}
+
+.element-bot-action {
+    background-color: #e7eed5;
+    border-radius: 4px;
+    margin-top: 19px;
+    min-width: 740px;
+    margin-left: 220px;
+    padding: 17px;
+    vertical-align: middle;
+}
+.element-bot-action input {
+    display: inline-block;
+    margin: 0 0 0 16px;
+}
+.element-bot-action input:first-child {
+    margin: 0;
+}
+
+.element-field:last-of-type {
+    margin-bottom: 0px !important;
 }

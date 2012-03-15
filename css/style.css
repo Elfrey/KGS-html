@@ -9,6 +9,7 @@
 @import url('element.css');
 @import url('lookup.css');
 @import url('addTableItems.css');
+@import url('calendar.css');
 
 * {
     margin: 0;

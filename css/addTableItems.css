@@ -166,3 +166,13 @@
 .popup-footer {
     margin: 44px 0 3px 5px;
 }
+.popup-close {
+    background: url("../img/sprites.png") no-repeat scroll -856px 0 transparent;
+    display: block;
+    float: right;
+    height: 18px;
+    margin: -4px;
+    position: relative;
+    text-indent: -99999px;
+    width: 18px;
+}

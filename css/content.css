@@ -7,7 +7,7 @@ Author     :   Elfrey
 -----------------------------------------------------------------------------*/
 #middle {
     width: 100%;
-    padding: 0 0 93px;
+    /*padding: 0 0 93px;*/
     height: 1%;
     position: relative;
 }
@@ -27,7 +27,6 @@ Author     :   Elfrey
 #container {
     float: left;
     overflow: hidden;
-    padding-bottom: 50px;
     padding-left: 36px;
     width: -moz-calc(100% - 80px);
 }

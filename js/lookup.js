@@ -61,8 +61,8 @@ if (jQuery) (function ($) {
 		listUrl: "", //Адрес для получения списка
 		listReqType: "html", //тип ответа, html/text отдаст: <ul><li></li></ul>, json отдаст {item:{title: "title",attr_1:"attr_1",attr_n:"attr_n"},{title: "title",attr_1:"attr_1",attr_n:"attr_n"}}
         inputMarginTop: 4,
-		wrapperLeftHorizontalPadding: 3, //левый паддинг для враппера, для установки ширины
-		wrapperRightHorizontalPadding: 5, //правый паддинг для враппера, для установки ширины
+		wrapperLeftHorizontalPadding: 0, //левый паддинг для враппера, для установки ширины
+		wrapperRightHorizontalPadding: 0, //правый паддинг для враппера, для установки ширины
 		borderSize: 1, //размер бордера, для установки ширины
 		parentClass: "element-field", //Класс родителя,, чтобы подсветить
 		parentHoverClass: "hover-clean", //Класс для подсветки родителя
@@ -88,12 +88,21 @@ if (jQuery) (function ($) {
 			var options = $.extend({}, defaults, params),
 				$input = $(input);
 
+            console.log(options);
+
 			if (options.guid==0){
 				options.guid = $.guid++;
 			}
 
 			var $parent = $input.parents("."+options.parentClass).addClass(options.parentHoverClass);
 			$parent.data("guid",options.guid);
+
+            $(".lookup-wrapper").each(function(){
+                var $wrapper = $(this);
+                if ($wrapper.data("guid")!=options.guid){
+                    $wrapper.remove();
+                }
+            })
 
 			$input.css({
 				marginTop: options.inputMarginTop+"px",
@@ -175,12 +184,14 @@ if (jQuery) (function ($) {
 			$(document).bind("click.lookup"+options.guid,function(e){
 				prepareClose(options, e);
 			});
-			$("ul li",options.wrapperItem.get(0)).live("click.lookup"+options.guid,function(e){
-				checkItem(options,e,this);
-			}).live("dblclick.lookup"+options.guid,function(e){
-					checkItem(options,e,this);
-					applySelected(options);
-			});
+			$("ul li",options.wrapperItem.get(0))
+                .on("click.lookup"+options.guid,function(e){
+                    checkItem(options,e,this);
+                })
+                .on("dblclick.lookup"+options.guid,function(e){
+                    checkItem(options,e,this);
+                    applySelected(options);
+                });
 
 			$(".lookup-action-select",options.wrapperItem.get(0)).live("click.lookup"+options.guid,function(){
 				applySelected(options);
@@ -235,7 +246,9 @@ if (jQuery) (function ($) {
 		};
 
 		var applySelected = function(options){
-			var $checkedLi = $("ul li[checked]",options.wrapperItem.get(0))
+			var $checkedLi = $("ul li[checked]",options.wrapperItem.get(0));
+            console.log("test2");
+            console.log(options);
 				if ($checkedLi.length==1){
 					options.input.val($checkedLi.find("h3").text());
 					options.button.text($checkedLi.find("h3").text());
@@ -254,9 +267,6 @@ if (jQuery) (function ($) {
 		switch( method ) {
 			default:
 				$(this).each( function() {
-
-                    $(".lookup-wrapper").remove();
-
 					init(this,params);
 				});
 				break;
