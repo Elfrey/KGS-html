@@ -1,8 +1,23 @@
 $(function() {
 
     var tableActionsOptions = {
-        showSingleAction: true
-    };
+            showSingleAction: true
+        },
+        tableActionListTemplate = '<script id="lookUpTmpl" type="text/x-jquery-tmpl">' +
+            '<div class="table-actions">' +
+            '<ul>' +
+            '{{each actions}}' +
+            '{{if $value.breaker}}' +
+            '<li class="breaker"></li>' +
+            '{{else}}' +
+            '<li><a href="${$value.href}"{{if $value.isDefault}} class="default"{{/if}}>${$value.title}</a></li>' +
+            '{{/if}}' +
+            '{{/each}}' +
+            '</ul>' +
+            '</div>' +
+            '</script>';
+
+
 
     /***************************************************************************
      * переход по селектам data-actions
@@ -21,7 +36,36 @@ $(function() {
     /***************************************************************************
      * Работа с кнопками в ".data-table"
      **************************************************************************/
-    if ($(".data-table")) {
+    if ($(".data-table").length>0){
+        var $dataTable = $(".data-table tbody");
+        $dataTable.children("tr").each(function(){
+            var $tr = $(this),
+                actionId = $tr.data("action-id");
+
+            if (tableActionJSON[actionId] != undefined){
+                $(tableActionListTemplate).tmpl(tableActionJSON[actionId]).attr("data-action-id",actionId).appendTo("body");
+            }
+        })
+        .on("contextmenu",function(event){
+                var $tr = $(this),
+                    actionId = $tr.data("action-id");
+                $(".table-actions[data-action-id='"+actionId+"']").css({
+                    left: event.clientX+5,
+                    top: event.clientY+5
+                }).show();
+                $(document).on("click.table-actions",function(event){
+                    if (!$(event.target).parents(".table-actions").length){
+                        $(".table-actions").hide();
+                        $(document).off("click.table-actions");
+                    }
+                })
+                event.preventDefault();
+
+            });
+    }
+
+    /*
+    if ($(".data-table") && false) {
         var $dataTable = $(".data-table tbody");
         var tdCount = $dataTable.find("tr:first td").length;
         $dataTable
@@ -97,10 +141,7 @@ $(function() {
         $(".data-table-actions-tr").live("mouseenter", function() {
             $(this).addClass("opened");
             $(this).css("visibility", "visible");
-        })/*
-         * .live("mouseleave",function(){ $(this).removeClass("opened");
-         * $(this).css("visibility","hidden"); })
-         */
+        })
 
         $(".data-table-main-tr").live(
             "mouseenter",
@@ -124,6 +165,7 @@ $(function() {
             }
         })
     }
+    */
     /***************************************************************************
      * END Работа с кнопками в ".data-table"
      **************************************************************************/
@@ -183,3 +225,181 @@ function showNotification(message, classIndex, $table) {
         "notification-close").text("x").appendTo($noteTd);
     $noteTr.prependTo($table.find("tbody"));
 }
+
+
+/**
+ * @description JSON объект с действиями над строками таблицы(просмотр, удаление, редактирование)
+ * Первый ключ = атрибут строки data-action-id
+ *
+ */
+var tableActionJSON = {
+    0: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    1: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    2: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    3: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    4: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    7: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    }
+
+};

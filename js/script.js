@@ -150,7 +150,7 @@ function plural_str(i, str1, str2, str3){
 }
 /*
 '../libs/additional-methods.min.js',
-'../libs/jquery-1.7.1.min.js',
+'../libs/jquery-1.7.2.js',
 '../libs/jquery-ui-1.8.16.custom.min.js',
 '../libs/jquery.fixedtable.js',
 '../libs/jquery.jscrollpane.min.js',
@@ -277,4 +277,30 @@ function isCapslock(e){
 
     return false;
 
+}
+
+function makeFloat (value){
+    return parseFloat(value
+    .split(" ").join("")
+    .split(",").join("."));
+}
+
+
+function formatFloat(_number,_decimal,_separator, _decSep) {
+    var decimal=(typeof(_decimal)!='undefined')?_decimal:2;
+
+    var separator=(typeof(_separator)!='undefined')?_separator:'';
+
+    var r=parseFloat(_number)
+
+    var exp10=Math.pow(10,decimal);
+    r=Math.round(r*exp10)/exp10;
+
+    rr=Number(r).toFixed(decimal).toString().split('.');
+
+
+    b=rr[0].replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g,"\$1"+separator);
+    r=b+'.'+rr[1];
+
+    return r.split(".").join(_decSep);
 }

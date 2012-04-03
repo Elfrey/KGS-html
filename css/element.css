@@ -31,36 +31,20 @@ input[type=checkbox] {
     text-decoration: none;
 }
 
-.elemet-left-apply-button {
-    background: -moz-linear-gradient(top, #8bba0d 0%, #447a04 100%);
-    border: 1px solid #627b20;
-    border-radius: 2px;
-    box-shadow: 0px 3px 3px #558205;
-    color: #fff;
-    display: block;
+
+.left-apply-green-button {
     font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    margin-top: 23px;
-    padding: 7px 7px;
-    text-align: center;
-    width: 168px;
-}
-.elemet-left-cancel-button {
-    background: -moz-linear-gradient(top, #ebedef 0%, #dddee0 100%);
-    border: 1px solid #bfbfbf;
-    border-radius: 2px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-    color: #7e7e7e;
-    font-size:  14px;
-    font-weight: 700;
-    line-height: 20px;
-    margin: 13px 0 0 6px;
-    padding: 5px;
-    text-align: center;
-    width: 153px;
+    margin-top: 21px;
+    padding: 10px 25px;
+    width: 116px;
 }
 
+.left-cancel-gray-button {
+    margin-left: 8px;
+    margin-top: 10px;
+    padding: 6px 3px 5px;
+    width: 143px;
+}
 /* END left block
 ----------------------------------------------------------------------------------------------*/
 
@@ -88,7 +72,7 @@ input[type=checkbox] {
 .element-field.element-checkbox .element-label {
     cursor: pointer;
     display: inline-block;
-    margin-top: 1px;
+    margin-top: 6px;
 }
 .element-field .elenemt-data {
 }
@@ -137,6 +121,7 @@ input[type=checkbox] {
 input[disabled]+.input-icon {
     background: transparent;
     border: none;
+    box-shadow: none;
 }
 .input-icon.input-date:before {
     background: url('../img/sprites.png') no-repeat -413px 0;
@@ -172,12 +157,12 @@ input[disabled]+.input-icon {
  * Основной фон иконки
  */
 .element-link-icon {
-    background: url('../img/sprites.png') no-repeat -440px 0;
+    background: url('../img/sprites.png') no-repeat -1207px 0;
     display: block;
     float: left;
-    height: 31px;
+    height: 40px;
     margin-right: 11px;
-    width: 32px;
+    width: 39px;
 }
 
 /*
@@ -188,14 +173,14 @@ input[disabled]+.input-icon {
  * Иконка внутри - человек
  */
 .element-link-icon.element-link-icon-person:before {
-    background: url("../img/sprites.png") no-repeat scroll -487px 0 transparent;
+    background: url("../img/sprites.png") no-repeat scroll -1179px 0 transparent;
     content: "";
     display: block;
-    height: 10px;
-    margin-left: 12px;
-    margin-top: 10px;
+    height: 14px;
+    margin-left: 13px;
+    margin-top: 13px;
     position: absolute;
-    width: 9px;
+    width: 15px;
 }
 
 /*
@@ -206,8 +191,8 @@ input[disabled]+.input-icon {
     content: "";
     display: block;
     height: 16px;
-    margin-left: 9px;
-    margin-top: 7px;
+    margin-left: 12px;
+    margin-top: 12px;
     position: absolute;
     width: 16px;
 }
@@ -248,8 +233,8 @@ input[disabled]+.input-icon {
     content: "";
     display: block;
     height: 11px;
-    margin-left: 20px;
-    margin-top: 24px;
+    margin-left: 28px;
+    margin-top: 34px;
     width: 15px;
 }
 /*
@@ -260,8 +245,8 @@ input[disabled]+.input-icon {
     content: "";
     display: block;
     height: 11px;
-    margin-left: 20px;
-    margin-top: 24px;
+    margin-left: 28px;
+    margin-top: 34px;
     width: 15px;
 }
 
@@ -312,7 +297,7 @@ input[disabled]+.input-icon {
     display: block;
     float: left;
     height: 30px;
-    margin-right: 11px;
+    margin-right: 24px;
     width: 27px;
 }
 
@@ -351,24 +336,26 @@ input[disabled]+.input-icon {
     border-bottom: none;
 }
 
-.gray-button {
-    background: -moz-linear-gradient(center top , rgba(233, 233, 236, 0.55) 0%, rgba(205, 206, 209, 0.55) 100%) repeat scroll 0 0 transparent;
-    border: 1px solid rgb(211, 211, 211);
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.24);
-    color: #7E7E7E;
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    line-height: 20px;
+.add-items-gray-button {
     margin-bottom: 12px;
-    padding: 4px 13px;
-    text-decoration: none;
-    vertical-align: middle;
+    padding: 6px 3px 5px;
+    width: 186px;
 }
-.gray-button:hover {
+.add-items-gray-button:hover {
     color: #7e7e7e;
+}
+.add-items-gray-button:active {
+    -moz-border-top-colors: none;
+    -moz-border-image: none;
+    -moz-border-right-colors: #B5B5B5 #FCFCFD;
+    -moz-border-left-colors: none;
+    -moz-border-bottom-colors: #C3C3C3 #FCFCFD;
+    background: -moz-linear-gradient(center bottom , #EFEFF1, #DBDBDD) repeat scroll 0 0 transparent;
+    border-color: #B5B5B5 #000000 #000000 #A9A9A9;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+    box-shadow: none;
 }
 
 /*Element table
@@ -414,7 +401,7 @@ input[disabled]+.input-icon {
     border-bottom: 1px dotted #acacac;
     color: #000000;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.25;
     padding: 13px;
 }
@@ -541,14 +528,23 @@ input[disabled]+.input-icon {
     padding: 17px;
     vertical-align: middle;
 }
-.element-bot-action input {
-    display: inline-block;
-    margin: 0 0 0 16px;
+
+.bottom-apply-green-button {
+    font-size: 16px;
+    padding: 10px 25px;
+    width: 116px;
 }
-.element-bot-action input:first-child {
-    margin: 0;
+
+.bottom-cancel-gray-button {
+    margin-left: 18px;
+    padding: 6px 3px 5px;
+    width: 143px;
 }
 
 .element-field:last-of-type {
     margin-bottom: 0px !important;
+}
+
+.element-data .selectBox {
+    width: 292px !important
 }

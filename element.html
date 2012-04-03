@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen, projection" />
 
         <script type="text/javascript" src="js/libs/php.js"></script>
-        <script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-1.7.2.js"></script>
         <script type="text/javascript" src="js/libs/jquery-ui-1.8.16.custom.min.js"></script>
         <script type="text/javascript" src="js/libs/jquery.ui.datepicker-ru.js"></script>
         <script type="text/javascript" src="js/libs/jquery-ui-timepicker-addon.js"></script>
@@ -86,9 +86,9 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <input type="button" class="elemet-left-apply-button" value="Сохранить" />
-                                <input type="button" class="elemet-left-cancel-button" value="Отменить" />
-
+                                <a type="button" class="left-apply-green-button green-button" value="Сохранить">Сохранить</a>
+                                <a type="button" class="left-cancel-gray-button gray-button" value="Отменить">Отменить</a>
+	                            <br class="clear" />
                             </div>
                         </div>
                         <div class="element-fields">
@@ -149,7 +149,7 @@
 
                                 <div class="element-data">
 	                                <!-- @TODO доделать аякс методы добавления, а хотя может и не надо, тупо в value записать и пусть передается в обработчик. Надо будет решить. -->
-                                    <select class="element-select select-editable" name="field_7_0" id="field_7_0">
+                                    <select class="selectBox select-editable" name="field_7_0" id="field_7_0">
                                         <optgroup label="1">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -167,7 +167,7 @@
 		                        <label class="element-label" for="field_7">Протяженность <span class="element-dash">-</span> км</label>
 
 		                        <div class="element-data">
-			                        <select class="element-select" name="field_7" id="field_7">
+			                        <select class="selectBox" name="field_7" id="field_7">
 				                        <optgroup label="1">
 					                        <option value="1">1</option>
 					                        <option value="2">2</option>
@@ -238,7 +238,7 @@
 	                        <h1>Другие документы</h1>
 
 	                        <div class="element-field element-table">
-		                        <a class="element-table-add-button gray-button" href="#">Прикрепить документы</a>
+		                        <a class="element-table-add-button add-items-gray-button gray-button" href="#">Прикрепить документы</a>
 		                        <div class=table-wrapper>
 			                        <table class="element-table-data" cellspacing="0" cellpadding="0" >
 				                        <thead>
@@ -259,8 +259,12 @@
 					                        <td>A2:42:B4А:8:23:19: К3:АВ:32:21</td>
 					                        <td>Тюмень,<br />
 						                        ул. Ленина, 12</td>
-					                        <td>132,2 <span class="small-gray-measure-unit">м2</span></td>
-					                        <td>7 890 921,33 <icon class="small-gray-rouble"></icon></td>
+					                        <td class="calculated" data-summary-field="general" data-value="132.2">
+						                        <span>132,2</span> <small class="small-gray-measure-unit">м2</small>
+					                        </td>
+					                        <td class="calculated" data-summary-field="cost" data-value="7890921.33">
+						                        <span>7 890 921,33</span> <icon class="small-gray-rouble"></icon>
+					                        </td>
 				                        </tr>
 				                        <tr>
 					                        <td>
@@ -270,8 +274,12 @@
 					                        <td>А8:23:19:К3:АВ:32: 21:A2:42:B4</td>
 					                        <td>Тюмень,<br />
 						                        ул. Pеспублики, 48</td>
-					                        <td>512 <span class="small-gray-measure-unit">м2</span></td>
-					                        <td>12 020 421 <icon class="small-gray-rouble"></icon></td>
+					                        <td class="calculated" data-summary-field="general" data-value="512">
+						                        <span>512</span> <small class="small-gray-measure-unit">м2</small>
+					                        </td>
+					                        <td class="calculated" data-summary-field="cost" data-value="12020421">
+						                        <span>12 020 421</span> <icon class="small-gray-rouble"></icon>
+					                        </td>
 				                        </tr>
 				                        <tr>
 					                        <td>
@@ -281,15 +289,23 @@
 					                        <td>A2:42:B4А:8:23:19: К3:АВ:32:21</td>
 					                        <td>Тюмень,<br />
 						                        ул. Ленина, 12</td>
-					                        <td>132,2 <span class="small-gray-measure-unit">м2</span></td>
-					                        <td>7 890 921,33 <icon class="small-gray-rouble"></icon></td>
+					                        <td class="calculated" data-summary-field="general" data-value="132.2">
+						                        <span>132,2</span> <small class="small-gray-measure-unit">м2</small>
+					                        </td>
+					                        <td class="calculated" data-summary-field="cost" data-value="7890921.33">
+						                        <span>7 890 921,33</span> <icon class="small-gray-rouble"></icon>
+					                        </td>
 				                        </tr>
 				                        </tbody>
 				                        <tfoot>
 				                        <tr>
 					                        <td colspan="3">Всего: 3 записи</td>
-					                        <td class="calculated">776,4 <span class="small-gray-measure-unit">м2</span></td>
-					                        <td class="calculated">27 802 263,66 <icon class="small-bold-gray-rouble"></icon></td>
+					                        <td class="calculated" data-summary-for="general">
+						                        <span>776,4</span> <small class="small-gray-measure-unit">м2</small>
+					                        </td>
+					                        <td class="calculated" data-summary-for="cost">
+						                        <span>27 802 263,66</span> <icon class="small-bold-gray-rouble"></icon>
+					                        </td>
 				                        </tr>
 				                        </tfoot>
 			                        </table>
@@ -311,7 +327,7 @@
 	                        <h1>Другие документы</h1>
 
 	                        <div class="element-field element-table">
-		                        <a class="element-table-add-button gray-button" href="#">Прикрепить документы</a>
+		                        <a class="element-table-add-button add-items-gray-button gray-button" href="#">Прикрепить документы</a>
 		                        <div class=table-wrapper>
 			                        <table class="element-table-data" cellspacing="0" cellpadding="0" >
 				                        <thead>
@@ -332,8 +348,12 @@
 					                        <td>A2:42:B4А:8:23:19: К3:АВ:32:21</td>
 					                        <td>Тюмень,<br />
 						                        ул. Ленина, 12</td>
-					                        <td>132,2 <span class="small-gray-measure-unit">м2</span></td>
-					                        <td>7 890 921,33 <icon class="small-gray-rouble"></icon></td>
+					                        <td class="calculated" data-summary-field="general" data-value="132.2">
+						                        <span>132,2</span> <small class="small-gray-measure-unit">м2</small>
+					                        </td>
+					                        <td class="calculated" data-summary-field="cost" data-value="7890921.33">
+						                        <span>7 890 921,33</span> <icon class="small-gray-rouble"></icon>
+					                        </td>
 				                        </tr>
 				                        <tr>
 					                        <td>
@@ -343,8 +363,12 @@
 					                        <td>А8:23:19:К3:АВ:32: 21:A2:42:B4</td>
 					                        <td>Тюмень,<br />
 						                        ул. Pеспублики, 48</td>
-					                        <td>512 <span class="small-gray-measure-unit">м2</span></td>
-					                        <td>12 020 421 <icon class="small-gray-rouble"></icon></td>
+					                        <td class="calculated" data-summary-field="general" data-value="512">
+						                        <span>512</span> <small class="small-gray-measure-unit">м2</small>
+					                        </td>
+					                        <td class="calculated" data-summary-field="cost" data-value="12020421">
+						                        <span>12 020 421</span> <icon class="small-gray-rouble"></icon>
+					                        </td>
 				                        </tr>
 				                        <tr>
 					                        <td>
@@ -354,15 +378,23 @@
 					                        <td>A2:42:B4А:8:23:19: К3:АВ:32:21</td>
 					                        <td>Тюмень,<br />
 						                        ул. Ленина, 12</td>
-					                        <td>132,2 <span class="small-gray-measure-unit">м2</span></td>
-					                        <td>7 890 921,33 <icon class="small-gray-rouble"></icon></td>
+					                        <td class="calculated" data-summary-field="general" data-value="132.2">
+						                        <span>132,2</span> <small class="small-gray-measure-unit">м2</small>
+					                        </td>
+					                        <td class="calculated" data-summary-field="cost" data-value="7890921.33">
+						                        <span>7 890 921,33</span> <icon class="small-gray-rouble"></icon>
+					                        </td>
 				                        </tr>
 				                        </tbody>
 				                        <tfoot>
 				                        <tr>
 					                        <td colspan="3">Всего: 3 записи</td>
-					                        <td class="calculated">776,4 <span class="small-gray-measure-unit">м2</span></td>
-					                        <td class="calculated">27 802 263,66 <icon class="small-bold-gray-rouble"></icon></td>
+					                        <td class="calculated" data-summary-for="general">
+						                        <span>776,4</span> <small class="small-gray-measure-unit">м2</small>
+					                        </td>
+					                        <td class="calculated" data-summary-for="cost">
+						                        <span>27 802 263,66</span> <icon class="small-bold-gray-rouble"></icon>
+					                        </td>
 				                        </tr>
 				                        </tfoot>
 			                        </table>
@@ -380,24 +412,13 @@
                             <br class="clear" />
                         </div>
 						<div class="element-bot-action">
-							<input type="button" value="Сохранить" class="elemet-left-apply-button" />
-							<input type="button" value="Отменить" class="elemet-left-cancel-button" />
+							<a class="bottom-apply-green-button green-button">Сохранить</a>
+							<a class="bottom-cancel-gray-button gray-button">Отменить</a>
 						</div>
 					</div><!-- #content-->
 				</div><!-- #container-->
 			</section><!-- #middle-->
 		</div><!-- #wrapper -->
-		<footer id="footer">
-			<div class="footer_note">
-				У вас <a href="#">1 новое уведомление</a>
-			</div>
-			<div class="footer_opt">
-				<a href="#">Настройки</a>
-			</div>
-			<div class="footer_dashboard">
-				<a href="/personal/">Личный кабинет</a>
-			</div>
-		</footer><!-- #footer -->
 		<someloadeddata>
 			<ul id="lookup_for_field_8">
 				<li>

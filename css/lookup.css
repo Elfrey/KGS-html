@@ -115,5 +115,5 @@
 
 .hover-clean {
     background-color: transparent !important;
-    border: none !important;
+    border: 1px solid transparent!important;
 }

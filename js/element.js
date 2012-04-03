@@ -13,9 +13,8 @@ $(function(){
 
 
     function makeAttrLinkList($button){
-        var buttonClass = $button.attr("class");
-
-        var $attrLinkListTmpl = $("#attrLinkListTmpl").tmpl([{
+        var buttonClass = $button.attr("class"),
+            $attrLinkListTmpl = $("#attrLinkListTmpl").tmpl([{
             "changeItemTitle": attrLinkChangeItemTitle[buttonClass]
         }]).hide().insertAfter($button);
     }
@@ -24,27 +23,78 @@ $(function(){
 	 * Добавление и обработка кнопки удаления записи
 	 */
 	$(".element-table-data tbody tr").each(function(){
-		var $tr = $(this);
-		var $firstTd = $("td:first", $tr);
-		var firstTdHeight = $firstTd.height();
-		var $delButton = $(".element-table-delete-row-button",$firstTd);
+		var $tr = $(this),
+            $firstTd = $("td:first", $tr),
+            firstTdHeight = $firstTd.height(),
+            $delButton = $(".element-table-delete-row-button",$firstTd);
+
 		$delButton.height(firstTdHeight )
 	});
 	$(".element-table-delete-row-button").live("click",function(){
-		var $delButton = $(this);
-		var $tr = $delButton.parent().parent();
+		var $delButton = $(this),
+            $tr = $delButton.parents("tr"),
+            $table = $tr.parents("table"),
+            $tbody = $table.find("tbody"),
+            $tfoot = $table.find("tfoot"),
+            $summaryField = $tfoot.find(".calculated"),
+            $toCalculateFields = $tr.find(".calculated"),
+            valuesToAnimate = {}; // {field: [from, to]}
+
+
+
 
 		/*Удаление записи
 		* $.post("ult_to_delete")
 		*/
 
-        /*
-         * @TODO тут еще должна быть функция пересчета итоговых данных под таблицей. Сейчас идет пересчет только по видимой области
-         */
 
-		$tr.children("td").each(function() {
-			$(this).wrapInner("<div />").children("div").slideUp(function() {$tr.remove();})
-		});
+
+        var $oldTr = $tr.clone(),
+            tdWidths = [],
+            colSpan = $tr.children("td").size();
+
+        $tr.children("td").each(function(){
+            tdWidths.push($(this).width());
+        });
+
+
+        $tr.empty().append("<td colspan='"+colSpan+"' style='padding: 0px; border: none' />")
+            .children("td").append("<div><table></table></div>")
+            .find("table").html($oldTr)
+            .find("td").each(function(index){
+                $(this).width(tdWidths[index])
+            });
+
+        $tr.find("td div").animate({
+                height: "toggle"
+            },
+            {
+                step: function (now, fx){
+                    var $div = $(this),
+                        tmpValue;
+
+                    $toCalculateFields.each(function(){
+                        var $td = $(this),
+                            summaryField = $td.data("summary-field"),
+                            value = $td.data("value") || makeFloat($td.find("span").text()),
+                            $currentSummaryField = $summaryField.filter("[data-summary-for='"+summaryField+"']"),
+                            summaryValue =  makeFloat($currentSummaryField.find("span").text());
+
+                        if (valuesToAnimate[summaryField] == undefined){
+                            valuesToAnimate[summaryField] = summaryValue;
+                        }
+
+                        summaryValue = valuesToAnimate[summaryField] - (value * fx.pos);
+                        $currentSummaryField.find("span").text(formatFloat(summaryValue, 1, " "));
+                    });
+
+                },
+                duration: 1000,
+                complete: function(){
+                    $(this).parents("tr").hide();
+                }
+            });
+
 		return false;
 	});
 
@@ -54,15 +104,16 @@ $(function(){
 	 */
 	var iconStyleCounter = 0;
 	$(".element-document-add-button, .element-link-add-button").each(function(){
-		var selector = "."+$(this).attr("class")+".style-"+iconStyleCounter;
+		var $button = $(this),
+            selector = "."+$button.attr("class")+".style-"+iconStyleCounter;
 		$(this).css({
 			"display": "inline-block",
 			"white-space": "nowrap"
 		});
 
-		var thisWidth = $(this).width()+5;
+		var thisWidth = $button.width()+5;
 
-		$(this)
+        $button
 			/*.css({
 				"display": "inline",
 				"white-space": "normal"
@@ -86,9 +137,8 @@ $(function(){
 				'<li><a href="#" class="attr-link-delete-item">Убрать</a></li>' +
 			'</ul></div>' +
 		'</script>'
-	).appendTo("body");
-
-	var attrLinkChangeItemTitle = {
+	).appendTo("body"),
+        attrLinkChangeItemTitle = {
 		"element-link-edit-button": "Выбрать другое",
 		"element-document-edit-button": "Прикрепить другой",
 	};
@@ -96,14 +146,7 @@ $(function(){
 	$(".element-document-edit-button, .element-link-edit-button")
 		.each(function(){
 			var $button = $(this);
-            /*
-			var buttonClass = $button.attr("class");
-            console.log($button);
 
-			var $attrLinkListTmpl = $("#attrLinkListTmpl").tmpl([{
-				"changeItemTitle": attrLinkChangeItemTitle[buttonClass]
-			}]).hide().insertAfter($button);
-			*/
             makeAttrLinkList($button);
 
 		})
@@ -176,4 +219,22 @@ $(function(){
 
         return false;
     };
+
+    function animateDigids(currentValue, startValue, $field){
+        var action = (startValue <= currentValue)?"inc":"dec";
+/*
+        if (startValue != currentValue){
+            startValue = (action == "dec")? ++currentValue : --currentValue;
+            setTimeout(function(){
+                animateDigids(currentValue, startValue, $field);
+                $field.children("span").text(currentValue);
+            },1000);
+        }else{
+            $field.children("span").text(currentValue);
+        }*/
+    }
+
+
 });
+
+

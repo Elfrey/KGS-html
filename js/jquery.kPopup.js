@@ -12,28 +12,44 @@
  * close - method for checking capabilities for closing popup
  * removePopup - remove popup and overlay, if it's active
  *
+ * @TODO Надо доделать плагин, чтобы при вызове плагина создавался новый экземпляр, а при закрытии закрывался только последний
+ *
  */
-
+if (typeof Object.create !== 'function'){
+    Object.create = function (o) {
+        function F() {}
+        F.prototype = o;
+        return new F();
+    };
+}
 
 
 if (jQuery) (function ($) {
-	var P = $.kPopup = function () {
+
+
+	/*var P = $.kPopup = function () {
             P.init.apply( this, arguments );
         };
+    */
+    var P = $.kPopup = function(){
+
+    };
 
     $.extend(P,{
 
         defaults: {
+            autoOpen: false,
             active:false, //Activity flag
             container: "body", //Popup container
             after: true, //Adding popup to end of container
-            item:"<div />", //ite,
+            item:"<div />", //item,
             newItem: false, //item clone for work
             openerClass:"popup-opener", //open button class
             class:"popup", //Popup class
             itemData:"", //html content of container
             itemUrl: false, //ajax link content of countainer
             useOverlay: false, //use overlay
+            hideOnDocumentClick: true,
             overlay: false, //@TODO remove that
             guid: 0, //GUID
             button: false, //opener button
@@ -73,7 +89,6 @@ if (jQuery) (function ($) {
                 })
 
             }
-
 
             if (!P.options.button.hasClass(P.options.openerClass)){
                 P.options.button.addClass(P.options.openerClass)
@@ -144,13 +159,24 @@ if (jQuery) (function ($) {
             }else{
                 P.options.newItem.prependTo(P.options.container);
             }
+            var top,left;
 
-            var marginLeft = ($(document).width()-P.options.newItem.width())/2;
+            if (P.options.container == "body"){
+                left = ($(document).width()-P.options.newItem.width())/2;
+                top = $(window).scrollTop()+50;
+            }else{
+                left = ($(P.options.container).width()-P.options.newItem.width())/2;
+                top = 50;
+            }
+
+            if (P.options.styles.top){
+                top = P.options.styles.top;
+            }
 
             P.options.newItem
                 .css({
-                top: $(window).scrollTop()+50,
-                left: marginLeft+"px"
+                top: top,
+                left: left
             })
                 .show();
 
@@ -203,8 +229,7 @@ if (jQuery) (function ($) {
         },
 
         close: function(e){
-            if (
-                P.options.active
+            if (P.options.active
                     && $(e.target).data("guid") != P.options.guid
                     && $(e.target).parents("." + P.options.class).data("guid") != P.options.guid
                 ) {
@@ -215,25 +240,64 @@ if (jQuery) (function ($) {
         removePopup: function(){
             P.options.newItem.hide().remove();
             P.options.active = false;
-            P.options.overlay.remove();
-            P.options.overlay = false;
-            P.options.popupOverlayActive = false;
-            $(document).unbind(".lookup"+P.options.guid);
+            if (P.options.useOverlay) {
+                P.options.overlay.remove();
+                P.options.overlay = false;
+                P.options.popupOverlayActive = false;
+            }
+            $(document).off(".kPopup_"+P.options.guid);
 
             if (P.options.afterCloseCallback){
                 P.afterCloseCallback(P.options);
+            }
+            if (P.oldOptions.length>0){
+                P.options = P.oldOptions.pop();
             }
         }
     });
 
 	$.fn.kPopup = function (params,button) {
-        $(this).bind("click.kPopup",function(){
-            P.init(this,params);
-            $(document).bind("click.lookup"+P.options.guid,function (e) {
-                P.close(e);
+
+        if (!params.autoOpen){
+            $(this).bind("click.kPopup",function(event){
+                event.preventDefault();
+
+                if (P.options && P.options.active){
+                    if (!P.oldOptions){
+                        P.oldOptions = [];
+                    }
+                    P.oldOptions[P.options.guid] = P.options;
+                }
+
+
+                P.init(this,params);
+
+                if (P.options.hideOnDocumentClick){
+                    $(document).bind("click.kPopup_"+P.options.guid,function (e) {
+                        P.close(e);
+                    });
+                }
+
+                return P.options.newItem;
             });
-            return false;
-        });
+        } else{
+            if (P.options && P.options.active){
+                if (!P.oldOptions){
+                    P.oldOptions = [];
+                }
+                P.oldOptions[P.options.guid] = P.options;
+            }
+
+
+            P.init(this,params);
+
+            if (P.options.hideOnDocumentClick){
+                $(document).bind("click.kPopup_"+P.options.guid,function (e) {
+                    P.close(e);
+                });
+            }
+        }
+
 
 	};
 })(jQuery);

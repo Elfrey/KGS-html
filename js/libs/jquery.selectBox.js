@@ -134,7 +134,7 @@ if(jQuery) (function($) {
                                     customClass = " search-type";
                                 }
 
-				var control = $('<a class="selectBox'+customClass+'" />'),
+				var control = $('<div class="selectBox'+customClass+'" />'),
 					inline = select.attr('multiple') || parseInt(select.attr('size')) > 1;
 
 				var settings = data || {};
@@ -225,8 +225,8 @@ if(jQuery) (function($) {
 					// Dropdown controls
 					//
 
-					var label = $('<span class="selectBox-label" />'),
-						arrow = $('<span class="selectBox-arrow" />');
+					var label = $('<div class="selectBox-label" />'),
+						arrow = $('<div class="selectBox-arrow"><div class="triangle"></div></div>');
 
 					label.text( $(select).find('OPTION:selected').text() || '\u00A0' );
 
@@ -240,6 +240,9 @@ if(jQuery) (function($) {
                             type: "text",
                             value: $(select).find('OPTION:selected').text() || '\u00A0'
                         });
+                        if (control.hasClass("disabled")){
+                            label.attr("disabled","disabled").addClass("disabled");
+                        }
                         //label.val( $(select).find('OPTION:selected').text() || '\u00A0' );
                     }
 

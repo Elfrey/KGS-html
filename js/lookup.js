@@ -106,7 +106,7 @@ if (jQuery) (function ($) {
 
 			$input.css({
 				marginTop: options.inputMarginTop+"px",
-				width: "-moz-calc(100% - 65px)"
+				width: "-moz-calc(100% - 73px)"
 			}).addClass("lookup").show().get(0).type="text";
 
 

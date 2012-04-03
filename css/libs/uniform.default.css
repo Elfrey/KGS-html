@@ -141,19 +141,19 @@ div.selector.disabled span {
 /* Checkbox */
 
 div.checker {
-  width: 19px;
-  height: 19px;
+  width: 30px;
+  height: 30px;
 }
 
 div.checker input {
-  width: 19px;
-  height: 19px;
+  width: 30px;
+  height: 30px;
 }
 
 div.checker span {
-    background: url('../../img/sprites.png') no-repeat -382px 0;
-    width: 20px;
-    height: 20px;
+    background: url('../../img/sprites.png') no-repeat -1333px 0;
+    width: 30px;
+    height: 30px;
 }
 
 div.checker:active span, 
@@ -174,7 +174,7 @@ div.checker.focus.active span {
 }
 
 div.checker span.checked {
-  background-position: -357px 0;
+  background-position: -1296px 0;
 }
 
 div.checker:active span.checked, 
@@ -197,13 +197,17 @@ div.checker.active.focus span.checked {
 div.checker.disabled span,
 div.checker.disabled:active span,
 div.checker.disabled.active span {
-  /*background-position: -152px -260px;*/
+    background: none;
 }
 
 div.checker.disabled span.checked,
 div.checker.disabled:active span.checked,
 div.checker.disabled.active span.checked {
-  /*background-position: -171px -260px;*/
+    background: url('../../img/sprites.png') no-repeat -1260px -7px;
+    width: 20px;
+    height: 17px;
+    margin-top: 7px;
+    margin-left: 5px;
 }
 
 /* Radio */
@@ -421,7 +425,7 @@ div.selector.disabled span {
 
 /* Checker */
 div.checker {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 /* Radio */

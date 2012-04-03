@@ -1,0 +1,60 @@
+
+.pagination {
+    margin-bottom: 32px;
+    margin-top: 24px;
+}
+
+.pagination a {
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    color: #454545;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 2px;
+    padding: 4px 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 27px;
+}
+.pagination a:hover {
+    background-color: #4986cb;
+    border-color: #4986cb;
+    color: #ffffff;
+}
+
+.pagination a.current {
+    background: -moz-linear-gradient(center top , #e9e9ec, #ceced1) repeat scroll 0 0 transparent;
+    border: 1px solid #aeaeae;
+    cursor: default;
+}
+.pagination a.current:hover {
+    background: -moz-linear-gradient(center top , #e9e9ec, #ceced1) repeat scroll 0 0 transparent;
+    border: 1px solid #aeaeae;
+    color: #454545;
+}
+
+.pagination a.prev-page {
+    background: url('../img/sprites.png') no-repeat -1118px 0;
+    border: none;
+    height: 9px;
+    margin-right: 7px;
+    margin-top: 10px;
+    padding: 0;
+    text-decoration: none;
+    text-indent: -9999px;
+    width: 23px;
+}
+.pagination a.next-page {
+    background: url('../img/sprites.png') no-repeat -1145px 0;
+    border: none;
+    height: 9px;
+    margin-left: 6px;
+    margin-top: 10px;
+    padding: 0;
+    text-decoration: none;
+    text-indent: -9999px;
+    width: 23px;
+}

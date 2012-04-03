@@ -13,15 +13,30 @@ $(function(){
 
 
     if (window.location.href.indexOf("element.html")>=0){
-        /*
-        $("input, select").each(function(){
-            $(this).attr("disabled","disabled");
-        });
-        */
+
+
+        /*$("input, select").each(function(){
+            $(this).attr("disabled","disabled").addClass("disabled");
+        });*/
+
+
         $("#header").addClass("document-header");
     }
     $(".breadcrumb, .quickaccess").remove();
-})
+
+
+
+    $(".elemet-left-apply-button").on("click",function(e){
+        e.preventDefault();
+        document.location = "table.html";
+    });
+
+    /*
+    $("tr[action-href-edit!='']").attr("action-href-edit","element.html");
+    $("tr[action-href-note!='']").attr("action-href-note","element.html");
+    $("tr[action-href-delete!='']").attr("action-href-delete","element.html");
+    */
+});
 
 
 

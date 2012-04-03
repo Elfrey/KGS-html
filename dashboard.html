@@ -1,92 +1,86 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset="utf-8" />
-        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-        <title>Личная страница</title>
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
-        <!--[if lte IE 6]><link rel="stylesheet" href="css/style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
-    </head>
+<head>
+    <meta charset="utf-8"/>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <title>Личная страница</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection"/>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="css/style_ie.css" type="text/css" media="screen, projection"/><![endif]-->
+</head>
 
-    <body class="dashboard">
+<body class="dashboard">
 
-        <div id="wrapper">
+<div id="wrapper">
 
-            <header id="header" class="dashboard-header">   
+    <header id="header" class="dashboard-header">
 
-                <h1 class="header-title">Личная страница</h1>
-            </header><!-- #header-->
+        <h1 class="header-title">Личная страница</h1>
+    </header>
+    <!-- #header-->
 
-            <section id="middle" class="dashboard-middle">
+    <section id="middle" class="dashboard-middle">
 
-                <div id="container">
-                    <div id="content">
-                        <h1 class="content-title">Добрый день, Владимир Владимирович</h1>
-                        <!-- @TODO Доделать аннотации у инпута -->
-                        <div class="search-block">
-                            <input type="text" name="search_input" class="search-big-input" placeholder="Быстрый поиск ..." />
-                            <input type="submit" value="Найти" class="search-submit-button" />
-                            <input type="button" class="ext-search-button" />
+        <div id="container">
+            <div id="content">
+                <h1 class="content-title">Добрый день, Владимир Владимирович</h1>
+                <!-- @TODO Доделать аннотации у инпута -->
+                <div class="search-block">
+                    <input type="text" name="search_input" class="search-big-input" placeholder="Быстрый поиск ..."/>
+                    <input type="submit" value="Найти" class="search-submit-button"/>
+                    <input type="button" class="ext-search-button"/>
+                </div>
+
+                <div class="dashboard-block">
+                    <div class="dasboard-buttons">
+                        <button class="dashboard-big-button" href="#">Учет имущества</button>
+                        <button class="dashboard-big-button" href="#">Предварительный учет имущества</button>
+                        <button class="dashboard-big-button" href="#">Учёт особо ценного движимого имущества</button>
+                        <button class="dashboard-big-button" href="#">Формирование выписок из реестра имущества</button>
+                        <button class="dashboard-big-button" href="#">Учёт балансодержателей</button>
+                        <button class="dashboard-big-button" href="#">Учёт передачи объектов имущества</button>
+                        <button class="dashboard-big-button" href="#">Учёт передачи имущества в казну</button>
+                    </div>
+
+                    <div class="dashboard-data">
+
+                        <div class="dashboard-notice">
+                            <b>1 новое уведомление</b>
+                            <br>
+                            В реестре имущества изменился объект:
+                            <br>
+                            <strong>Производственный цех №3, г. Салехард, ул. Безымянная 14</strong>
                         </div>
 
-                        <div class="dashboard-block">
-                            <div class="dasboard-buttons">
-                                <button class="dashboard-big-button" href="#">Учет имущества</button>
-                                <button class="dashboard-big-button" href="#">Предварительный учет имущества</button>
-                                <button class="dashboard-big-button" href="#">Учёт особо ценного движимого имущества</button>
-                                <button class="dashboard-big-button" href="#">Формирование выписок из реестра имущества</button>
-                                <button class="dashboard-big-button" href="#">Учёт балансодержателей</button>
-                                <button class="dashboard-big-button" href="#">Учёт передачи объектов имущества</button>
-                                <button class="dashboard-big-button" href="#">Учёт передачи имущества в казну</button>
-                            </div>
-
-                            <div class="dashboard-data">
-
-                                <div class="dashboard-notice">
-                                    <b>1 новое уведомление</b>
-                                    <br>
-                                    В реестре имущества изменился объект:
-                                    <br>
-                                    <strong>Производственный цех №3, г. Салехард, ул. Безымянная 14</strong>
-                                </div>
-				
-				<div class="search-templates">
-				    <h3>Шаблоны выборки</h3>
-				    <ul>
-					<li><a href="#">Поиск имущества стоимостью более 10 тыс.</a></li>
-					<li><a href="#">Поиск балансодержателей в г. Салехард без данных об ИНН</a></li>
-					<li><a href="#">Выборка только автотранспорта из реестра имущества со сроком экплуатации более 10 лет</a></li>
-					<li><a href="#">Выборка балансодержателей добавленных за неделю</a></li>
-					<li><a href="#">Поиск балансодержателей в г. Салехард без данных об ИНН</a></li>					
-				    </ul>
-				    <a href="#" class="new-search-template button-with-plus">Новый поиск</a>
-				</div>
-
-                            </div>
-
+                        <div class="search-templates">
+                            <h3>Шаблоны выборки</h3>
+                            <ul>
+                                <li><a href="#">Поиск имущества стоимостью более 10 тыс.</a></li>
+                                <li><a href="#">Поиск балансодержателей в г. Салехард без данных об ИНН</a></li>
+                                <li><a href="#">Выборка только автотранспорта из реестра имущества со сроком экплуатации
+                                    более 10 лет</a></li>
+                                <li><a href="#">Выборка балансодержателей добавленных за неделю</a></li>
+                                <li><a href="#">Поиск балансодержателей в г. Салехард без данных об ИНН</a></li>
+                            </ul>
+                            <a href="#" class="new-search-template button-with-plus">Новый поиск</a>
                         </div>
 
-                    </div><!-- #content-->
-                </div><!-- #container-->
+                    </div>
 
-            </section><!-- #middle-->
+                </div>
 
-        </div><!-- #wrapper -->
-
-        <footer id="footer">
-            <div class="footer_note">
-                У вас <a href="#">1 новое уведомление</a>
             </div>
-	    
-	    <div class="footer_opt">
-                <a href="#">Настройки</a>
-            </div>
-	    <div class="footer_dashboard">
-                <a href="/personal/">Личный кабинет</a>
-            </div>
-        </footer><!-- #footer -->
+            <!-- #content-->
+        </div>
+        <!-- #container-->
 
-    </body>
+    </section>
+    <!-- #middle-->
+
+</div>
+<!-- #wrapper -->
+</body>
 </html>

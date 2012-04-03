@@ -1,0 +1,219 @@
+/*
+Зеленые кнопки
+*/
+.green-button {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: #60791F #A8C136;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: #87A22A #AEC838;
+    background: -moz-linear-gradient(center top , #99B92F, #58791E) repeat scroll 0 0 transparent;
+    border-color: #000000 #60791F #3F5516 #000000;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 2px 1px 1px 2px;
+    box-shadow: 0 7px 5px -6px #3F5516;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 #60831F;
+}
+.green-button:hover {
+    background: -moz-linear-gradient(top,  #99b92f,  #6a8a23);
+}
+.green-button:active {
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: #60791F #A8C136;
+    -moz-border-left-colors: none;
+    -moz-border-bottom-colors: #87A22A #AEC838;
+    background: -moz-linear-gradient(center bottom , #99B92F, #58791E) repeat scroll 0 0 transparent;
+    border-color: #60791F #000000 #000000 #3F5516;
+    border-width: 1px 2px 2px 1px;
+    box-shadow: none;
+}
+
+
+/*
+Серые кнопки
+*/
+.gray-button {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: #B5B5B5 #FCFCFD;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: #C3C3C3 #FCFCFD;
+    background: -moz-linear-gradient(center top , #EFEFF1, #DBDBDD) repeat scroll 0 0 transparent;
+    border-color: #000000 #B5B5B5 #A9A9A9 #000000;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 2px 1px 1px 2px;
+    box-shadow: 0 6px 5px -6px #A9A9A9;
+    color: #7D7D7D;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #F7F7F7;
+}
+.gray-button:hover {
+
+}
+.gray-button:active {
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: #B5B5B5 #FCFCFD;
+    -moz-border-left-colors: none;
+    -moz-border-bottom-colors: #C3C3C3 #FCFCFD;
+    background: -moz-linear-gradient(center bottom , #EFEFF1, #DBDBDD) repeat scroll 0 0 transparent;
+    border-color: #B5B5B5 #000000 #000000 #A9A9A9;
+    border-width: 1px 2px 2px 1px;
+    box-shadow: none;
+}
+
+
+/*
+Синии кнопки
+*/
+.blue-button {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: #225185 #389FC8;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: #2A60A2 #389FC8;
+    background: -moz-linear-gradient(center top , #2F86B8, #1E5079) repeat scroll 0 0 transparent;
+    border-color: #000000 #204C7B #163855 #000000;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 2px 1px 1px 2px;
+    box-shadow: 0 7px 5px -6px #163855;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 #1C4E7C;
+}
+.blue-button:hover {
+
+}
+.blue-button:active {
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: #225185 #389FC8;
+    -moz-border-left-colors: none;
+    -moz-border-bottom-colors: #2A60A2 #389FC8;
+    background: -moz-linear-gradient(center bottom , #2F86B8, #1E5079) repeat scroll 0 0 transparent;
+    border-color: #204C7B #000000 #000000 #163855;
+    border-width: 1px 2px 2px 1px;
+    box-shadow: none;
+}
+
+/*
+Селекты
+*/
+.white-select {
+
+}
+/**Blue Select
+*********************************************/
+.blue-select {
+
+}
+
+.selectBox-dropdown.blue-select {
+    -moz-box-shadow: 0px 7px 5px -6px #313f4d;
+    border: none;
+    padding: 1px;
+    background: -moz-linear-gradient(top,  #4e5b68,  #242e38);
+}
+
+.selectBox-dropdown.blue-select .selectBox-label {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: #708091;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: #708091;
+
+    color: #ffffff;
+    background: -moz-linear-gradient(top,  #5f6d7a,  #313f4d);
+    text-shadow: -1px -1px 0px black;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid #708091;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.selectBox-dropdown.blue-select .selectBox-arrow {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: #708091;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: #708091;
+    background: -moz-linear-gradient(top,  #5f6d7a,  #313f4d);
+    border-top: 1px solid #708091;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    border-radius: 0 3px 3px 0;
+}
+.selectBox-dropdown.blue-select .selectBox-arrow:active {
+    background: #33414f;
+    border-top: 1px solid #33414f;
+    border-left: 1px solid #33414f;
+}
+
+
+.selectBox-dropdown.blue-select .selectBox-arrow .triangle {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white;
+    height: 0;
+    width: 0;
+}
+
+
+.selectBox-dropdown-menu.blue-select {
+    background: #33414F;
+    border: 1px solid #33414F;
+    color: #ffffff;
+    max-height: 200px;
+    min-width:  200px;
+    overflow: auto;
+    position: absolute;
+    z-index: 99999;
+}
+.selectBox-options.blue-select li.selectBox-optgroup:hover {
+    background: none repeat scroll 0 0 #33414F;
+    color: #ffffff;
+}
+
+.selectBox-options.blue-select li a {
+    color: #ffffff;
+}
+.selectBox-options.blue-select li:hover {
+    background: #ffffff;
+}
+.selectBox-options.blue-select li:hover a {
+    color: #33414f;
+}
+
+/*
+End blue select
+********************************************/
+
+
+
+.gray-select {
+
+}
+
+.input-text {
+
+}

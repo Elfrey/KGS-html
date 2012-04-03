@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/libs/uniform.default.css" type="text/css" media="screen, projection">
 
         <script type="text/javascript" src="js/libs/php.js"></script>
-        <script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-1.7.2.js"></script>
         <script type="text/javascript" src="js/libs/jquery-ui-1.8.16.custom.min.js"></script>
         <script type="text/javascript" src="js/libs/jquery.ui.datepicker-ru.js"></script>
         <script type="text/javascript" src="js/libs/jquery.tmpl.min.js"></script>
@@ -42,13 +42,13 @@
 						<!-- @TODO Доделать аннотации у инпута -->
 						<div class="search-block">
 							<input type="text" name="search_input" class="search-big-input" placeholder="Быстрый поиск ..." />
-							<input type="submit" value="Найти" class="search-submit-button" />
-							<input type="button" class="ext-search-button" />
+							<input type="submit" value="Найти" class="search-submit-button gray-button" />
+							<a class="ext-search-button gray-button">&nbsp;</a>
 						</div>
 						<div class="table-data">
 							<div class="table-main-actions">
-								<a class="green-add-button-with-plus" href="#"><span class="big-plus">+</span> Добавить</a>
-								<a id="gray-add" class="gray-add-button-with-plus" href="#"><span class="big-plus">+</span> Добавить объект</a>
+								<a class="green-add-button-with-plus green-button" href="#"><span class="big-plus">+</span> Добавить</a>
+								<!--<a id="gray-add" class="gray-add-button-with-plus gray-button" href="#"><span class="big-plus">+</span> Добавить объект</a>-->
 								<div class="table-fields-filter-block">
 									<div class="table-fields-filter-block-top-corner"></div>
 									<a class="close-filter-block" href="#">x</a>
@@ -98,8 +98,8 @@
 										</li>
 									</ul>
 								</div>
-								<div class="select_wrap">
-									<select class="blue-actions-select selectBox select-button" name="select_0_0_1">
+
+									<select class="selectBox blue-select" name="select_0_0_1">
 										<optgroup label="Тест">
 											<option style="display: none;">Действия</option>
 											<option>Сделать выписку</option>
@@ -109,8 +109,8 @@
 											<option>Экспорт в Excel</option>
 										</optgroup>
 									</select>
-								</div>
-								<a id="filter" class="table-filter-button" href="#">Фильтр ...</a>
+
+								<a id="filter" class="table-filter-button gray-button" href="#">Фильтр ...</a>
 								<div class="table-fields-filter-block">
 									<div class="table-fields-filter-block-top-corner"></div>
 									<a class="close-filter-block" href="#">x</a>
@@ -229,7 +229,7 @@
 										или <a class="table-fields-filter-block-cancel" href="#">Отменить</a>
 									</div>
 								</div>
-								<a id="field-settings" class="table-field-settings" href="#"> &nbsp; </a>
+								<a id="field-settings" class="table-field-settings gray-button" href="#"> &nbsp; </a>
 								<div class="table-fields-filter-block">
 									<div class="table-fields-filter-block-top-corner"></div>
 									<a class="close-filter-block" href="#">x</a>
@@ -284,8 +284,9 @@
 										или <a class="table-fields-filter-block-cancel" href="#">Отменить</a>
 									</div>
 								</div>
+								<br class="clear" />
 							</div>
-							<table class="data-table">
+							<table class="data-table sortable">
 								<thead>
 									<tr>
 										<th> Объект </th>
@@ -299,7 +300,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr add-info-data-href="expand_table_data.html" action-name-note="Настроить уведомление" action-href-note="13" action-name-delete="Удалить" action-href-delete="13" action-default="edit" action-name-edit="Редактировать" action-href-edit="13" actions="edit note delete" class="data-table-main-tr">
+									<tr data-action-id="0">
 										<td style="padding-bottom: 35px;"> 737 </td>
 										<td> 331 </td>
 										<td> ЯНАО, г. Салехард, ул. Северная, 22 </td>
@@ -309,7 +310,7 @@
 										<td> Иванов И. И. </td>
 										<td> 18.02.2011 </td>
 									</tr>
-									<tr action-name-note="Настроить уведомление" action-href-note="13" action-name-delete="Удалить" action-href-delete="13" action-default="edit" action-name-edit="Редактировать" action-href-edit="13" actions="edit note delete" class="data-table-main-tr">
+									<tr data-action-id="1">
 										<td style="padding-bottom: 35px;"> 338 </td>
 										<td> 780 </td>
 										<td> ЯНАО, г. Салехард, ул. Лесная, 1 </td>
@@ -319,7 +320,7 @@
 										<td> Иванов И. И. </td>
 										<td> 24.02.2011 </td>
 									</tr>
-									<tr action-name-note="Настроить уведомление" action-href-note="13" action-name-delete="Удалить" action-href-delete="13" action-default="edit" action-name-edit="Редактировать" action-href-edit="13" actions="edit note delete" class="data-table-main-tr">
+									<tr data-action-id="2">
 										<td style="padding-bottom: 35px;"> 599 </td>
 										<td> 528 </td>
 										<td> ЯНАО, г. Салехард, ул. Лесная, 1 </td>
@@ -329,7 +330,7 @@
 										<td> Петров П. П. </td>
 										<td> 04.11.2011 </td>
 									</tr>
-									<tr action-name-note="Настроить уведомление" action-href-note="13" action-name-delete="Удалить" action-href-delete="13" action-default="edit" action-name-edit="Редактировать" action-href-edit="13" actions="edit note delete" class="data-table-main-tr">
+									<tr data-action-id="3">
 										<td style="padding-bottom: 35px;"> 270 </td>
 										<td> 512 </td>
 										<td> ЯНАО, г. Салехард, ул. Ленина, 2 </td>
@@ -339,7 +340,7 @@
 										<td> Иванов И. И. </td>
 										<td> 02.01.2011 </td>
 									</tr>
-									<tr action-name-note="Настроить уведомление" action-href-note="13" action-name-delete="Удалить" action-href-delete="13" action-default="edit" action-name-edit="Редактировать" action-href-edit="13" actions="edit note delete" class="data-table-main-tr">
+									<tr data-action-id="4">
 										<td style="padding-bottom: 35px;"> 675 </td>
 										<td> 134 </td>
 										<td> ЯНАО, г. Салехард, ул. Северная, 22 </td>
@@ -349,7 +350,7 @@
 										<td> Петров П. П. </td>
 										<td> 09.09.2011 </td>
 									</tr>
-									<tr action-name-note="Настроить уведомление" action-href-note="13" action-name-delete="Удалить" action-href-delete="13" action-default="edit" action-name-edit="Редактировать" action-href-edit="13" actions="edit note delete" class="data-table-main-tr">
+									<tr data-action-id="5">
 										<td style="padding-bottom: 35px;"> 57 </td>
 										<td> 974 </td>
 										<td> ЯНАО, г. Салехард, ул. 8-е Марта, 14 </td>
@@ -359,7 +360,7 @@
 										<td> Петров П. П. </td>
 										<td> 19.09.2011 </td>
 									</tr>
-									<tr action-name-note="Настроить уведомление" action-href-note="13" action-name-delete="Удалить" action-href-delete="13" action-default="edit" action-name-edit="Редактировать" action-href-edit="13" actions="edit note delete" class="data-table-main-tr">
+									<tr data-action-id="6">
 										<td style="padding-bottom: 35px;"> 301 </td>
 										<td> 170 </td>
 										<td> ЯНАО, г. Салехард, ул. Северная, 22 </td>
@@ -369,7 +370,7 @@
 										<td> Петров П. П. </td>
 										<td> 03.01.2011 </td>
 									</tr>
-									<tr action-name-note="Настроить уведомление" action-href-note="13" action-name-delete="Удалить" action-href-delete="13" action-default="edit" action-name-edit="Редактировать" action-href-edit="13" actions="edit note delete" class="data-table-main-tr">
+									<tr data-action-id="7">
 										<td style="padding-bottom: 35px;"> 341 </td>
 										<td> 167 </td>
 										<td> ЯНАО, г. Салехард, ул. Северная, 22 </td>
@@ -387,7 +388,8 @@
 								<a href="?page=1">2</a>
 								<a href="?page=2">3</a>
 								<a href="?page=3">4</a>
-								<a href="?page=4">5</a>
+								<a href="?page=6">5</a>
+								<a href="?page=6">6</a>
 								<a href="#next-page" class="next-page">→</a>
 							</div>
 						</div>

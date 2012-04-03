@@ -30,21 +30,11 @@
     text-decoration: none;
 }
 .green-add-button-with-plus {
-    background: url("../img/data-green-button-bg.png") repeat-x scroll left top #55B322;
-    border: 1px solid #578C12;
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 2px 3px 0 #CCCCCC;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
-    height: 28px;
-    letter-spacing: -0.1px;
-    line-height: 28px;
     margin-right: 6px;
-    padding: 0 18px 0 38px;
-    text-decoration: none;   
+    padding: 5px 13px 5px 37px;
+}
+.green-add-button-with-plus:active {
+    border-width: 1px 2px 1px 1px;
 }
 .gray-add-button-with-plus {
     background-image: -moz-linear-gradient(bottom, rgb(205,206,209) 0%, rgb(233,233,236) 100%);;
@@ -54,7 +44,7 @@
     color: #7E7E7E;
     display: inline-block;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     height: 28px;
     line-height: 28px;
     margin-right: 6px;
@@ -79,39 +69,29 @@
 }
 
 .table-filter-button {
-    background-image: -moz-linear-gradient(bottom, rgb(205,206,209) 0%, rgb(233,233,236) 100%);;
-    border: 1px solid #C3C3C3;
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 2px 3px 0 #CCCCCC;
-    color: #7E7E7E;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
+    margin-left: 7px;
     margin-right: 6px;
-    padding: 0 15px;
-    text-decoration: none;
+    padding: 5px 12px 5px 15px;
+}
+.table-filter-button:active {
+    border-width: 1px 2px 1px 1px;
 }
 .table-field-settings {
-    background-color: transparent;
-    background-image: url("../img/gear-ico.png"), -moz-linear-gradient(bottom, rgb(205,206,209) 0%, rgb(233,233,236) 100%);;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border: 1px solid #C3C3C3;
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 2px 3px 0 #CCCCCC;
-    color: #7E7E7E;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 28px;
-    height: 28px;
     margin-right: 6px;
-    padding: 0 18px;
-    text-decoration: none;
+    padding: 5px 12px;
+    width: 18px;
 }
-
+.table-field-settings:active {
+    border-width: 1px 2px 1px 1px;
+}
+.table-field-settings:before {
+    background: url("../img/gear-ico.png") transparent scroll center center no-repeat;
+    content: "";
+    display: block;
+    height: 19px;
+    position: absolute;
+    width: 18px;
+}
 .table-fields-filter-block {
     background-color: #FFFFFF;
     border: 1px solid #AFAFAF;
@@ -177,7 +157,7 @@
     color: #7E7E7E !important;
     cursor: pointer;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     height: 30px;
     line-height: 28px;
     margin-right: 10px;
@@ -210,13 +190,12 @@
 }
 
 .data-table > thead {
-    background: -moz-linear-gradient(top, rgba(233,233,236,1) 0%, rgba(205,206,209,1) 100%);
-    box-shadow: 0 1px 20px #CCCCCC;
+    background: -moz-linear-gradient(center top , #F9F9FA 0px, #EFEFF2 2px, #D9D9DB 100%) repeat scroll 0 0 transparent;
+    box-shadow: 0 6px 20px -10px #A9A9A9;
 }
 
 .data-table > thead th {
-    /*background: url("../img/data-th-bg.png") repeat-x scroll left top padding-box #CECECE;*/
-    border: 1px solid #ADADAD;
+    border: 1px solid #C7C7C7;
     color: #2A2A2A;
     font-size: 14px;
     height: 53px;
@@ -226,6 +205,17 @@
     text-align: left;
     vertical-align: top;
 }
+.data-table > thead th:first-child:before {
+    background-color: #FCFCFD;
+    content: "";
+    display: block;
+    float: left;
+    height: -moz-calc(100% - 2px);
+    margin: -13px 0 0 -12px;
+    position: relative;
+    width: 1px;
+}
+
 .data-table > thead th.half-th-top {
     height: 24px;
     padding: 0px;
@@ -242,6 +232,10 @@
 }
 .data-table > tbody > tr {
     border-bottom: 1px dotted #A8AAAC;
+}
+
+.data-table > tbody > tr:hover {
+    background-color: #F6F6F6;
 }
 
 .data-table > tbody td {
@@ -363,48 +357,53 @@
     background: none repeat scroll 0 0 #A54848;
 }
 
-/* END .data-table-actions-tr
-------------------------------------------------------------------------------*/
 
-.pagination {
-    margin-bottom: 32px;
-    margin-top: 24px;
-}
-
-.pagination a {
-    background: url("../img/pagination-a-bg.png") repeat-x scroll left top #DBDBDD;
-    border: 1px solid #C3C3C3;
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 1px 1px 1px #B7CFE6;    
-    color: #7E7E7E;
-    display: inline-block;
+.table-actions {
+    -moz-box-shadow: 2px 3px 3px 0px #cbcbcb;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    display: none;
     font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    margin-right: 5px;
-    padding: 0 12px;
+    padding: 5px 0;
+    position: absolute;
+    width: auto;
+}
+.table-actions ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+.table-actions ul li {
+    cursor: pointer;
+    padding: 5px 25px 5px 15px;
+}
+.table-actions ul li:hover {
+    background: #4986cb;
+    color: #ffffff;
+}
+.table-actions ul li.breaker {
+    background: #cbcbcb;
+    height: 1px;
+    margin: 5px 0;
+    padding: 0;
+    width: auto;
+}
+.table-actions ul li.breaker:hover {
+    background: #cbcbcb;
+}
+.table-actions ul li a {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
     text-decoration: none;
 }
-
-.pagination a.current {
-    background: url("../img/pagination-current-bg.png") repeat-x scroll left top #313F4D;
-    border: 1px solid #4E5B68;
-    color: #FFFFFF;
+.table-actions ul li a.default {
+    font-weight: 700;
 }
-
-.pagination a.prev-page {
-    background: url("../img/pagination-prev-bg.png") repeat-x scroll left top #DBDBDD;
-    text-indent: -9999px;
-    padding: 0;
-    width: 32px;
+.table-actions ul li:hover a {
+    color: #ffffff;
 }
-.pagination a.next-page {
-    background: url("../img/pagination-next-bg.png") repeat-x scroll left top #DBDBDD;
-    padding: 0;
-    text-indent: -9999px;
-    width: 32px;
-}
-
-/* END .pagination
+/* END .data-table-actions-tr
 ------------------------------------------------------------------------------*/
