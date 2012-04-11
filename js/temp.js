@@ -32,7 +32,7 @@ $(function(){
         document.location = "table.html";
     });
 
-    /*
+    /* Ссылки
     $("tr[action-href-edit!='']").attr("action-href-edit","element.html");
     $("tr[action-href-note!='']").attr("action-href-note","element.html");
     $("tr[action-href-delete!='']").attr("action-href-delete","element.html");
