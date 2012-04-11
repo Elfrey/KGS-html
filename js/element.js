@@ -193,7 +193,7 @@ $(function(){
 		});
 
     $(".element-link, .element-document").on("click",function(event){
-        if (event.target.tagName.toUpperCase()!="A"){
+        if (event.target.tagName.toUpperCase()!="A" && $(event.target).parents(".lookup-wrapper").length==0){
             var $div = $(this),
                 $a = $div.find(".element-data > a");
             event.preventDefault();

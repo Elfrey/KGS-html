@@ -62,13 +62,15 @@ $(function(){
             })
         }
     });
-    $("#main_form").trigger("submit");
 
     $(".bottom-apply-green-button.green-button, .left-apply-green-button").live("click",function(event){
         event.preventDefault();
         $("#main_form").submit();
         return false;
     });
+
+
+    //$("#main_form").trigger("submit");
 });
 
 

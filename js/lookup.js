@@ -190,11 +190,12 @@ if (jQuery) (function ($) {
 			$(document).bind("click.lookup"+options.guid,function(e){
 				prepareClose(options, e);
 			});
+
 			$("ul li",options.wrapperItem.get(0))
-                .on("click.lookup"+options.guid,function(e){
+                .live("click.lookup"+options.guid,function(e){
                     checkItem(options,e,this);
                 })
-                .on("dblclick.lookup"+options.guid,function(e){
+                .live("dblclick.lookup"+options.guid,function(e){
                     checkItem(options,e,this);
                     applySelected(options);
                 });
