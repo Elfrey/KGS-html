@@ -248,7 +248,9 @@
     padding: 15px;
     vertical-align: top;
 }
-
+.data-table > tbody tr td:first-child {
+    padding-bottom: 35px;
+}
 .data-table > tbody td a {
     color: #01366a;
     display: inline-block;

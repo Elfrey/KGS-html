@@ -250,7 +250,7 @@ if (jQuery) (function ($) {
             if (P.options.afterCloseCallback){
                 P.afterCloseCallback(P.options);
             }
-            if (P.oldOptions.length>0){
+            if (P.oldOptions && P.oldOptions.length>0){
                 P.options = P.oldOptions.pop();
             }
         }

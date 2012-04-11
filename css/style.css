@@ -13,6 +13,8 @@
 @import url('calendar.css');
 @import url('search.css');
 @import url('pagination.css');
+@import url('validate.css');
+@import url('serverError.css');
 
 * {
     margin: 0;

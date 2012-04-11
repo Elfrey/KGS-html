@@ -11,6 +11,31 @@ var addRule = (function(style){
 
 $(function(){
 
+    /**
+     * @description Кнопки переключения верхней панели(просмотр/редактирование)
+     */
+    /*
+    @TODO Это все только для того, чтобы показать как работает. На ссылки должны быть нормальные переходы.
+     */
+    var tmpTopPanelCounter = 0;
+    $("#element-top-panel").find("a#read-element").on("click",function(event){
+        event.preventDefault();
+        var $this = $(this);
+        $this.siblings("a").addClass("inactive").end().removeClass("inactive").next().removeClass("edit");
+        tmpTopPanelCounter++;
+        if (tmpTopPanelCounter>2){
+            var $newSpan = $("<span />",{
+                text: "Редактировать",
+                "class": "edit-button-disabled"
+            });
+            $this.parent().find(".already-opened").css("display","inline-block").end().find("a#edit-element").after($newSpan).remove();
+            $("#element-top-panel").addClass("element-top-panel-bordered");
+        }
+    }).end().find("a#edit-element").on("click",function(event){
+            event.preventDefault();
+            $(this).siblings("a").addClass("inactive").end().removeClass("inactive").prev().addClass("edit");
+            tmpTopPanelCounter++;
+        });
 
     function makeAttrLinkList($button){
         var buttonClass = $button.attr("class"),
@@ -18,6 +43,15 @@ $(function(){
             "changeItemTitle": attrLinkChangeItemTitle[buttonClass]
         }]).hide().insertAfter($button);
     }
+
+    /**
+     * @description установка position: fixed у верхней панельки, когда мы проскорили вниз на ее высоту
+     *
+    $(document).scroll(function(event){
+        var $this = $(this)
+            $panel = $("#element-top-panel");
+        $panel.height()<$this.scrollTop() ? $panel.css("position","fixed") : $panel.css("position","relative");
+    });*/
 
 	/*
 	 * Добавление и обработка кнопки удаления записи

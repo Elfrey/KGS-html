@@ -1,0 +1,19 @@
+.content-server-error {
+
+}
+
+.content-server-error h1 {
+    color: #000000;
+    font-size: 36px;
+    line-height: 56px;
+    margin-bottom: 12px;
+}
+.content-server-error p {
+    color: #464646;
+    font-size: 14px;
+    line-height: 1.25;
+    margin-top: 25px;
+}
+.content-server-error .back-button {
+    padding: 5px 37px;
+}

@@ -3,9 +3,9 @@
  * User: Elfrey
  * Date: 31.01.12
  * Time: 14:39
+ * @description плагин для полей типа "ссылка"
  *
- *
- *
+ * Вызов
  $(".element-link-add-button, .element-document-add-button").live("click",function(){
      var $button = $(this);
      var $parentDiv = $button.parent();
@@ -42,6 +42,9 @@
  *
  */
 $(function(){
+    /**
+     * @description шаблон лукапа
+     */
 	var $lookUpTmpl = $('<script id="lookUpTmpl" type="text/x-jquery-tmpl">' +
 		'<div class="lookup-wrapper">' +
 		'<ol class="lookup-actions">' +
@@ -88,7 +91,6 @@ if (jQuery) (function ($) {
 			var options = $.extend({}, defaults, params),
 				$input = $(input);
 
-            console.log(options);
 
 			if (options.guid==0){
 				options.guid = $.guid++;
@@ -115,7 +117,6 @@ if (jQuery) (function ($) {
 				inputWidth = $input.outerWidth()-(options.wrapperLeftHorizontalPadding+options.wrapperRightHorizontalPadding)-(options.borderSize*2);
 
 			var $lookUpWrapper = $("#lookUpTmpl").tmpl([{}])
-				.insertAfter($input)
 				.css({
 					left: inputPosition.left,
 					width: inputWidth
@@ -126,6 +127,7 @@ if (jQuery) (function ($) {
 
 					$.get(options.listUrl,function(data){
 						$(data).prependTo($lookUpWrapper);
+                        $lookUpWrapper.insertAfter($input)
 					});
 
 				}else if (options.listReqType == "json"){
@@ -148,6 +150,8 @@ if (jQuery) (function ($) {
 							'class': 'my-new-list',
 							html: items.join('')
 						}).prependTo($lookUpWrapper);
+
+                        $lookUpWrapper.insertAfter($input)
 					});
 				}
 
@@ -155,6 +159,8 @@ if (jQuery) (function ($) {
 
 			if (options.listItem!=""){
 				$(options.listItem).clone().prependTo($lookUpWrapper);
+
+                $lookUpWrapper.insertAfter($input)
 			}
 
 			$lookUpWrapper.show();
@@ -247,8 +253,7 @@ if (jQuery) (function ($) {
 
 		var applySelected = function(options){
 			var $checkedLi = $("ul li[checked]",options.wrapperItem.get(0));
-            console.log("test2");
-            console.log(options);
+
 				if ($checkedLi.length==1){
 					options.input.val($checkedLi.find("h3").text());
 					options.button.text($checkedLi.find("h3").text());

@@ -221,6 +221,13 @@ function dumpx(obj) {
     }
 }
 
+/**
+ * @description плюрализация строки(1 строка, 2 строки, 10 строк)
+ * @param i {INT} - число
+ * @param str1 {STRING} - строка
+ * @param str2 {STRING} - строки
+ * @param str3 {STRING} - строк
+ */
 function plural_str(i, str1, str2, str3){
     function plural (a){
         if ( a % 10 == 1 && a % 100 != 11 ) return 0
@@ -238,6 +245,9 @@ function plural_str(i, str1, str2, str3){
     }
 }
 
+/**
+ * @description расширение jQuery - методы для установки невидимости/видимости
+ */
 $.fn.extend({
     visHide: function(){
         this.css("visibility","hidden");
@@ -249,6 +259,10 @@ $.fn.extend({
     }
 });
 
+/**
+ * @description проверка, включен ли капслок
+ * @param e {EVENT} - event нажатия кнопки
+ */
 function isCapslock(e){
 
     e = (e) ? e : window.event;
@@ -278,14 +292,23 @@ function isCapslock(e){
     return false;
 
 }
-
+/**
+ * @description форматирование строк из таблиц во флоат
+ * @param value {STRING} строка вида 1 000 000,25
+ */
 function makeFloat (value){
     return parseFloat(value
     .split(" ").join("")
     .split(",").join("."));
 }
 
-
+/**
+ * @description форматирование числа в строку с разделителями тысяч
+ * @param _number {FLOAT} - число
+ * @param _decimal {STRING} - разделитель дробной части
+ * @param _separator {STRING} - разделитель тысячных
+ * @param _decSep
+ */
 function formatFloat(_number,_decimal,_separator, _decSep) {
     var decimal=(typeof(_decimal)!='undefined')?_decimal:2;
 
@@ -303,4 +326,12 @@ function formatFloat(_number,_decimal,_separator, _decSep) {
     r=b+'.'+rr[1];
 
     return r.split(".").join(_decSep);
+}
+
+/**
+ * @description
+ * @param $element
+ */
+function scrollTo($element){
+
 }

@@ -1,43 +1,42 @@
 /**
- * Created by JetBrains WebStorm.
  * User: Elfrey
  * Date: 06.02.12
- *
+ * @description скрипт для таблиц в просмотре элемента, вызов попапа для выбора
  */
 
 $(function(){
 
-    var popupOptions = {
-            class: "popup-add-linked",
-            itemUrl:"table-for-add.html",
-            useOverlay: true,
-            "styles": {
+    var popupOptions = {//натсройки для плагина kPopup
+            class: "popup-add-linked", //класс самого окна
+            itemUrl:"table-for-add.html", //откуда брать контент
+            useOverlay: true, //использовать подложку
+            "styles": { //стили
                 backgroundColor: "#fff",
                 display: "block",
                 width: "1000px",
                 zIndex: '102'
             },
-            afterOpenCallback: changePopup,
-            afterCloseCallback: clearPopup
+            afterOpenCallback: changePopup, //функция вызываемая после открытия
+            afterCloseCallback: clearPopup //функция вызываемая после закрытия
         },
-        counterOptions = {
+        counterOptions = { //настройки счетчика(показано количество отмеченных элементов
             counterContainer: "blue-element-counter",
-            footerCounterContainer: "footer-popup-counter",
+            footerCounterContainer: "footer-popup-counter"
 
         },
-        $blueElementCounterTmpl = $('<div></div>',{
+        $blueElementCounterTmpl = $('<div></div>',{ //шаблон синего счетчика(наверху слева)
             class: counterOptions.counterContainer,
             html: "Выбрано<br /><span></span>"
         }).hide(),
 
-        $popupFooterCounter = $('<div />',{
+        $popupFooterCounter = $('<div />',{ //шаблон счетчика внизу
             html: '<span>Выбрано</span> <a href="#"></a>',
             class: counterOptions.footerCounterContainer
-        }).visHide(),
+        }).visHide(), //чтобы ничего не прыгало, мы его делаем невидимым, а не убираем
 
-        objectStrngs = ["объект", "объекта", "объектов"],
-        selectedObjString = ["Выбран", "Выбрано", "Выбрано"],
-        activeKeyCodes = {
+        objectStrngs = ["объект", "объекта", "объектов"], //слова для plural_str
+        selectedObjString = ["Выбран", "Выбрано", "Выбрано"], //слова для plural_str
+        activeKeyCodes = { //коды клавишь
             esc: 27,
             up: 38,
             down: 40,
@@ -45,7 +44,7 @@ $(function(){
             "38": "up",
             "40": "down"
         },
-        detailItemTemplate = '<script id="detailfItemTemplate" type="text/x-jquery-tmpl">' +
+        detailItemTemplate = '<script id="detailfItemTemplate" type="text/x-jquery-tmpl">' + //Шаблон делального просмотра записи(в еще одном попапе)
             '<ul class="detail-info-ul">' +
             '{{each items}}' +
             '   {{if !$value.other}}' +
@@ -67,9 +66,49 @@ $(function(){
             '<a href="${link}" class="gray-button detail-info-button-show-more">Открыть карточку</a>' +
             '</div>' +
             '<a href="#close" class="detail-info-close"></a>' +
-            '</script>';
+            '</script>',
 
-    $(".element-table-add-button").kPopup(popupOptions);
+        checkHeaderCkeckbox = function($checkbox,$checkboxes){ //функция клика на чекбокс в заголовке таблицы
+            if ($checkbox.is(":checked")){
+                $checkboxes.attr("checked","checked");
+                $checkboxes.parents("tr").addClass("hover-blue");
+
+                showCounter($checkboxes.length);
+            }else{
+                $checkboxes.removeAttr("checked");
+                $checkboxes.parents("tr").removeClass("hover-blue");
+                hideCounter();
+            }
+
+
+        },
+
+        checkBodyCheckbox = function ($checkbox,$headerCheckbox, $checkboxes){ //функция клика на чекбокс в строке таблицы
+
+            var checkedCount = 0;
+
+            if (!$checkbox.is(":checked")){
+                $checkbox.attr("checked",true);
+                $checkbox.parents("tr").addClass("hover-blue");
+            }else{
+                $checkbox.parents("tr").removeClass("hover-blue");
+                $checkbox.attr("checked",false);
+                $headerCheckbox.removeAttr("checked");
+            }
+
+            checkedCount = $checkboxes.filter(":checked").length;
+            if ($checkboxes.length == checkedCount){
+                $headerCheckbox.attr("checked",true);
+            }
+            if (checkedCount>0){
+                showCounter(checkedCount);
+            }else{
+                hideCounter();
+            }
+            $checkbox.blur();
+        }
+
+    $(".element-table-add-button").kPopup(popupOptions); //инициализация плагина
 
     //Клик на чекбокс
     $(".checkboxed th input[type=checkbox]").live("change",function(){
@@ -104,49 +143,12 @@ $(function(){
     });
 
 
-    function checkHeaderCkeckbox($checkbox,$checkboxes){
-        if ($checkbox.is(":checked")){
-            $checkboxes.attr("checked","checked");
-            $checkboxes.parents("tr").addClass("hover-blue");
-
-            showCounter($checkboxes.length);
-        }else{
-            $checkboxes.removeAttr("checked");
-            $checkboxes.parents("tr").removeClass("hover-blue");
-            hideCounter();
-        }
-
-
-    }
-
-    function checkBodyCheckbox($checkbox,$headerCheckbox, $checkboxes){
-
-        var checkedCount = 0;
-
-        if (!$checkbox.is(":checked")){
-            $checkbox.attr("checked",true);
-            $checkbox.parents("tr").addClass("hover-blue");
-        }else{
-            $checkbox.parents("tr").removeClass("hover-blue");
-            $checkbox.attr("checked",false);
-            $headerCheckbox.removeAttr("checked");
-        }
-
-        checkedCount = $checkboxes.filter(":checked").length;
-        if ($checkboxes.length == checkedCount){
-            $headerCheckbox.attr("checked",true);
-        }
-        if (checkedCount>0){
-            showCounter(checkedCount);
-        }else{
-            hideCounter();
-        }
-        $checkbox.blur();
-    }
-
-    function showCounter(count){
-        var $popup = $("."+popupOptions.class),
-            popupPosition = $popup.position();
+    /**
+     * @description показываем счетчик
+     * @param count {INT} - количество элементов
+     */
+    function showCounter(count){//Показываем счетчик
+        var $popup = $("."+popupOptions.class);
 
         if ($popup == undefined){
             return false;
@@ -166,14 +168,22 @@ $(function(){
             .end()
             .visShow();
     }
-    function hideCounter(popup){
 
-        //var $popup = popup!=undefined ? $(popup) : $("."+popupOptions.class);
+    /**
+     * @description причем счетчик
+     *
+     */
+    function hideCounter(){
+
         $blueElementCounterTmpl.hide();
         $popupFooterCounter.visHide();
     }
 
-    function changePopup(popup,params,options){
+    /**
+     * @description изменяем котент попапа
+     * @param popup - попап
+     */
+    function changePopup(popup){
         var $popup = $(popup);
 
         var $popupFooter = $("<div />",{

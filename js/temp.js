@@ -19,6 +19,7 @@ $(function(){
             $(this).attr("disabled","disabled").addClass("disabled");
         });*/
 
+        $("div.element-field input[type=text]").addClass("required").parents(".element-field").addClass("required");
 
         $("#header").addClass("document-header");
     }

@@ -47,6 +47,7 @@
     padding: 64px 0 0 83px;
     */
     color: #FFFFFF;
+    display: inline-block;
     font-size: 24px;
     font-weight: 400;
     line-height: 1;
@@ -271,4 +272,124 @@
     text-align: left;
     text-decoration: underline;
     white-space: nowrap;
+}
+
+.user-actions {
+    color: #FFFFFF;
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    height: 100%;
+    line-height: 1.25;
+    margin-right: 16px;
+    margin-top: -8px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.user-actions a {
+    display: block;
+    color: #b0b0b0;
+    font-size: 14px;
+    line-height: 1.25
+}
+
+#element-top-panel {
+    background: url(../img/top-panel-bg.png) #445167 repeat-x 0 0;
+    height: 24px;
+    left: 0;
+    padding-left: 16px;
+    position: fixed;
+    top: 0;
+    width: -moz-calc(100% - 16px);
+    z-index: 50;
+}
+#element-top-panel.element-top-panel-bordered {
+    border-top: 4px solid #F6E300;
+}
+#element-top-panel .element-top-panel-inner {
+    display: table-cell;
+    height: 24px;
+    vertical-align: middle;
+}
+#element-top-panel a {
+    color: #ffffff;
+    cursor: default;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 8px;
+    text-decoration: none;
+}
+#element-top-panel a.inactive {
+    color: #95AAC7;
+    cursor: pointer;
+}
+#element-top-panel a.inactive:hover {
+    color: #3B465A;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+#element-top-panel span {
+    display: inline-block;
+}
+
+#element-top-panel span.read-edit-switch {
+    background-color: #2A3239;
+    border-radius: 10px;
+    height: 10px;
+    vertical-align: middle;
+    width: 25px;
+}
+#element-top-panel span.read-edit-switch:before {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    content: "";
+    display: block;
+    float: left;
+    height: 10px;
+    width: 10px;
+}
+
+#element-top-panel span.read-edit-switch.edit:before {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    content: "";
+    display: block;
+    float: right;
+    height: 10px;
+    width: 10px;
+}
+
+#element-top-panel .already-opened {
+    color: #FFFFFF;
+    display: none;
+    font-size: 12px;
+    line-height: 1.25;
+    margin-left: 20px;
+}
+#element-top-panel .already-opened .opener {
+    margin-left: 5px;
+    padding-left: 15px;
+}
+#element-top-panel .already-opened .opener:before {
+    background: url("../img/sprites.png") no-repeat scroll -1415px 0 transparent;
+    content: "";
+    display: inline-block;
+    height: 12px;
+    margin-left: -15px;
+    position: absolute;
+    width: 11px;
+}
+#element-top-panel .edit-button-disabled {
+    color: #65768F;
+    font-size: 12px;
+}
+
+#element-top-panel+#header {
+    margin-top: 24px;
+}
+
+#element-top-panel.element-top-panel-bordered+#header {
+    margin-top: 28px;
 }

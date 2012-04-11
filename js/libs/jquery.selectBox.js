@@ -238,6 +238,8 @@ if(jQuery) (function($) {
                         label = $('<input />',{
                             class: "selectBox-label",
                             type: "text",
+                            name: control.attr("name")+"_search",
+                            id: control.attr("id")+"_search",
                             value: $(select).find('OPTION:selected').text() || '\u00A0'
                         });
                         if (control.hasClass("disabled")){

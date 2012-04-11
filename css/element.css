@@ -68,6 +68,34 @@ input[type=checkbox] {
     font-size: 14px;
     line-height: 1.65;
 }
+.element-field.element-table .element-label {
+    color: #000000;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 32px;
+    display: block;
+}
+.element-field.required .element-label:after {
+    color: #D10000;
+    content: "*";
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1.45;
+    margin-left: 5px;
+    position: absolute;
+}
+.element-field.required.element-link .element-label:after {
+    font-size: 30px;
+    line-height: 1;
+}
+.element-field.required.element-document .element-label:after {
+    font-size: 30px;
+    line-height: 1;
+}
+.element-field.required.element-table .element-label:after {
+    font-size: 36px;
+}
 
 .element-field.element-checkbox .element-label {
     cursor: pointer;

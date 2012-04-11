@@ -1,0 +1,29 @@
+hintcontainer {
+    display: none;
+}
+
+
+.element-field input[type="text"].required.error {
+    border-color: red;
+}
+
+.element-field.element-link.validation-error label, .element-field.element-document.validation-error label {
+    color: #DD0000;
+}
+
+.element-field.element-table.validation-error .element-table-add-button {
+    background: -moz-linear-gradient(center top , #D82C2B, #8C1818) repeat scroll 0 0 transparent
+}
+
+.element-messages-validation-error {
+    color: #DD0000;
+    font-size: 12px;
+    line-height: 1.25;
+    margin-left: 6px;
+}
+
+.element-messages-validation-error a{
+    color: #DD0000;
+    font-size: 12px;
+    line-height: 1.25;
+}
