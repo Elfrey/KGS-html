@@ -13,8 +13,8 @@
     /*
     height: 126px;
     */
-    padding: 20px 32px 17px;
-    width: -moz-calc(100% - 64px);
+    padding: 20px 29px 12px;
+    width: -moz-calc(100% - 58px);
     z-index: 12;
 }
 #header.document-header {
@@ -50,7 +50,7 @@
     display: inline-block;
     font-size: 24px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.25;
 }
 #header .breadcrumb ~ .header-title{
     font-size: 37px;
@@ -287,11 +287,15 @@
     vertical-align: middle;
 }
 
-.user-actions a {
-    display: block;
+.user-actions button {
+    background: none;
+    border: none;
     color: #b0b0b0;
+    display: inline-block;
     font-size: 14px;
-    line-height: 1.25
+    line-height: 1.25;
+    text-align: right;
+    text-decoration: underline;
 }
 
 #element-top-panel {

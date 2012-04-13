@@ -412,13 +412,14 @@ input[disabled]+.input-icon {
     -moz-border-left-colors: rgba(255,255,255,0);
     border-style: solid;
 
-    color: #2a2a2a;
+    color: #2A2A2A;
     font-size: 14px;
-    font-weight: 700;
-    line-height: 15px;
-    min-height: 27px;
-    padding: 12px 13px;
+    height: 40px;
+    letter-spacing: -0.2px;
+    line-height: 14px;
+    padding: 4px 7px;
     text-align: left;
+    vertical-align: top
 }
 .element-table-data thead tr th:first-child {
         border-left-width: 1px;
@@ -426,12 +427,18 @@ input[disabled]+.input-icon {
     }
 
 .element-table-data tbody tr td {
-    border-bottom: 1px dotted #acacac;
+    border: 1px solid #EFEFEF;
+    border-top: none;
+    border-left: none;
     color: #000000;
+    cursor: pointer;
     font-size: 12px;
-    font-weight: 400;
-    line-height: 1.25;
-    padding: 13px;
+    line-height: 15px;
+    padding: 7px;
+    vertical-align: top;
+}
+.element-table-data tbody tr td:first-child {
+    border-left: 1px solid #EFEFEF;
 }
 .element-table-data tbody tr:hover {
     background-color: #f6f6f6;

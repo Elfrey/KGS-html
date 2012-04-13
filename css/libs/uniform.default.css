@@ -150,11 +150,13 @@ div.checker input {
   height: 30px;
 }
 
+
 div.checker span {
     background: url('../../img/sprites.png') no-repeat -1333px 0;
     width: 30px;
     height: 30px;
 }
+
 
 div.checker:active span, 
 div.checker.active span {
@@ -176,6 +178,7 @@ div.checker.focus.active span {
 div.checker span.checked {
   background-position: -1296px 0;
 }
+
 
 div.checker:active span.checked, 
 div.checker.active span.checked {
@@ -427,6 +430,8 @@ div.selector.disabled span {
 div.checker {
   margin-right: 10px;
 }
+
+
 
 /* Radio */
 div.radio {

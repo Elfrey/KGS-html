@@ -1,3 +1,181 @@
+
+/**
+ * @description JSON объект с действиями над строками таблицы(просмотр, удаление, редактирование)
+ * Первый ключ = атрибут строки data-action-id
+ *
+ */
+var tableActionJSON = {
+    0: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    1: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    2: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    3: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    4: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    },
+    7: {
+        actions: [
+            {
+                code: "show",//Код действия
+                title: "Просмотр", //Название пункта
+                href: "#show", //Ссылка
+                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
+            },
+            {
+                code: "makeExt",
+                title: "Сделать выписку",
+                href: "#make"
+            },
+            {
+                code: "edit",
+                title: "Редактировать",
+                href: "#edit"
+            },
+            {
+                breaker: true
+            },
+            {
+                code: "delete",
+                title: "Удалить",
+                href: "#delete"
+            }
+        ]
+    }
+
+};
+
 $(function() {
 
     var tableActionsOptions = {
@@ -36,7 +214,7 @@ $(function() {
     /***************************************************************************
      * Работа с кнопками в ".data-table"
      **************************************************************************/
-    if ($(".data-table").length>0){
+    if ($(".data-table").length>0 && tableActionJSON != undefined){
         var $dataTable = $(".data-table tbody");
         $dataTable.children("tr").each(function(){
             var $tr = $(this),
@@ -226,180 +404,3 @@ function showNotification(message, classIndex, $table) {
     $noteTr.prependTo($table.find("tbody"));
 }
 
-
-/**
- * @description JSON объект с действиями над строками таблицы(просмотр, удаление, редактирование)
- * Первый ключ = атрибут строки data-action-id
- *
- */
-var tableActionJSON = {
-    0: {
-        actions: [
-            {
-                code: "show",//Код действия
-                title: "Просмотр", //Название пункта
-                href: "#show", //Ссылка
-                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
-            },
-            {
-                code: "makeExt",
-                title: "Сделать выписку",
-                href: "#make"
-            },
-            {
-                code: "edit",
-                title: "Редактировать",
-                href: "#edit"
-            },
-            {
-                breaker: true
-            },
-            {
-                code: "delete",
-                title: "Удалить",
-                href: "#delete"
-            }
-        ]
-    },
-    1: {
-        actions: [
-            {
-                code: "show",//Код действия
-                title: "Просмотр", //Название пункта
-                href: "#show", //Ссылка
-                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
-            },
-            {
-                code: "makeExt",
-                title: "Сделать выписку",
-                href: "#make"
-            },
-            {
-                code: "edit",
-                title: "Редактировать",
-                href: "#edit"
-            },
-            {
-                breaker: true
-            },
-            {
-                code: "delete",
-                title: "Удалить",
-                href: "#delete"
-            }
-        ]
-    },
-    2: {
-        actions: [
-            {
-                code: "show",//Код действия
-                title: "Просмотр", //Название пункта
-                href: "#show", //Ссылка
-                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
-            },
-            {
-                code: "makeExt",
-                title: "Сделать выписку",
-                href: "#make"
-            },
-            {
-                code: "edit",
-                title: "Редактировать",
-                href: "#edit"
-            },
-            {
-                breaker: true
-            },
-            {
-                code: "delete",
-                title: "Удалить",
-                href: "#delete"
-            }
-        ]
-    },
-    3: {
-        actions: [
-            {
-                code: "show",//Код действия
-                title: "Просмотр", //Название пункта
-                href: "#show", //Ссылка
-                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
-            },
-            {
-                code: "makeExt",
-                title: "Сделать выписку",
-                href: "#make"
-            },
-            {
-                code: "edit",
-                title: "Редактировать",
-                href: "#edit"
-            },
-            {
-                breaker: true
-            },
-            {
-                code: "delete",
-                title: "Удалить",
-                href: "#delete"
-            }
-        ]
-    },
-    4: {
-        actions: [
-            {
-                code: "show",//Код действия
-                title: "Просмотр", //Название пункта
-                href: "#show", //Ссылка
-                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
-            },
-            {
-                code: "makeExt",
-                title: "Сделать выписку",
-                href: "#make"
-            },
-            {
-                code: "edit",
-                title: "Редактировать",
-                href: "#edit"
-            },
-            {
-                breaker: true
-            },
-            {
-                code: "delete",
-                title: "Удалить",
-                href: "#delete"
-            }
-        ]
-    },
-    7: {
-        actions: [
-            {
-                code: "show",//Код действия
-                title: "Просмотр", //Название пункта
-                href: "#show", //Ссылка
-                isDefault: true //действие по умолчание, вызывается при клике левой кнопкой по строке
-            },
-            {
-                code: "makeExt",
-                title: "Сделать выписку",
-                href: "#make"
-            },
-            {
-                code: "edit",
-                title: "Редактировать",
-                href: "#edit"
-            },
-            {
-                breaker: true
-            },
-            {
-                code: "delete",
-                title: "Удалить",
-                href: "#delete"
-            }
-        ]
-    }
-
-};

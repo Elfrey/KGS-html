@@ -2,16 +2,15 @@
     Document   : table
     Created on : Jan 8, 2012, 8:40:57 PM
     Author     : Elfrey
-    Description:
-        Purpose of the stylesheet follows.
+    @TODO туча камментов, удалять
 */
 
 .table-data {
-    margin-top: 4px;
+    margin-top: 0;
 }
 
 .table-data .table-main-actions {
-    margin-top: 22px;
+    margin-top: 20px;
 }
 .green-subscribe-button {
     background: -moz-linear-gradient(top, rgba(154,186,47,1) 0%, rgba(87,120,30,1) 100%);
@@ -134,13 +133,11 @@
 .table-fields-filter-block label {
     color: #484848;
     cursor: pointer;
-    display: block;
+    display: inline-block;
     font-size: 14px;
     line-height: 1.25;
     margin-bottom: 5px;
-    margin-left: 25px;
-    margin-top: -18px;
-    position: static;
+    width: -moz-calc(100% - 35px);
 }
 
 .table-fields-filter-block-actions {
@@ -180,12 +177,14 @@
     margin-right: 18px;
     width: 210px;
 }
-
+.table-fields-filter-block ul li {
+    margin-bottom: 10px;
+}
 
 .data-table {
     border-top: 1px solid #CECECE;
     margin-left: -2px;
-    margin-top: 31px;
+    margin-top: 19px;
     width: 100%;
 }
 
@@ -198,10 +197,10 @@
     border: 1px solid #C7C7C7;
     color: #2A2A2A;
     font-size: 14px;
-    height: 53px;
+    height: 40px;
     letter-spacing: -0.2px;
     line-height: 14px;
-    padding: 13px 18px 0 12px;
+    padding: 4px 7px 4px 7px;
     text-align: left;
     vertical-align: top;
 }
@@ -231,7 +230,7 @@
     vertical-align: middle;
 }
 .data-table > tbody > tr {
-    border-bottom: 1px dotted #A8AAAC;
+    /*border-bottom: 1px dotted #A8AAAC;*/
 }
 
 .data-table > tbody > tr:hover {
@@ -239,17 +238,18 @@
 }
 
 .data-table > tbody td {
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
+    /*border-left: 1px solid transparent;
+    border-right: 1px solid transparent;*/
+    border: 1px solid #EFEFEF;
     color: #000000;
     cursor: pointer;
     font-size: 12px;
     line-height: 15px;
-    padding: 15px;
+    padding: 7px;
     vertical-align: top;
 }
 .data-table > tbody tr td:first-child {
-    padding-bottom: 35px;
+    /*padding-bottom: 35px;*/
 }
 .data-table > tbody td a {
     color: #01366a;
@@ -406,6 +406,24 @@
 }
 .table-actions ul li:hover a {
     color: #ffffff;
+}
+
+.with-small-checkbox div.checker {
+    margin-right: 0px;
+    vertical-align: top;
+}
+
+.with-small-checkbox .checker input, .with-small-checkbox div.checker {
+    width: 20px;
+    height: 20px;
+}
+.with-small-checkbox div.checker span {
+    background: url('../../img/sprites.png') no-repeat -382px 0;
+    width: 20px;
+    height: 20px;
+}
+.with-small-checkbox div.checker span.checked {
+    background-position: -357px 0;
 }
 /* END .data-table-actions-tr
 ------------------------------------------------------------------------------*/

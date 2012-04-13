@@ -35,33 +35,36 @@ $(function(){
         console.log($input);
     });
 
-    var validator = $("#main_form").validate({
-        debug: true,
-        messages: validateErrorMessages,
-        errorElement: 'span',
-        wrapper: "hintcontainer",
-        ignore: ".ignore-validation",
-        onfocusout: function(input, event){
-            var eSize = validator.numberOfInvalids();
-            showErrorBlock(eSize)
-        },
-        invalidHandler: function(){
-            var eSize = validator.numberOfInvalids();
-            showErrorBlock(eSize)
-        },
-        showErrors: function(errorMap, errorList){
-            var elements = $(this.currentElements);
+    if ($("form").length>0) {
+        var validator = $("#main_form").validate({
+            debug: true,
+            messages: validateErrorMessages,
+            errorElement: 'span',
+            wrapper: "hintcontainer",
+            ignore: ".ignore-validation",
+            onfocusout: function(input, event){
+                var eSize = validator.numberOfInvalids();
+                showErrorBlock(eSize)
+            },
+            invalidHandler: function(){
+                var eSize = validator.numberOfInvalids();
+                showErrorBlock(eSize)
+            },
+            showErrors: function(errorMap, errorList){
+                var elements = $(this.currentElements);
 
-            this.defaultShowErrors();
-            this.toShow.hide();
-            elements.each(function(){
-                var $item = $(this),
-                    $parent = $item.parents(".element-field"),
-                    $label = $parent.children(".element-label");
-                $parent.addClass("validation-error");
-            })
-        }
-    });
+                this.defaultShowErrors();
+                this.toShow.hide();
+                elements.each(function(){
+                    var $item = $(this),
+                        $parent = $item.parents(".element-field"),
+                        $label = $parent.children(".element-label");
+                    $parent.addClass("validation-error");
+                })
+            }
+        });
+    }
+
 
     $(".bottom-apply-green-button.green-button, .left-apply-green-button").live("click",function(event){
         event.preventDefault();

@@ -187,6 +187,7 @@ if (jQuery) (function ($) {
 			if (!options.input)
 				options.input = $input;
 
+
 			$(document).bind("click.lookup"+options.guid,function(e){
 				prepareClose(options, e);
 			});
@@ -216,11 +217,65 @@ if (jQuery) (function ($) {
                     options.addNewAction.call();
             });
 
+            options.input.live("keyup.lookup"+options.guid,function(e){
+                options.wrapperItem.find(".visible").removeClass("visible");
+
+                var $input = $(this),
+                    inputValue = $input.val(),
+                    $data = options.wrapperItem.find("ul li"),
+                    flag = false;
+
+                clearTimeout(timeoutId);
+
+
+                if (event.keyCode == 27) {
+                    $input.val('');
+                    $data.hide();
+                }
+                if (inputValue.length>1 || inputValue==''){
+
+                    toggleLookUp($wrapper,$ul,"open",$scrollableLookup);
+
+                    timeoutId = setTimeout(function(){
+                        flag = true;
+                        if (flag){
+                            lookupFilter($data, inputValue);
+                            $ul.find(".odd").removeClass("odd");
+
+                            var i=0;
+                            $ul.find("li:visible").each(function(){
+                                i++
+                                if (i%2==0){
+                                    $(this).addClass("odd")
+                                }
+                            })
+
+                        }
+                    },1);
+                }else{
+                    $data.hide();
+                }
+                $data.find(":first").addClass("btop");
+                var $lastLi = $data.find(":last");
+                $lastLi.addClass("bbottom");
+
+                if (!$lastLi.is("[title]")){
+                    $lastLi.addClass("visible").show();
+                }
+                $scrollableLookup.data('jsp').reinitialise();
+
+
+                filterList(options,e,$(this).val());
+            });
 
 			/*return $input.bind("click.lookup",function () {
 				return false;
 			});*/
 		};
+
+        var filterList = function(options, e, value) {
+            console.log(value);
+        };
 
 		var prepareClose = function(options, e){
 			if (

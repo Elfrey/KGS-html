@@ -21,11 +21,11 @@ body.dashboard .search-block {
     margin-top: 32px;
 }
 
-.dashboard-block .dasboard-buttons {
+.dashboard-block .dashboard-buttons {
     float: left;
 }
 
-.dashboard-block .dasboard-buttons .dashboard-big-button {
+.dashboard-block .dashboard-buttons .dashboard-big-button {
     background: url("../img/dashboard-big-button-bg.png") repeat-x scroll left top #DBDBDE;
     border: 1px solid #C4C4C4;
 
@@ -40,14 +40,17 @@ body.dashboard .search-block {
     line-height: 20px;
     margin-bottom: 20px;
     min-height: 84px;
-    padding: 15px 40px 15px 38px;
+    padding: 0 40px;/*15px 40px 15px 38px; for button*/
     text-align: center;
     text-shadow: 0 2px 3px white;
     vertical-align: middle;
-    width: 332px;
+    width: 252px;/*332px; for button*/
 }
-
-.dashboard-block .dasboard-buttons .dashboard-big-button:hover {
+.dashboard-block .dashboard-buttons .dashboard-big-button span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.dashboard-block .dashboard-buttons .dashboard-big-button:hover {
     color: #209add;
     background: url(../img/dashboard-big-button-bg-hover.png) repeat-x scroll left top #c2e4f6 !important;
 }
