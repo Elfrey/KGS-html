@@ -24,7 +24,6 @@ var loads = [
     scriptPath+"js/libs/jquery.scrollTo.js",
 
     scriptPath+"js/temp.js",//@TODO временный файл
-    scriptPath+"js/dashboard.js",
     scriptPath+"js/script.js",
     scriptPath+"js/jquery.kPopup.js",
     scriptPath+"js/customSelect.js",
