@@ -1,0 +1,268 @@
+.search-item-delete {
+    background: url("../img/sprites.png") no-repeat scroll -1103px 0 transparent;
+    display: block;
+    float: left;
+    height: 8px;
+    margin-left: -19px;
+    margin-top: 10px;
+    position: absolute;
+    text-indent: -99999px;
+    width: 9px;
+}
+.search-item-delete:hover {
+    background: url('../img/sprites.png') no-repeat -1173px 0;
+}
+.search-item {
+    margin-top: 20px;
+}
+
+.search-item > div {
+    float: left;
+    margin-right: 13px;
+}
+
+.search-item .search-item-field {
+    width: 290px;
+}
+
+.search-item .search-item-action {
+    margin-right: 15px;
+    width: 185px;
+}
+
+/*
+Search select
+*/
+.search-item .selectBox-dropdown {
+    width: 100% !important;
+}
+/*.search-item .selectBox-dropdown {
+    background: white;
+    border: 1px solid #B2B2B2;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 11px;
+    padding: 0 0 0 10px;
+
+    width: 100% !important;
+}
+
+.search-item .selectBox-dropdown .selectBox-arrow:before {
+    background: url("../img/sprites.png") no-repeat scroll -804px 0 transparent;
+    content: "";
+    display: block;
+    height: 5px;
+    margin: 13px 0 0 7px;
+    width: 9px;
+}
+
+.search-item .selectBox-dropdown .selectBox-arrow {
+    background: -moz-linear-gradient(center top , #ECECEE 0%, #DADADD 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #B2B2B2;
+    border-radius: 2px 2px 2px 2px;
+    display: inline-block;
+    margin-right: -4px;
+    margin-top: -1px;
+}
+
+
+.selectBox-dropdown-menu.search-item-select {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B2B2B2;
+    border-radius: 0 0 0 0;
+}
+
+.selectBox-options.search-item-select .selectBox-optgroup {
+    background-color: #F0F0F0;
+    color: #000000;
+}
+.selectBox-options.search-item-select li {
+    padding: 3px 0 3px 15px;
+}
+.selectBox-options.search-item-select li a {
+    color: #000000;
+    font-size: 12px;
+    line-height: 23px;
+    padding: 0 0 0 15px;
+}
+.selectBox-options.search-item-select li:hover {
+    background-color: #F0F7FF;
+}
+*/
+/*
+End search select
+*/
+
+
+/*
+search last input type=text
+*/
+
+.search-item-value {
+    margin-left: -4px;
+    width: 437px;
+}
+
+.search-item-value .search-item-value-input {
+    border: 1px solid #B2B2B2;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07) inset;
+    color: #000000;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+
+/*
+search footer
+*/
+.ext-search-bot-action {
+    background-color: #E7EED5;
+    border-radius: 4px 4px 4px 4px;
+    margin-top: 19px;
+    padding: 21px 6px;
+    vertical-align: middle;
+    width: 658px;
+}
+.ext-search-bot-action input {
+    display: inline-block;
+    margin-left: 12px;
+}
+.ext-search-bot-action input:last-child {
+    float: right;
+    margin-right: 28px;
+}
+
+.search-apply-button {
+    background: -moz-linear-gradient(top,  #99b92f,  #58791e);
+
+    border: 2px solid #000;
+    border-right: 1px solid #60791f;
+    border-bottom: 1px solid #3f5516;
+    -moz-border-top-colors: #87a22a #aec838;
+    -moz-border-left-colors: #60791f #a8c136;
+    -moz-box-shadow: 0px 7px 5px -6px #557120;
+
+    border-radius: 3px;
+
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 8px 7px;
+    text-align: center;
+    text-shadow: -1px -1px 0px #60831f;
+    width: 169px;
+}
+
+.search-apply-button:active {
+    background: -moz-linear-gradient(bottom,  #99b92f,  #58791e);
+
+    border: 2px solid #000;
+    border-left: 1px solid #60791f;
+    border-top: 1px solid #3f5516;
+    -moz-border-bottom-colors: #87a22a #aec838;
+    -moz-border-right-colors: #60791f #a8c136;
+    -moz-box-shadow: none;
+}
+
+.search-save-button {
+    background: -moz-linear-gradient(top, #ebedef 0%, #dddee0 100%);
+
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.3);
+    -moz-border-top-colors: #bfbfbf #FCFCFE;
+    -moz-border-left-colors: #bfbfbf #FCFCFE;
+
+    color: #7e7e7e;
+    font-size:  16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0 0 0 6px;
+    padding: 9px 7px;
+    text-align: center;
+    width: 153px;
+}
+
+.search-cancel-button {
+    background: -moz-linear-gradient(top, #ebedef 0%, #dddee0 100%);
+
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.3);
+    -moz-border-top-colors: #bfbfbf #FCFCFE;
+    -moz-border-left-colors: #bfbfbf #FCFCFE;
+
+    color: #7e7e7e;
+    font-size:  16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 2px 0 0 6px;
+    padding: 7px;
+    text-align: center;
+    width: 142px;
+}
+
+
+.ext-search-add {
+    margin-top: 30px;
+    margin-bottom: 31px;
+}
+.ext-search-add a{
+    border-bottom: 1px dotted #1B6090;
+    color: #1B6090;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+}
+.ext-search-add a:hover {
+    border-bottom: none;
+}
+.ext-search-add a:before {
+    background: url("../img/sprites.png") no-repeat scroll -1393px 0 transparent;
+    content: "";
+    display: block;
+    float: left;
+    height: 13px;
+    margin: 4px 7px 0 0;
+    position: relative;
+    width: 13px;
+}
+
+.ext-search-params {
+    
+}
+
+.ext-search-params h2 {
+    color: #3B3B3B;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-bottom: 10px;
+}
+.ext-search-params .show-all-input-cont {
+    color: #464646;
+}
+.ext-search-params label {
+    color: #464646;
+    font-size: 14px;
+    line-height: 2;
+}
+.ext-search-params ul {
+    list-style: none;
+    margin-top: 5px;
+}
+
+.ext-search-params ul li {
+    float: left;
+    pading-right: 20px;
+    padding-bottom: 3px;
+    width: 223px;
+}

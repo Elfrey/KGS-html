@@ -1,0 +1,30 @@
+.popup-add-linked {
+    border-radius: 5px;
+    padding: 25px 30px;
+}
+
+.table-wrapper.popuped {
+    margin-top: 13px;
+}
+
+.popup-add-linked .search-block .search-big-input {
+    width: -moz-calc(100% - 108px);
+}
+
+.checkboxed.element-table-data thead tr th:first-child {
+    border-right: none;
+    min-width: 12px;
+    padding: 12px 8px 12px 24px;
+    width: 12px;
+}
+
+.checkboxed.element-table-data tbody tr td:first-child {
+    min-width: 12px;
+    padding: 12px 8px 12px 24px;
+    width: 12px;
+}
+
+.checkboxed.element-table-data tbody tr:hover, .checkboxed.element-table-data tbody tr.hover-blue {
+    background-color: #f1faff;
+    cursor: pointer;
+}

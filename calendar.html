@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:1="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>Календарь</title>
+		<meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="css/jquery.selectBox.css" type="text/css" media="screen, projection" />
+
+        <link rel="stylesheet" href="css/libs/uniform.default.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="css/libs/jquery-ui-timepicker-addon.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.16.custom.css" type="text/css" media="screen, projection" />
+
+		<link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen, projection" />
+
+		<script type="text/javascript" src="js/libs/yepnope.js"></script>
+		<script type="text/javascript" src="js/load.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<h1 class="header-title">Календарь</h1>
+			</header><!-- #header-->
+			<section id="middle">
+				<div id="container" class="calendar">
+					<div id="content">
+
+                        <div id="calendar-block">
+                            <div class="month-navigate">
+                                <a href="#prev-month" id="prev-month" class="np-month"><-</a>
+                                <h2>Март</h2>
+                                <a href="#next-month" id="next-month" class="np-month">-></a>
+                            </div>
+                            <div class="calendar" id="calendar">
+                                <table class="calendar-month">
+                                    <thead>
+                                        <tr>
+                                            <th>Пн</th>
+                                            <th>Вт</th>
+                                            <th>Ср</th>
+                                            <th>Чт</th>
+                                            <th>Пт</th>
+                                            <th>Сб</th>
+                                            <th>Вс</th>
+                                        </tr>
+                                    </thead>
+	                                <tbody>
+		                                <tr>
+			                                <td class="inactive-day" data-day="27" data-month="2" data-year="2012"></td>
+			                                <td class="inactive-day" data-day="28" data-month="2" data-year="2012"></td>
+			                                <td class="inactive-day" data-day="29" data-month="2" data-year="2012"></td>
+			                                <td data-day="1" data-month="3" data-year="2012"></td>
+			                                <td data-day="2" data-month="3" data-year="2012"></td>
+			                                <td class="weekend" data-day="3" data-month="3" data-year="2012"></td>
+			                                <td class="weekend" data-day="4" data-month="3" data-year="2012"></td>
+		                                </tr>
+		                                <tr>
+			                                <td data-day="5" data-month="3" data-year="2012"></td>
+			                                <td data-day="6" data-month="3" data-year="2012"></td>
+			                                <td data-day="7" data-month="3" data-year="2012"></td>
+			                                <td data-day="8" data-month="3" data-year="2012"></td>
+			                                <td data-day="9" data-month="3" data-year="2012"></td>
+			                                <td class="weekend" data-day="10" data-month="3" data-year="2012"></td>
+			                                <td class="weekend" data-day="11" data-month="3" data-year="2012"></td>
+		                                </tr>
+		                                <tr>
+			                                <td data-day="12" class="current-day" data-month="3" data-year="2012"></td>
+			                                <td data-day="13" data-month="3" data-year="2012"></td>
+			                                <td data-day="14" data-month="3" data-year="2012"></td>
+			                                <td data-day="15" data-month="3" data-year="2012"></td>
+			                                <td data-day="16" data-month="3" data-year="2012"></td>
+			                                <td class="weekend" data-day="17" data-month="3" data-year="2012"></td>
+			                                <td class="weekend" data-day="18" data-month="3" data-year="2012"></td>
+		                                </tr>
+		                                <tr>
+			                                <td data-day="19" data-month="3" data-year="2012"></td>
+			                                <td data-day="20" data-month="3" data-year="2012"></td>
+			                                <td data-day="21" data-month="3" data-year="2012"></td>
+			                                <td data-day="22" data-month="3" data-year="2012"></td>
+			                                <td data-day="23" data-month="3" data-year="2012"></td>
+			                                <td class="weekend" data-day="24" data-month="3" data-year="2012"></td>
+			                                <td class="weekend" data-day="25" data-month="3" data-year="2012"></td>
+		                                </tr>
+		                                <tr>
+			                                <td data-day="26" data-month="3" data-year="2012"></td>
+			                                <td data-day="27" data-month="3" data-year="2012"></td>
+			                                <td data-day="28" data-month="3" data-year="2012"></td>
+			                                <td data-day="29" data-month="3" data-year="2012"></td>
+			                                <td data-day="30" data-month="3" data-year="2012"></td>
+			                                <td class="weekend" data-day="31" data-month="3" data-year="2012"></td>
+			                                <td class="weekend inactive-day" data-day="1" data-month="4" data-year="2012"></td>
+		                                </tr>
+	                                </tbody>
+                                    <tfoot>
+	                                    <tr>
+	                                        <td>&nbsp</td>
+	                                        <td>&nbsp</td>
+	                                        <td>&nbsp</td>
+	                                        <td>&nbsp</td>
+	                                        <td>&nbsp</td>
+	                                        <td>&nbsp</td>
+	                                        <td>&nbsp</td>
+	                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="events">
+                            </div>
+                        </div>
+
+					</div><!-- #content-->
+				</div><!-- #container-->
+			</section><!-- #middle-->
+		</div><!-- #wrapper -->
+	</body>
+</html>

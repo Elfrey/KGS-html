@@ -1,0 +1,245 @@
+#calendar-block {
+    padding-top: 37px;
+}
+
+.month-navigate {
+    margin-left: 28px;
+    margin-bottom: 7px;
+}
+
+.month-navigate h2 {
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    margin: 0 19px;
+}
+.month-navigate h2:hover {
+    color: #22628B;
+}
+.month-navigate  a.np-month {
+    display: inline-block;
+    height: 36px;
+    line-height: 28px;
+    text-indent: -9999px;
+    vertical-align: super;
+    width: 36px;
+}
+.month-navigate #prev-month {
+    background: url('../img/sprites.png') no-repeat scroll -1029px 8px transparent;
+}
+.month-navigate #next-month {
+    background: url("../img/sprites.png") no-repeat scroll -1065px 8px transparent;
+}
+#calendar-block .calendar {
+    margin-bottom: 33px;
+    margin-left: 79px;
+}
+
+#calendar-block .calendar .calendar-month {
+
+}
+
+
+#calendar-block .calendar .calendar-month thead tr th {
+    color: #979797;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: uppercase   ;
+}
+
+#calendar-block .calendar .calendar-month tbody tr td {
+    border: 1px solid #c4c4c4;
+    height: 77px;
+    width: 112px;
+    text-align: center;
+    vertical-align: top;
+}
+#calendar-block .calendar .calendar-month tbody tr td:before {
+    color: #393939;
+    content: attr(data-day);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    left: 42px;
+    position: relative;
+    text-align: right;
+    top: 6px;
+    vertical-align: top;
+}
+#calendar-block .calendar .calendar-month tbody tr td.weekend:before {
+    color: #C11418;
+}
+#calendar-block .calendar .calendar-month tbody tr td.inactive-day:before {
+    color: #9C9C9C;
+}
+#calendar-block .calendar .calendar-month tbody tr td.active {
+    cursor: pointer;
+}
+#calendar-block .calendar .calendar-month tbody tr td.active:hover {
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.19);
+}
+
+.month-day {
+    color: #393939;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    left: 42px;
+    position: relative;
+    text-align: right;
+    top: 6px;
+}
+#calendar-block .calendar .calendar-month tbody tr td.inactive-day {
+    background-color: #F7F8F8;
+    border: 1px solid #AEAEAE;
+}
+#calendar-block .calendar .calendar-month tbody tr td.current-day {
+    background-color: #DAECFE;
+}
+
+.events-count {
+    color: #363636;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 6px 0 0 0;
+    width: inherit;
+}
+.events-count span {
+    font-size: 42px;
+}
+.events-count icon.event-mark {
+    background: none repeat scroll 0 0 #C0C0C0;
+    border-radius: 14px 14px 14px 14px;
+    display: inline-block;
+    height: 14px;
+    margin: 8px 0 0 5px;
+    width: 14px;
+}
+
+#calendar-block .calendar .calendar-month tfoot tr td {
+    height: 10px;
+}
+
+
+/**
+Event list
+*/
+
+#calendar-block .events {
+    background: url("../img/event-list-head-bg.jpg") repeat-x scroll 0 0 transparent;
+    left: 0;
+    padding-left: 111px;
+    padding-top: 25px;
+    position: absolute;
+    width: -moz-calc(100% - 111px);
+}
+
+#calendar-block .events .event-day-title {
+    color: #000000;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+
+}
+#calendar-block .events .event-day-title span {
+    color: #AAA8A5;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    height: 63px;
+    line-height: 50px;
+    margin: 7px 0 0 13px;
+    vertical-align: middle;
+}
+
+#calendar-block .events .event-list {
+    list-style: none;
+    padding-left: 3px;
+}
+#calendar-block .events .event-list li {
+    padding-top: 32px;
+
+}
+
+#calendar-block .events .event-list li:before {
+    color: #525252;
+    content: attr(data-time);
+    display: block;
+    float: left;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-left: -65px;
+    text-align: right;
+    width: 45px;
+}
+#calendar-block .events .event-list li h3 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+#calendar-block .events .event-list li div {
+    color: #484848;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 7px;    
+}
+
+.month-selector {
+    background-color: #FFFFFF;
+    border: 1px solid #C4C7CB;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 34px;
+    margin-top: 5px;
+    min-width: 177px;
+    position: absolute;
+    z-index: 2;
+}
+.month-selector:before {
+    background: url("../img/sprites.png") no-repeat scroll -755px 0 transparent;
+    content: "";
+    display: block;
+    height: 8px;
+    margin-left: 16px;
+    margin-top: -8px;
+    position: absolute;
+    width: 14px;
+}
+.month-selector ul {
+    background: none repeat scroll 0 0 #FFFFFF;
+    list-style: none outside none;
+    position: relative;
+    z-index: 2;
+}
+.month-selector ul li {
+    padding: 3px 16px;
+}
+
+.month-selector ul li:first-child {
+    margin-top: 8px;
+}
+.month-selector ul li:last-child {
+    margin-bottom: 5px;
+}
+.month-selector ul li a {
+    color: #3c608d;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+}
+.month-selector ul li a.active {
+    font-weight: 700;
+}
+.month-selector ul li:hover {
+    background-color: #0088cc;
+}
+.month-selector ul li:hover a, .month-selector ul li:hover a:hover, .month-selector ul li a:hover {
+    color: #fff;
+}
+
