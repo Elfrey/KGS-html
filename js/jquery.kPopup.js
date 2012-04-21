@@ -169,9 +169,15 @@ if (jQuery) (function ($) {
                 top = 50;
             }
 
-            if (P.options.styles.top){
+
+            top = P.options.styles.top ? P.options.styles.top : top;
+            left = P.options.styles.left ? P.options.styles.left : left;
+            /*if (P.options.styles.top){
                 top = P.options.styles.top;
-            }
+            }*/
+            /*if (P.options.styles.left){
+                left = P.options.styles.left;
+            }*/
 
             P.options.newItem
                 .css({

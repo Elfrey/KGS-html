@@ -1,8 +1,7 @@
-/* 
+/*
     Document   : table
     Created on : Jan 8, 2012, 8:40:57 PM
     Author     : Elfrey
-    @TODO туча камментов, удалять
 */
 
 .table-data {
@@ -229,17 +228,12 @@
     text-align: left;
     vertical-align: middle;
 }
-.data-table > tbody > tr {
-    /*border-bottom: 1px dotted #A8AAAC;*/
-}
 
 .data-table > tbody > tr:hover {
     background-color: #F6F6F6;
 }
 
 .data-table > tbody td {
-    /*border-left: 1px solid transparent;
-    border-right: 1px solid transparent;*/
     border: 1px solid #EFEFEF;
     color: #000000;
     cursor: pointer;
@@ -247,9 +241,6 @@
     line-height: 15px;
     padding: 7px;
     vertical-align: top;
-}
-.data-table > tbody tr td:first-child {
-    /*padding-bottom: 35px;*/
 }
 .data-table > tbody td a {
     color: #01366a;

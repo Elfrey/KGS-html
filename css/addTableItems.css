@@ -26,13 +26,13 @@
 .checkboxed.element-table-data thead tr th:first-child {
     border-right: none;
     min-width: 12px;
-    padding: 12px 8px 12px 24px;
+    /*padding: 12px 8px 12px 24px;*/
     width: 12px;
 }
 
 .checkboxed.element-table-data tbody tr td:first-child {
     min-width: 12px;
-    padding: 12px 8px 12px 26px;
+    /*padding: 12px 8px 12px 26px;*/
     width: 12px;
 }
 
