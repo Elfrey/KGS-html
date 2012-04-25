@@ -15,6 +15,7 @@
 @import url('pagination.css');
 @import url('validate.css');
 @import url('serverError.css');
+@import url('scroll.css');
 
 * {
     margin: 0;

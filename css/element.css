@@ -399,12 +399,13 @@ input[disabled]+.input-icon {
 
 
 .element-table-data thead {
+    background: -moz-linear-gradient(center top , #F9F9FA 0px, #EFEFF2 2px, #D9D9DB 100%) repeat scroll 0 0 transparent;
     box-shadow: 5px 3px 4px 0px rgba(227, 227, 227, 0.9);
 }
 
 .element-table-data thead tr th {
     /*Borders*/
-    background: -moz-linear-gradient(top, rgba(233,233,236,0.7) 0%, rgba(205,206,209,0.7) 100%);
+    /*background: -moz-linear-gradient(top, rgba(233,233,236,0.7) 0%, rgba(205,206,209,0.7) 100%);*/
     border-width: 1px 1px 1px 0px;
     -moz-border-top-colors: rgb(198,198,198) rgb(249,249,250);
     -moz-border-right-colors: rgb(198,198,198);

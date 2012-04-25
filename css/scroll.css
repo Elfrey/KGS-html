@@ -1,0 +1,9 @@
+.floatingHeader {
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+}
+
+#element-top-panel + #header + #middle .floatingHeader {
+    top: 24px;
+}

@@ -38,6 +38,7 @@ var loads = [
     scriptPath+"js/calendar.js",
     scriptPath+"js/login.js",
     scriptPath+"js/search.js",
+    scriptPath+"js/scroll.js"
 ];
 
 yepnope({

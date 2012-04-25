@@ -385,6 +385,12 @@ $(function() {
             $("#overLay").remove();
         }
     });
+
+    /**
+     *Закрепление шапки таблицы при скроле
+     */
+
+
 })
 
 function showNotification(message, classIndex, $table) {

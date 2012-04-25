@@ -91,6 +91,7 @@ var todayEvents = {
 
 
 $(function(){
+    if ($("#calendar-block").length==0)return false;
 
     // @TODO тут возможно необходимо написать контроллер на получение списка событий через ajax
     /**
@@ -493,7 +494,6 @@ $(function(){
                 day = $td.data("day");
                 $td.prepend("<div class=\"events-count\"></div>");
             })
-
         },
 
         /**

@@ -335,3 +335,30 @@ function formatFloat(_number,_decimal,_separator, _decSep) {
 function scrollTo($element){
 
 }
+
+/**
+ * © css-tricks.com
+ * http://css-tricks.com/snippets/jquery/persistant-headers-on-tables/
+ */
+function UpdateTableHeaders(whereToFix,whatToFix,fixedSelector) {
+    whereToFix = (whereToFix == undefined || typeof whereToFix != "string") ? "table" : whereToFix;
+    whatToFix = (whatToFix == undefined) ? "tr" : whatToFix;
+    fixedSelector = (fixedSelector == undefined) ? ".floatingHeader" : fixedSelector;
+
+    $(whereToFix).each(function(index,item) {
+        var $el = $(this),
+            offset = $el.offset(),
+            scrollTop = $(window).scrollTop(),
+            $floatingHeader = $(fixedSelector, this);
+
+        if ((scrollTop > offset.top) && (scrollTop < offset.top + $el.height())) {
+            $floatingHeader.css({
+                "visibility": "visible"
+            });
+        } else {
+            $floatingHeader.css({
+                "visibility": "hidden"
+            });
+        };
+    });
+}
